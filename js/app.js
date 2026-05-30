@@ -282,25 +282,37 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Efeito de Skew/Tilt Dinâmico nos Bento Cards (Motion de Scroll do DS)
-    let proxy = { skew: 0 },
-        skewSetter = gsap.quickSetter(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", "skewY", "deg"),
-        clamp = gsap.utils.clamp(-6, 6);
+    let skewSetter = gsap.quickSetter(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", "skewY", "deg"),
+        clamp = gsap.utils.clamp(-6, 6),
+        proxy = { skew: 0 },
+        lastScrollY = window.scrollY,
+        lastTime = Date.now();
 
-    ScrollTrigger.create({
-      onUpdate: (self) => {
-        let skew = clamp(self.getVelocity() / -400);
+    window.addEventListener("scroll", () => {
+      let currentScrollY = window.scrollY;
+      let currentTime = Date.now();
+      let deltaY = currentScrollY - lastScrollY;
+      let deltaTime = currentTime - lastTime;
+
+      if (deltaTime > 0) {
+        let velocity = deltaY / deltaTime; // pixels por milissegundo
+        let skew = clamp(velocity * -12); // Sensibilidade calibrada para suavidade
+
         if (Math.abs(skew) > Math.abs(proxy.skew)) {
           proxy.skew = skew;
           gsap.to(proxy, {
             skew: 0,
-            duration: 0.8,
-            ease: "power3.out",
+            duration: 0.6,
+            ease: "power2.out",
             overwrite: "auto",
             onUpdate: () => skewSetter(proxy.skew)
           });
         }
       }
-    });
+
+      lastScrollY = currentScrollY;
+      lastTime = currentTime;
+    }, { passive: true });
 
     gsap.set(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", { 
       transformOrigin: "center center", 
