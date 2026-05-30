@@ -1145,15 +1145,237 @@ footer {
   }
 }
 
-/* Bento Grid Accordion (FAQ Matrix Estilo Arooth) */
+/* =========================================================
+   AROOTH FLEX ACCORDION — single-faq-wrapper (Serviços)
+   ========================================================= */
 .faq-flex-wrap {
   display: flex;
   width: 100%;
-  gap: 1.5rem;
-  height: 38rem;
+  gap: 1.25rem;
+  height: 36rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+/* Cada painel do accordion horizontal */
+.single-faq-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  will-change: width;
+  /* Transição CSS de fallback — o GSAP vai sobrescrever */
+  transition: width 0.65s cubic-bezier(0.77, 0, 0.175, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+/* Hover glow nos painéis inativos */
+.single-faq-wrapper:not(:first-child):hover {
+  box-shadow: 0 8px 30px rgba(37, 109, 255, 0.12);
+  border-color: rgba(37, 109, 255, 0.3) !important;
+}
+
+/* Background shape decorativo dentro de cada painel */
+.faq-bg-shape {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: opacity 0.4s ease;
+}
+
+/* Conteúdo do painel — fica acima do bg shape */
+.faq-content-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.5rem;
+}
+
+/* Topo: serial + ícone */
+.faq-top-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: auto;
+}
+
+.faq-question-serial {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.faq-icon-wrap {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+
+.faq-icon-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Base do painel — wrap de pergunta e resposta */
+.faq-bottom-wrap {
   margin-top: 2rem;
 }
 
+/* Texto da pergunta (vertical nos painéis colapsados) */
+.faq-question-wrap {
+  min-width: max-content;
+}
+
+.faq-question {
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.02em;
+}
+
+/* Bloco de resposta (visível no painel ativo) */
+.faq-ans-wrap {
+  overflow: hidden;
+}
+
+.faq-ans-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-ans-title {
+  font-family: var(--font-headline);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.faq-ans-divider {
+  height: 1px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.faq-details {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.faq-button-wrap {
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   PROJECT CARDS — Hover Premium Arooth
+   ========================================================= */
+.single-project-wrapper,
+.large-project-wrap {
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.45s ease;
+  cursor: default;
+}
+
+.single-project-wrapper:hover,
+.large-project-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(37, 109, 255, 0.1) !important;
+  border-color: rgba(37, 109, 255, 0.35) !important;
+}
+
+/* Hover no link "Falar com Engenheiro" */
+.more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.more-button:hover {
+  gap: 1rem;
+}
+
+.more-button-flex {
+  display: flex;
+  align-items: center;
+}
+
+.more-button-text {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   TESTIMONIALS STAT CARDS — Hover
+   ========================================================= */
+.testimonials-stats-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonials-stats-flex .single-testimonial-stat-wrap {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+.testimonials-stats-flex .single-testimonial-stat-wrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(37, 109, 255, 0.1) !important;
+  border-color: rgba(37, 109, 255, 0.3) !important;
+}
+
+/* =========================================================
+   ABOUT US STAT BADGE — Hover flutuante
+   ========================================================= */
+.about-us-stat-wrappper {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.5s ease;
+}
+
+.about-us-stat-wrappper:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 25px 60px rgba(37, 109, 255, 0.12) !important;
+}
+
+/* =========================================================
+   AWARD COUNT BADGES — Pulso animado
+   ========================================================= */
+.award-count-arrow-wrap {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.award-count-arrow-wrap:hover {
+  transform: scale(1.08) !important;
+}
+
+/* =========================================================
+   LEGACY — Accordion antiga (ds-faq-card-real)
+   Mantida para não quebrar outras páginas
+   ========================================================= */
 .ds-faq-card-real {
   width: 20%;
   height: 100%;
@@ -1251,13 +1473,8 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-.ds-faq-card-real.active .ds-faq-minus-real {
-  opacity: 1;
-}
-
-.ds-faq-card-real.active .ds-faq-plus-real {
-  opacity: 0;
-}
+.ds-faq-card-real.active .ds-faq-minus-real { opacity: 1; }
+.ds-faq-card-real.active .ds-faq-plus-real  { opacity: 0; }
 
 .ds-faq-bottom-real {
   display: flex;
@@ -1326,27 +1543,47 @@ footer {
   line-height: 1.6;
 }
 
-/* Responsividade FAQ */
+/* =========================================================
+   RESPONSIVIDADE ACCORDION (Mobile)
+   ========================================================= */
 @media (max-width: 768px) {
   .faq-flex-wrap {
     flex-direction: column;
     height: auto;
     gap: 1rem;
   }
+
+  .single-faq-wrapper {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .faq-question {
+    writing-mode: horizontal-tb;
+    transform: none;
+    white-space: normal;
+  }
+
+  .faq-ans-wrap {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
   .ds-faq-card-real {
     width: 100% !important;
     height: auto;
     padding: 2rem;
   }
+
   .ds-faq-q-vertical {
     writing-mode: horizontal-tb;
     transform: none !important;
     white-space: normal;
-    display: none; /* Em mobile, exibe sempre o bloco expandido */
-  }
-  .ds-faq-card-real.active .ds-faq-q-vertical {
     display: none;
   }
+
+  .ds-faq-card-real.active .ds-faq-q-vertical { display: none; }
+
   .ds-faq-ans-block-real {
     position: relative;
     opacity: 1 !important;
@@ -1354,7 +1591,11 @@ footer {
     pointer-events: auto;
     margin-top: 1.5rem;
   }
-  .ds-faq-ans-title-real {
-    font-size: 1.5rem;
+
+  .ds-faq-ans-title-real { font-size: 1.5rem; }
+
+  .testimonials-stats-flex {
+    grid-template-columns: 1fr;
   }
 }
+

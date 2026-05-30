@@ -281,128 +281,246 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Efeito de Skew/Tilt Dinâmico nos Bento Cards (Motion de Scroll do DS)
-    let skewSetter = gsap.quickSetter(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", "skewY", "deg"),
-        clamp = gsap.utils.clamp(-6, 6),
-        proxy = { skew: 0 },
-        lastScrollY = window.scrollY,
-        lastTime = Date.now();
+    // ─── Skew/Tilt Cinético no Scroll (Arooth Motion Signature) ───────────────
+    // Aplica nos cartões Bento Grid e nas wrappers de FAQ que existem no HTML
+    const skewTargets = [
+      ".glass-card-premium",
+      ".single-project-wrapper",
+      ".large-project-wrap",
+      ".single-testimonial-stat-wrap",
+      ".about-us-stat-wrappper"
+    ].join(", ");
+
+    let skewSetter = gsap.quickSetter(skewTargets, "skewY", "deg");
+    const clamp = gsap.utils.clamp(-5, 5);
+    let proxy = { skew: 0 };
+    let lastScrollY = window.scrollY;
+    let lastTime = Date.now();
 
     window.addEventListener("scroll", () => {
-      let currentScrollY = window.scrollY;
-      let currentTime = Date.now();
-      let deltaY = currentScrollY - lastScrollY;
-      let deltaTime = currentTime - lastTime;
+      const now = Date.now();
+      const deltaY = window.scrollY - lastScrollY;
+      const deltaT = now - lastTime || 1;
+      const velocity = deltaY / deltaT;
+      const skew = clamp(velocity * -10);
 
-      if (deltaTime > 0) {
-        let velocity = deltaY / deltaTime; // pixels por milissegundo
-        let skew = clamp(velocity * -12); // Sensibilidade calibrada para suavidade
-
-        if (Math.abs(skew) > Math.abs(proxy.skew)) {
-          proxy.skew = skew;
-          gsap.to(proxy, {
-            skew: 0,
-            duration: 0.6,
-            ease: "power2.out",
-            overwrite: "auto",
-            onUpdate: () => skewSetter(proxy.skew)
-          });
-        }
+      if (Math.abs(skew) > Math.abs(proxy.skew)) {
+        proxy.skew = skew;
+        gsap.to(proxy, {
+          skew: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          overwrite: "auto",
+          onUpdate: () => skewSetter(proxy.skew)
+        });
       }
 
-      lastScrollY = currentScrollY;
-      lastTime = currentTime;
+      lastScrollY = window.scrollY;
+      lastTime = now;
     }, { passive: true });
 
-    gsap.set(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", { 
-      transformOrigin: "center center", 
-      force3D: true 
-    });
+    gsap.set(skewTargets, { transformOrigin: "center center", force3D: true });
 
-    // Animação Hero Entrada
-    gsap.from(".headline-xl", {
-      y: 50,
+    // ─── Hero — Entrada Cinética ───────────────────────────────────────────────
+    gsap.from(".banner-section .headline-xl, .banner-section h1", {
+      y: 60,
+      opacity: 0,
+      duration: 1.3,
+      ease: "power4.out",
+      delay: 0.1
+    });
+    gsap.from(".banner-section p", {
+      y: 35,
       opacity: 0,
       duration: 1.2,
+      delay: 0.3,
       ease: "power4.out"
     });
-    gsap.from(".hero-subhead", {
-      y: 30,
+    gsap.from(".banner-section .primary-button", {
+      y: 25,
       opacity: 0,
-      duration: 1.2,
-      delay: 0.2,
-      ease: "power4.out"
+      duration: 1.1,
+      delay: 0.5,
+      stagger: 0.12,
+      ease: "power3.out"
     });
-    gsap.from(".hero-actions", {
+    gsap.from(".subtitle-wrap", {
       y: 20,
       opacity: 0,
-      duration: 1.2,
-      delay: 0.4,
-      ease: "power4.out"
-    });
-
-    // Revelar Bento Cards de Benefícios
-    gsap.from(".bento-grid-beneficios .glass-card-premium", {
-      scrollTrigger: {
-        trigger: ".bento-grid-beneficios",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 60,
-      opacity: 0,
       duration: 1.0,
-      stagger: 0.15,
+      delay: 0.05,
       ease: "power3.out"
     });
 
-    // Revelar Cards de Serviços
-    gsap.from(".services-grid .service-card", {
+    // ─── Seção About / Métricas ────────────────────────────────────────────────
+    gsap.from(".about-us-stat-wrappper", {
       scrollTrigger: {
-        trigger: ".services-grid",
-        start: "top 80%",
+        trigger: ".section.about-us",
+        start: "top 78%",
         toggleActions: "play none none none"
       },
-      y: 60,
+      y: 70,
       opacity: 0,
-      duration: 1.0,
-      stagger: 0.15,
+      duration: 1.1,
       ease: "power3.out"
     });
 
-    // Revelar Bento Soluções
-    gsap.from(".bento-grid-solucoes .sol-card", {
+    gsap.from(".about-us-title-wrap", {
       scrollTrigger: {
-        trigger: ".bento-grid-solucoes",
-        start: "top 85%",
+        trigger: ".section.about-us",
+        start: "top 75%",
+        toggleActions: "play none none none"
+      },
+      x: 50,
+      opacity: 0,
+      duration: 1.1,
+      ease: "power3.out"
+    });
+
+    // Contadores animados (métricas do About)
+    gsap.from(".single-testimonial-stat-wrap.about-us", {
+      scrollTrigger: {
+        trigger: ".about-vh-wrap",
+        start: "top 82%",
         toggleActions: "play none none none"
       },
       y: 50,
       opacity: 0,
-      duration: 1.0,
-      stagger: 0.15,
+      duration: 0.9,
+      stagger: 0.18,
       ease: "power3.out"
     });
 
-    // Revelar Layout de Manifesto
-    gsap.from(".sobre-depoimento", {
+    gsap.from(".about-stat-image-wrap", {
       scrollTrigger: {
-        trigger: ".sobre-layout",
+        trigger: ".about-vh-wrap",
         start: "top 80%",
+        toggleActions: "play none none none"
       },
       x: -60,
       opacity: 0,
-      duration: 1.2,
+      duration: 1.1,
       ease: "power3.out"
     });
-    gsap.from(".sobre-manifesto", {
+
+    // ─── Seção Serviços (Flex FAQ) ─────────────────────────────────────────────
+    gsap.from(".section.services .section-title-wrapper", {
       scrollTrigger: {
-        trigger: ".sobre-layout",
+        trigger: ".section.services",
         start: "top 80%",
+        toggleActions: "play none none none"
       },
-      x: 60,
+      y: 45,
       opacity: 0,
-      duration: 1.2,
+      duration: 1.0,
       ease: "power3.out"
+    });
+
+    gsap.from(".single-faq-wrapper", {
+      scrollTrigger: {
+        trigger: ".faq-flex-wrap",
+        start: "top 82%",
+        toggleActions: "play none none none"
+      },
+      y: 80,
+      opacity: 0,
+      duration: 1.0,
+      stagger: 0.1,
+      ease: "power3.out"
+    });
+
+    // ─── Seção Projetos / Bento Grid ──────────────────────────────────────────
+    gsap.from(".section.projects .section-title-wrapper", {
+      scrollTrigger: {
+        trigger: ".section.projects",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: 1.0,
+      ease: "power3.out"
+    });
+
+    gsap.from(".single-project-wrapper, .large-project-wrap", {
+      scrollTrigger: {
+        trigger: ".projects-wrapper",
+        start: "top 82%",
+        toggleActions: "play none none none"
+      },
+      y: 70,
+      opacity: 0,
+      duration: 0.95,
+      stagger: 0.14,
+      ease: "power3.out"
+    });
+
+    // ─── Seção Depoimentos / SLA ──────────────────────────────────────────────
+    gsap.from(".section.testimonials .single-testimonial-stat-wrap", {
+      scrollTrigger: {
+        trigger: ".testimonials-stats-wrapper",
+        start: "top 82%",
+        toggleActions: "play none none none"
+      },
+      y: 55,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.15,
+      ease: "power3.out"
+    });
+
+    gsap.from(".testimonial-title", {
+      scrollTrigger: {
+        trigger: ".section.testimonials",
+        start: "top 78%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: 1.0,
+      ease: "power3.out"
+    });
+
+    // ─── Seção CTA ─────────────────────────────────────────────────────────────
+    gsap.from(".cta-content-wrap", {
+      scrollTrigger: {
+        trigger: ".section.cta",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      y: 50,
+      opacity: 0,
+      scale: 0.97,
+      duration: 1.1,
+      ease: "power3.out"
+    });
+
+    // ─── Parallax Sutil nos Section Borders ───────────────────────────────────
+    gsap.utils.toArray(".section-border-top, .section-border-bottom").forEach(el => {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: el.closest("section") || el,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2
+        },
+        yPercent: -15,
+        ease: "none"
+      });
+    });
+
+    // ─── Award Count Badges Flutuantes ────────────────────────────────────────
+    gsap.from(".award-count-arrow-wrap", {
+      scrollTrigger: {
+        trigger: ".about-award-count-wrap",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "back.out(1.5)"
     });
   }
 
@@ -742,24 +860,106 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================
-  // 9. Bento Flex Accordion (FAQ Matrix)
+  // 9. Flex Accordion de Serviços (Arooth Style)
   // ==========================================
-  const faqCards = document.querySelectorAll(".ds-faq-card-real");
-  faqCards.forEach((card) => {
-    const triggerAction = () => {
-      if (card.classList.contains("active")) return;
-      faqCards.forEach((c) => c.classList.remove("active"));
-      card.classList.add("active");
-      playTick();
-    };
+  // Seleciona os painéis do accordion horizontal
+  const faqPanels = document.querySelectorAll(".single-faq-wrapper");
 
-    card.addEventListener("mouseenter", triggerAction);
-    card.addEventListener("click", triggerAction);
+  // Larguras do DS Arooth: ativo = 45%, inativo = 18%
+  const W_ACTIVE   = "45%";
+  const W_INACTIVE = "18%";
+
+  // Duração e ease espelhando o Arooth IX3
+  const ANIM_DUR  = 0.65;
+  const ANIM_EASE = "power3.inOut";
+
+  function activatePanel(target) {
+    if (!target) return;
+
+    faqPanels.forEach((panel) => {
+      const isTarget   = panel === target;
+      const ansWrap    = panel.querySelector("[class*='faq-ans-wrap']");
+      const qWrap      = panel.querySelector("[class*='faq-question-wrap']");
+      const plusIcon   = panel.querySelector("[class*='faq-plus']");
+      const minusIcon  = panel.querySelector("[class*='faq-minus']");
+
+      if (isTarget) {
+        // ── Expandir o painel ativo ──────────────────────────────────────
+        gsap.to(panel, { width: W_ACTIVE, duration: ANIM_DUR, ease: ANIM_EASE });
+
+        // Mostrar conteúdo de resposta
+        if (ansWrap) {
+          gsap.set(ansWrap, { display: "block" });
+          gsap.to(ansWrap, {
+            width: "100%", opacity: 1, duration: ANIM_DUR, ease: ANIM_EASE,
+            clearProps: "display"
+          });
+        }
+        // Ocultar texto de pergunta vertical
+        if (qWrap) {
+          gsap.to(qWrap, { display: "none", opacity: 0, duration: 0.25, ease: "power2.in" });
+        }
+        // Ícone: minus visível, plus oculto
+        if (plusIcon)  gsap.to(plusIcon,  { scale: 0, duration: 0.35, ease: ANIM_EASE });
+        if (minusIcon) gsap.to(minusIcon, { scale: 1, duration: 0.35, ease: ANIM_EASE });
+
+      } else {
+        // ── Colapsar os outros painéis ────────────────────────────────────
+        gsap.to(panel, { width: W_INACTIVE, duration: ANIM_DUR, ease: ANIM_EASE });
+
+        if (ansWrap) {
+          gsap.to(ansWrap, {
+            width: "0%", opacity: 0, duration: ANIM_DUR, ease: ANIM_EASE,
+            onComplete: () => { ansWrap.style.display = "none"; }
+          });
+        }
+        if (qWrap) {
+          gsap.set(qWrap, { display: "block" });
+          gsap.to(qWrap, { opacity: 1, duration: ANIM_DUR * 0.8, ease: ANIM_EASE });
+        }
+        // Ícone: plus visível, minus oculto
+        if (plusIcon)  gsap.to(plusIcon,  { scale: 1, duration: 0.35, ease: ANIM_EASE });
+        if (minusIcon) gsap.to(minusIcon, { scale: 0, duration: 0.35, ease: ANIM_EASE });
+      }
+    });
+
+    playTick();
+  }
+
+  // Ativa o primeiro painel por padrão ao carregar
+  if (faqPanels.length > 0) {
+    activatePanel(faqPanels[0]);
+  }
+
+  // Event listeners nos painéis
+  faqPanels.forEach((panel) => {
+    panel.addEventListener("click",      () => activatePanel(panel));
+    panel.addEventListener("mouseenter", () => activatePanel(panel));
   });
+
+
+  // ==========================================
+  // 9.5 Accordion Legacy (ds-faq-card-real) — servicos.html
+  // ==========================================
+  // Esta versão usa toggle de classe CSS .active (sem GSAP width)
+  const legacyFaqCards = document.querySelectorAll(".ds-faq-card-real");
+  if (legacyFaqCards.length > 0) {
+    legacyFaqCards.forEach((card) => {
+      const open = () => {
+        if (card.classList.contains("active")) return;
+        legacyFaqCards.forEach((c) => c.classList.remove("active"));
+        card.classList.add("active");
+        playTick();
+      };
+      card.addEventListener("mouseenter", open);
+      card.addEventListener("click",      open);
+    });
+  }
 
   // ==========================================
   // 10. Hamburger Menu Cinematic Curtain Overlay (GSAP)
   // ==========================================
+
   const hamburgerBtn = document.querySelector(".hamburger-button");
   const navMenu = document.querySelector(".navigation");
   const bgTop = document.querySelector(".navigation-bg-top");
