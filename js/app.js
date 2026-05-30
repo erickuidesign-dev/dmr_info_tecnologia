@@ -66,13 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   requestAnimationFrame(updateCursor);
 
-  // Efeitos de Hover no Cursor
-  const hoverElements = document.querySelectorAll("a, button, .glass-card-premium, select, input, textarea");
+  // Efeitos de Hover no Cursor (Compatível com botões e Flex Accordion do Arooth)
+  const hoverElements = document.querySelectorAll("a, button, .glass-card-premium, .primary-button, .ds-faq-card-real, select, input, textarea");
   hoverElements.forEach((el) => {
     el.addEventListener("mouseenter", () => {
       cursor.style.width = "40px";
       cursor.style.height = "40px";
-      cursor.style.backgroundColor = "rgba(6, 182, 212, 0.1)";
+      cursor.style.backgroundColor = "rgba(37, 109, 255, 0.15)";
       cursor.style.borderColor = "var(--color-accent-cyan)";
     });
     el.addEventListener("mouseleave", () => {
@@ -473,8 +473,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Vincular sons aos Hovers e Cliques do Menu e Cards
-  const interactiveNodes = document.querySelectorAll("a, button, .service-card, .sol-card");
+  // Vincular sons aos Hovers e Cliques do Menu, Cards e Botões Premium Arooth
+  const interactiveNodes = document.querySelectorAll("a, button, .primary-button, .ds-faq-card-real, .service-card, .sol-card");
   interactiveNodes.forEach((node) => {
     node.addEventListener("mouseenter", () => {
       playHoverSound();
@@ -669,5 +669,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1200);
     });
   }
+
+  // ==========================================
+  // 9. Bento Flex Accordion (FAQ Matrix)
+  // ==========================================
+  const faqCards = document.querySelectorAll(".ds-faq-card-real");
+  faqCards.forEach((card) => {
+    const triggerAction = () => {
+      if (card.classList.contains("active")) return;
+      faqCards.forEach((c) => c.classList.remove("active"));
+      card.classList.add("active");
+      playTick();
+    };
+
+    card.addEventListener("mouseenter", triggerAction);
+    card.addEventListener("click", triggerAction);
+  });
 
 });

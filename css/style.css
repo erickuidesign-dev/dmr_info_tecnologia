@@ -1,24 +1,31 @@
 /* DMR Info Tecnologia - Premium Stylesheet (Awwwards Aura Standard) */
 
 :root {
-  /* DNA Visual - Paleta Cromática HSL Premium */
-  --color-bg: hsl(222, 47%, 4%);             /* Preto Espacial Profundo */
-  --color-surface: hsl(222, 40%, 8%);        /* Superfície Cinza/Azulada */
-  --color-accent-cobalt: hsl(217, 91%, 60%); /* Azul Cobalto Ativo de Alta Tensão */
-  --color-accent-cyan: hsl(180, 100%, 50%);  /* Ciano Digital de Segurança */
-  --color-accent-orange: hsl(22, 100%, 50%); /* Cyber Laranja (Destaques/Alertas) */
-  --color-text-primary: hsl(0, 0%, 96%);     /* Branco Gelo */
-  --color-text-secondary: hsl(220, 14%, 70%);/* Cinza Suave Escaneável */
-  --color-border: rgba(255, 255, 255, 0.08); /* Borda Glass Fina */
-  --color-card-bg: rgba(255, 255, 255, 0.02);/* Card Translúcido */
+  /* DNA Visual - Paleta Cromática Arooth-DMR HSL & HEX Premium */
+  --arooth-primary: #0040c1;
+  --arooth-blue-crayola: #256dff;
+  --arooth-eerie-black: #111827;
+  --arooth-alice-blue: #eff4ff;
+  --arooth-ghost-white: #f9f9f9;
+  --arooth-azureish-white: #d1e0ff;
+
+  --color-bg: #090c15;                       /* Preto Azulado Espacial Profundo */
+  --color-surface: #111827;                  /* Eerie Black do Arooth */
+  --color-accent-cobalt: #0040c1;            /* Primary Blue do Arooth */
+  --color-accent-cyan: #256dff;              /* Blue Crayola do Arooth (Super vibrante) */
+  --color-accent-orange: #ff6b00;            /* Cyber Laranja Ativo */
+  --color-text-primary: #ffffff;             /* Branco puro */
+  --color-text-secondary: #a8bee7;           /* Azureish White suave e escaneável */
+  --color-border: rgba(37, 109, 255, 0.15);  /* Borda sutil de azul cobalto */
+  --color-card-bg: rgba(17, 24, 39, 0.65);   /* Card Translúcido Eerie Black */
   
-  /* Tipografia */
-  --font-headline: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  /* Tipografia do Arooth */
+  --font-headline: 'Instrument Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
   
-  /* Transições Bezier Awwwards */
-  --transition-bezier: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.2s ease;
+  /* Transições Bezier do Arooth e Awwwards */
+  --transition-bezier: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Reset Geral */
@@ -219,49 +226,149 @@ body {
   stroke-dashoffset: 20;
 }
 
-/* Botões */
-.btn-primary {
-  background: var(--color-accent-cobalt);
-  color: #fff;
-  font-family: var(--font-headline);
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.85rem 1.8rem;
-  border-radius: 50px;
-  border: none;
+/* Botões Premium Estilo Arooth */
+.primary-button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
-  transition: var(--transition-bezier);
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #fff;
-  font-family: var(--font-headline);
-  font-weight: 600;
   text-decoration: none;
-  padding: 0.85rem 1.8rem;
-  border-radius: 50px;
+  background-color: var(--color-accent-cobalt);
   border: 1px solid var(--color-border);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-bezier);
+  border-radius: 50px;
+  padding: 0.85rem 2.2rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-headline);
+  font-weight: 500;
+  font-size: 0.95rem;
   cursor: pointer;
+  z-index: 1;
+  transition: border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+.primary-button-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+  position: relative;
+  pointer-events: none;
+}
+
+.primary-button-text-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 1.5em;
+  display: block;
+}
+
+.primary-button-text, .primary-button-text-hover {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  line-height: 1.5em;
+}
+
+.primary-button-text-hover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.primary-button:hover .primary-button-text {
+  transform: translateY(-100%);
+}
+
+.primary-button:hover .primary-button-text-hover {
+  transform: translateY(-100%);
+}
+
+.primary-button-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-button-arrow-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.primary-button-arrow, .primary-button-arrow-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.primary-button-arrow-hover {
+  transform: translate(-100%, 100%);
+}
+
+.primary-button:hover .primary-button-arrow {
+  transform: translate(100%, -100%);
+}
+
+.primary-button:hover .primary-button-arrow-hover {
+  transform: translate(100%, -100%);
+}
+
+.primary-button-hover-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160%;
+  height: 160%;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.primary-button:hover .primary-button-hover-bg {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Variantes de Botão */
+.primary-button[data-variant="white"] {
+  background-color: #ffffff;
+  color: var(--color-accent-cobalt);
+  border-color: #ffffff;
+}
+
+.primary-button[data-variant="white"] .primary-button-hover-bg {
+  background-color: var(--color-accent-cyan);
+}
+
+.primary-button[data-variant="white"]:hover {
+  color: #ffffff;
+  border-color: var(--color-accent-cyan);
+}
+
+.primary-button[data-variant="border"] {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: var(--color-border);
+}
+
+.primary-button[data-variant="border"] .primary-button-hover-bg {
+  background-color: var(--color-accent-cyan);
+}
+
+.primary-button[data-variant="border"]:hover {
+  border-color: var(--color-accent-cyan);
+}
+
+/* Compatibilidade com classes anteriores */
+.btn-primary, .btn-secondary {
+  display: none !important; /* Desativar em prol dos novos botões Arooth */
 }
 
 /* Hero Section */
@@ -1035,5 +1142,219 @@ footer {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+}
+
+/* Bento Grid Accordion (FAQ Matrix Estilo Arooth) */
+.faq-flex-wrap {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  height: 38rem;
+  margin-top: 2rem;
+}
+
+.ds-faq-card-real {
+  width: 20%;
+  height: 100%;
+  border-radius: 24px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  padding: 3rem 2.5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.6s ease, border-color 0.6s ease;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.ds-faq-card-real.active {
+  width: 40%;
+  background: rgba(17, 24, 39, 0.85);
+  border-color: rgba(37, 109, 255, 0.45);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.ds-faq-bg-real {
+  z-index: 0;
+  background-image: linear-gradient(180deg, rgba(0, 64, 193, 0.1) 0%, rgba(37, 109, 255, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.ds-faq-card-real.active .ds-faq-bg-real {
+  opacity: 1;
+}
+
+.ds-faq-content-real {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.ds-faq-top-real {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ds-faq-serial-real {
+  color: var(--color-accent-cyan);
+  font-family: var(--font-headline);
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
+
+.ds-faq-icon-real {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+.ds-faq-card-real.active .ds-faq-icon-real {
+  background-color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  transform: rotate(45deg);
+}
+
+.ds-faq-plus-real {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  stroke: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+.ds-faq-minus-real {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ds-faq-card-real.active .ds-faq-minus-real {
+  opacity: 1;
+}
+
+.ds-faq-card-real.active .ds-faq-plus-real {
+  opacity: 0;
+}
+
+.ds-faq-bottom-real {
+  display: flex;
+  align-items: flex-end;
+  height: calc(100% - 3rem);
+  position: relative;
+}
+
+.ds-faq-q-vertical {
+  font-family: var(--font-headline);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  margin: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.ds-faq-card-real.active .ds-faq-q-vertical {
+  opacity: 0;
+  transform: rotate(180deg) translateY(-30px);
+  pointer-events: none;
+}
+
+.ds-faq-ans-block-real {
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+}
+
+.ds-faq-card-real.active .ds-faq-ans-block-real {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.ds-faq-ans-title-real {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.ds-faq-divider-real {
+  height: 1px;
+  background-color: var(--color-border);
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.ds-faq-text-real {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Responsividade FAQ */
+@media (max-width: 768px) {
+  .faq-flex-wrap {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+  .ds-faq-card-real {
+    width: 100% !important;
+    height: auto;
+    padding: 2rem;
+  }
+  .ds-faq-q-vertical {
+    writing-mode: horizontal-tb;
+    transform: none !important;
+    white-space: normal;
+    display: none; /* Em mobile, exibe sempre o bloco expandido */
+  }
+  .ds-faq-card-real.active .ds-faq-q-vertical {
+    display: none;
+  }
+  .ds-faq-ans-block-real {
+    position: relative;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+    margin-top: 1.5rem;
+  }
+  .ds-faq-ans-title-real {
+    font-size: 1.5rem;
   }
 }

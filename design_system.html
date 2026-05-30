@@ -3,445 +3,468 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DMR Info | Design System Viva e Pattern Library</title>
-  <!-- Google Fonts Outfit & Plus Jakarta Sans -->
+  <title>DMR Info | Living Design System & Pattern Library (Arooth DNA)</title>
+  
+  <!-- Google Fonts Instrument Sans & Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Referência ao CSS do Site de Produção -->
+  <link rel="stylesheet" href="css/style.css">
   
   <style>
-    :root {
-      /* DNA Visual - Paleta HSL Premium */
-      --color-bg: hsl(222, 47%, 4%);             /* Preto Espacial Profundo */
-      --color-surface: hsl(222, 40%, 8%);        /* Superfície Cinza/Azulada Escura */
-      --color-accent-cobalt: hsl(217, 91%, 60%); /* Azul Cobalto Ativo de Alta Tensão */
-      --color-accent-cyan: hsl(180, 100%, 50%);  /* Ciano Neon de Segurança Eletrônica */
-      --color-accent-orange: hsl(22, 100%, 50%); /* Laranja Cibernético (Alerta/Destaques) */
-      --color-text-primary: hsl(0, 0%, 96%);     /* Branco Gelo */
-      --color-text-secondary: hsl(220, 14%, 70%);/* Cinza Escaneável */
-      --color-border: rgba(255, 255, 255, 0.08); /* Borda Glass Fina */
-      --color-card-bg: rgba(255, 255, 255, 0.02);/* Card Translúcido */
-      
-      /* Tipografia */
-      --font-headline: 'Outfit', sans-serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-      
-      /* Curva Bezier Awwwards */
-      --transition-bezier: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* Estilos Adicionais do Dashboard de Documentação */
     body {
       background-color: var(--color-bg);
       color: var(--color-text-primary);
       font-family: var(--font-body);
+      padding: 6rem 2rem 4rem 2rem;
       min-height: 100vh;
-      padding: 4rem 2rem;
-      line-height: 1.6;
       background-image: 
-        radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(37, 109, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(37, 109, 255, 0.03) 0%, transparent 40%);
     }
 
-    .container {
+    .ds-container {
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    header {
+    .ds-header {
       margin-bottom: 5rem;
       border-bottom: 1px solid var(--color-border);
-      padding-bottom: 2rem;
+      padding-bottom: 2.5rem;
     }
 
-    h1 {
+    .ds-title {
       font-family: var(--font-headline);
       font-size: 3.5rem;
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.1;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, #fff 30%, var(--color-accent-cobalt) 100%);
+      background: linear-gradient(135deg, #ffffff 30%, var(--color-accent-cyan) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
+    .ds-subtitle {
+      font-size: 1.15rem;
       color: var(--color-text-secondary);
-      max-width: 600px;
+      max-width: 700px;
     }
 
-    /* Bento Grid da Documentação */
-    .bento-grid {
+    .ds-section {
+      margin-bottom: 5rem;
+    }
+
+    .ds-section-title {
+      font-family: var(--font-headline);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #ffffff;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.75rem;
+    }
+
+    .ds-section-title span {
+      color: var(--color-accent-cyan);
+    }
+
+    /* Bento Grid Layout para Demonstrações */
+    .ds-bento-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 1.5rem;
-      margin-bottom: 4rem;
     }
 
-    .card {
-      background: var(--color-card-bg);
-      border: 1px solid var(--color-border);
-      backdrop-filter: blur(25px);
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      transition: var(--transition-bezier);
-    }
-
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.16);
-      transform: translateY(-4px);
-    }
-
-    /* Custom Grid Layouts */
-    .col-6 { grid-column: span 6; }
-    .col-12 { grid-column: span 12; }
-    .col-4 { grid-column: span 4; }
-    .col-8 { grid-column: span 8; }
+    .ds-col-12 { grid-column: span 12; }
+    .ds-col-6 { grid-column: span 6; }
+    .ds-col-4 { grid-column: span 4; }
 
     @media (max-width: 768px) {
-      .col-6, .col-4, .col-8 { grid-column: span 12; }
-      h1 { font-size: 2.5rem; }
-    }
-
-    h2 {
-      font-family: var(--font-headline);
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      .ds-col-6, .ds-col-4 { grid-column: span 12; }
     }
 
     /* Swatches de Cores */
-    .swatch-container {
+    .ds-swatch-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1rem;
-    }
-
-    .swatch-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 1rem;
-      text-align: center;
-      transition: var(--transition-bezier);
-    }
-
-    .swatch-card:hover {
-      transform: scale(1.03);
-    }
-
-    .color-preview {
-      height: 80px;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .swatch-name {
-      font-family: var(--font-headline);
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .swatch-value {
-      font-size: 0.8rem;
-      color: var(--color-text-secondary);
-      font-family: monospace;
-    }
-
-    /* Tipografia Showcase */
-    .type-specimen {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding-bottom: 1rem;
-    }
-
-    .type-label {
-      font-size: 0.8rem;
-      color: var(--color-text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
-    }
-
-    .headline-xl {
-      font-family: var(--font-headline);
-      font-size: 4rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .headline-lg {
-      font-family: var(--font-headline);
-      font-size: 2.2rem;
-      font-weight: 600;
-    }
-
-    .body-lg {
-      font-size: 1.1rem;
-      color: var(--color-text-secondary);
-    }
-
-    /* UI Componentes: Botões */
-    .component-showcase {
-      display: flex;
-      flex-wrap: wrap;
       gap: 1.5rem;
-      align-items: center;
-      margin-top: 1rem;
     }
 
-    /* Botão Principal Magnético Cobalto */
-    .btn-premium {
-      background: var(--color-accent-cobalt);
-      color: #fff;
-      font-family: var(--font-headline);
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-      transition: var(--transition-bezier);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-premium::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: 0.5s;
-    }
-
-    .btn-premium:hover {
-      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
-      transform: translateY(-2px);
-    }
-
-    .btn-premium:hover::before {
-      left: 100%;
-    }
-
-    /* Botão Secundário Ciano */
-    .btn-sec-cyan {
-      background: transparent;
-      color: var(--color-accent-cyan);
-      border: 1px solid var(--color-accent-cyan);
-      font-family: var(--font-headline);
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      transition: var(--transition-bezier);
-    }
-
-    .btn-sec-cyan:hover {
-      background: rgba(6, 182, 212, 0.08);
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
-      transform: translateY(-2px);
-    }
-
-    /* Botão Translúcido Glass */
-    .btn-glass {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--color-text-primary);
-      border: 1px solid var(--color-border);
-      font-family: var(--font-headline);
-      font-size: 1.0rem;
-      font-weight: 600;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: var(--transition-bezier);
-      backdrop-filter: blur(10px);
-    }
-
-    .btn-glass:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
-    /* Glass Cards Previews */
-    .glass-card-example {
+    .ds-swatch-card {
       background: var(--color-card-bg);
       border: 1px solid var(--color-border);
-      backdrop-filter: blur(25px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
       border-radius: 16px;
-      padding: 1.5rem;
-      position: relative;
+      padding: 1.25rem;
+      text-align: center;
+      transition: var(--transition-bezier);
+      backdrop-filter: blur(25px);
     }
 
-    .glow-beam {
-      position: absolute;
-      top: 0;
-      left: 10%;
-      width: 80%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);
+    .ds-swatch-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37, 109, 255, 0.3);
+    }
+
+    .ds-color-preview {
+      height: 90px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .ds-swatch-name {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 1rem;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .ds-swatch-hex {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* Specimens Tipográficos */
+    .ds-typo-row {
+      border-bottom: 1px solid var(--color-border);
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .ds-typo-label {
+      width: 250px;
+      font-weight: 500;
+      color: var(--color-accent-cyan);
+      font-family: var(--font-headline);
+    }
+
+    .ds-typo-preview {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .ds-typo-spec {
+      font-family: monospace;
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .ds-card-desc {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent-cyan);
+      margin-bottom: 1rem;
+    }
+
+    /* Simulação de Cursor local apenas para demonstração */
+    .ds-cursor-preview {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--color-accent-cyan);
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <!-- Top bar fixa simulada -->
+  <header class="header-sticky" style="position: fixed; background: rgba(9, 12, 21, 0.85); top: 0; left: 0; width: 100%;">
+    <div class="header-container">
+      <a href="#" class="logo">DMR<span>INFO</span> <span style="font-size: 0.8rem; font-weight: 400; color: var(--color-text-secondary); margin-left: 0.5rem;">Pattern Library</span></a>
+      <a href="index.html" class="primary-button" data-variant="border" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">
+        <div class="primary-button-flex">
+          <div class="primary-button-text-wrap">
+            <div class="primary-button-text">Voltar ao Site</div>
+            <div class="primary-button-text-hover">Voltar ao Site</div>
+          </div>
+        </div>
+        <div class="primary-button-hover-bg"></div>
+      </a>
+    </div>
+  </header>
+
+  <div class="ds-container">
     
-    <header>
-      <h1>DMR Info Tecnologia</h1>
-      <p class="subtitle">Biblioteca Viva e Pattern Library de Elite do Design System. Criada sob os padrões estéticos do Awwwards Squad.</p>
-    </header>
-
-    <div class="bento-grid">
-      
-      <!-- Seção: Paleta Cromática -->
-      <div class="card col-12">
-        <h2>🎨 DNA Cromático (Variáveis HSL Premium)</h2>
-        <div class="swatch-container">
-          
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-bg); border: 1px solid var(--color-border);"></div>
-            <div class="swatch-name">Espacial Profundo</div>
-            <div class="swatch-value">hsl(222, 47%, 4%)</div>
-          </div>
-
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-accent-cobalt);"></div>
-            <div class="swatch-name">Cobalto Ativo</div>
-            <div class="swatch-value">hsl(217, 91%, 60%)</div>
-          </div>
-
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-accent-cyan);"></div>
-            <div class="swatch-name">Ciano Digital</div>
-            <div class="swatch-value">hsl(180, 100%, 50%)</div>
-          </div>
-
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-accent-orange);"></div>
-            <div class="swatch-name">Laranja Cyber</div>
-            <div class="swatch-value">hsl(22, 100%, 50%)</div>
-          </div>
-
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-text-primary);"></div>
-            <div class="swatch-name">Branco Gelo</div>
-            <div class="swatch-value">hsl(0, 0%, 96%)</div>
-          </div>
-
-          <div class="swatch-card">
-            <div class="color-preview" style="background-color: var(--color-text-secondary);"></div>
-            <div class="swatch-name">Cinza Escaneável</div>
-            <div class="swatch-value">hsl(220, 14%, 70%)</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Seção: Tipografia -->
-      <div class="card col-6">
-        <h2>📐 Tipografia Tech & Geométrica</h2>
-        
-        <div class="type-specimen">
-          <div class="type-label">H1 Monumental (Outfit Bold)</div>
-          <div class="headline-xl">DMR Info</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="type-label">H2/H3 Título (Outfit Semibold)</div>
-          <div class="headline-lg">Segurança de Dados</div>
-        </div>
-
-        <div class="type-specimen">
-          <div class="type-label">Corpo de Texto (Plus Jakarta Sans)</div>
-          <div class="body-lg">
-            Projetamos, implementamos e mantemos redes corporativas robustas e estáveis com inércia e máxima segurança.
-          </div>
-        </div>
-      </div>
-
-      <!-- Seção: Botões Interativos -->
-      <div class="card col-6">
-        <h2>💎 Componentes de Interação (Botões & Hovers)</h2>
-        <div style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; height: 80%;">
-          
-          <div class="type-label">Botão Primário (Magnético / Orçamento)</div>
-          <div class="component-showcase">
-            <button class="btn-premium">
-              <span>Solicitar Orçamento</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-
-          <div class="type-label">Botão Secundário (Segurança / Especialista)</div>
-          <div class="component-showcase">
-            <button class="btn-sec-cyan">
-              <span>Falar com Especialista</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </button>
-          </div>
-
-          <div class="type-label">Botão Terciário (Translúcido Glass)</div>
-          <div class="component-showcase">
-            <button class="btn-glass">Conheça a DMRInfo</button>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Seção: Superfícies Glassmorphic -->
-      <div class="card col-12">
-        <h2>⚡ Cartões Bento Glassmorphic com Feixes Glow</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-          
-          <div class="glass-card-example">
-            <div class="glow-beam" style="background: linear-gradient(90deg, transparent, var(--color-accent-cobalt), transparent);"></div>
-            <h3 style="font-family: var(--font-headline); margin-bottom: 0.5rem; color: #fff;">Infraestrutura Conectiva</h3>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem;">
-              Bordas brilhantes e translucidez que expõem levemente o background espacial, garantindo profundidade dimensional premium.
-            </p>
-          </div>
-
-          <div class="glass-card-example">
-            <div class="glow-beam" style="background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);"></div>
-            <h3 style="font-family: var(--font-headline); margin-bottom: 0.5rem; color: #fff;">Segurança Monitorada</h3>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem;">
-              Efeito ativo de Glow Beam superior ciano, atraindo a atenção imediata do usuário ao rolar as seções de Bento Grids.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
+    <!-- Hero / Cabeçalho -->
+    <div class="ds-header">
+      <h1 class="ds-title">DMR Info & Arooth Design System</h1>
+      <p class="ds-subtitle">Biblioteca de padrões vivos, variáveis semânticas e componentes cinéticos premium resultantes da fusão do DNA estético do Arooth com a engenharia robusta da DMR Info.</p>
     </div>
 
+    <!-- 1. Paleta de Cores -->
+    <section class="ds-section" id="colors">
+      <h2 class="ds-section-title"><span>01.</span> Paleta de Cores Semântica (Hex Arooth)</h2>
+      <div class="ds-swatch-grid">
+        
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-bg); border: 1px solid var(--color-border);"></div>
+          <div class="ds-swatch-name">Espacial Profundo</div>
+          <div class="ds-swatch-hex">#090c15</div>
+        </div>
+
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-surface);"></div>
+          <div class="ds-swatch-name">Eerie Black</div>
+          <div class="ds-swatch-hex">#111827</div>
+        </div>
+
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-accent-cobalt);"></div>
+          <div class="ds-swatch-name">Azul Arooth</div>
+          <div class="ds-swatch-hex">#0040c1</div>
+        </div>
+
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-accent-cyan);"></div>
+          <div class="ds-swatch-name">Blue Crayola</div>
+          <div class="ds-swatch-hex">#256dff</div>
+        </div>
+
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-accent-orange);"></div>
+          <div class="ds-swatch-name">Cyber Laranja</div>
+          <div class="ds-swatch-hex">#ff6b00</div>
+        </div>
+
+        <div class="ds-swatch-card">
+          <div class="ds-color-preview" style="background-color: var(--color-text-secondary);"></div>
+          <div class="ds-swatch-name">Azureish White</div>
+          <div class="ds-swatch-hex">#a8bee7</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. Tipografia -->
+    <section class="ds-section" id="typography">
+      <h2 class="ds-section-title"><span>02.</span> Matriz de Tipografia (Instrument Sans & Poppins)</h2>
+      
+      <div class="ds-typo-row">
+        <div class="ds-typo-label">Título H1 Monumental</div>
+        <div class="ds-typo-preview">
+          <h1 class="headline-xl" style="margin: 0;">Infraestrutura Conectiva</h1>
+        </div>
+        <div class="ds-typo-spec">Instrument Sans / Bold / 4rem</div>
+      </div>
+
+      <div class="ds-typo-row">
+        <div class="ds-typo-label">Título Secundário H2</div>
+        <div class="ds-typo-preview">
+          <h2 class="section-title" style="margin: 0;">Valores inegociáveis de engenharia</h2>
+        </div>
+        <div class="ds-typo-spec">Instrument Sans / Semibold / 2.5rem</div>
+      </div>
+
+      <div class="ds-typo-row">
+        <div class="ds-typo-label">Corpo de Texto Médio</div>
+        <div class="ds-typo-preview">
+          <p class="hero-subhead" style="margin: 0; max-width: 100%;">Projetamos, implementamos e blindamos a infraestrutura tecnológica do seu negócio para que sua equipe foque exclusivamente em faturar e crescer.</p>
+        </div>
+        <div class="ds-typo-spec">Poppins / Light / 1.15rem</div>
+      </div>
+
+      <div class="ds-typo-row">
+        <div class="ds-typo-label">Etiqueta de Seção</div>
+        <div class="ds-typo-preview">
+          <span class="section-tag" style="margin: 0;">VALORES INEGOCOÁVEIS</span>
+        </div>
+        <div class="ds-typo-spec">Poppins / Bold / 0.85rem / 0.15em spacing</div>
+      </div>
+
+    </section>
+
+    <!-- 3. Botões e Componentes de Alta Interação -->
+    <section class="ds-section" id="components">
+      <h2 class="ds-section-title"><span>03.</span> Botões Premium Arooth (Interativos)</h2>
+      
+      <div class="ds-bento-grid">
+        
+        <!-- Botão Azul Cobalto -->
+        <div class="glass-card-premium ds-col-4" style="padding: 2.5rem;">
+          <div class="glow-beam"></div>
+          <div class="ds-card-desc">Variante Azul Cobalto (Primary)</div>
+          <div style="margin-top: 1rem;">
+            <a class="primary-button" data-variant="blue" href="#">
+              <div class="primary-button-flex">
+                <div class="primary-button-text-wrap">
+                  <div class="primary-button-text">Solicitar Orçamento</div>
+                  <div class="primary-button-text-hover">Solicitar Orçamento</div>
+                </div>
+                <div class="primary-button-arrow-wrapper">
+                  <div class="primary-button-arrow-wrap">
+                    <svg class="primary-button-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    <svg class="primary-button-arrow-hover" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-button-hover-bg"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Botão Branco Puro -->
+        <div class="glass-card-premium ds-col-4" style="padding: 2.5rem; background: var(--color-accent-cobalt);">
+          <div class="glow-beam"></div>
+          <div class="ds-card-desc" style="color: rgba(255,255,255,0.7);">Variante Branco Puro (White)</div>
+          <div style="margin-top: 1rem;">
+            <a class="primary-button" data-variant="white" href="#">
+              <div class="primary-button-flex">
+                <div class="primary-button-text-wrap">
+                  <div class="primary-button-text">Saiba Mais</div>
+                  <div class="primary-button-text-hover">Saiba Mais</div>
+                </div>
+                <div class="primary-button-arrow-wrapper">
+                  <div class="primary-button-arrow-wrap">
+                    <svg class="primary-button-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    <svg class="primary-button-arrow-hover" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-button-hover-bg"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Botão com Borda sutil -->
+        <div class="glass-card-premium ds-col-4" style="padding: 2.5rem;">
+          <div class="glow-beam orange-beam"></div>
+          <div class="ds-card-desc">Variante Borda Glass (Bordered)</div>
+          <div style="margin-top: 1rem;">
+            <a class="primary-button" data-variant="border" href="#">
+              <div class="primary-button-flex">
+                <div class="primary-button-text-wrap">
+                  <div class="primary-button-text">Falar com Suporte</div>
+                  <div class="primary-button-text-hover">Falar com Suporte</div>
+                </div>
+              </div>
+              <div class="primary-button-hover-bg"></div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Flex Accordion Sandbox -->
+    <section class="ds-section" id="accordion">
+      <h2 class="ds-section-title"><span>04.</span> Bento Flex Accordion (FAQ Matrix Showcase)</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">Passe o mouse ou clique sobre os painéis abaixo para visualizar o comportamento real da FAQ Matrix cineticamente integrada no site.</p>
+      
+      <!-- Flex Accordion interativo sandbox -->
+      <div class="faq-flex-wrap" style="margin-top: 0;">
+        
+        <div class="ds-faq-card-real active" onclick="activateFaq(this)">
+          <div class="ds-faq-bg-real"></div>
+          <div class="ds-faq-content-real">
+            <div class="ds-faq-top-real">
+              <span class="ds-faq-serial-real">01</span>
+              <div class="ds-faq-icon-real">
+                <svg class="ds-faq-plus-real" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <div class="ds-faq-minus-real"></div>
+              </div>
+            </div>
+            <div class="ds-faq-bottom-real">
+              <h3 class="ds-faq-q-vertical">Consultoria em TI</h3>
+              <div class="ds-faq-ans-block-real">
+                <h4 class="ds-faq-ans-title-real">Otimização Estratégica</h4>
+                <div class="ds-faq-divider-real"></div>
+                <p class="ds-faq-text-real">Diagnosticamos e organizamos todo o ecossistema tecnológico do seu negócio sob premissas rígidas de contenção de custos e alta estabilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-faq-card-real" onclick="activateFaq(this)">
+          <div class="ds-faq-bg-real"></div>
+          <div class="ds-faq-content-real">
+            <div class="ds-faq-top-real">
+              <span class="ds-faq-serial-real">02</span>
+              <div class="ds-faq-icon-real">
+                <svg class="ds-faq-plus-real" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <div class="ds-faq-minus-real"></div>
+              </div>
+            </div>
+            <div class="ds-faq-bottom-real">
+              <h3 class="ds-faq-q-vertical">Infraestrutura & Redes</h3>
+              <div class="ds-faq-ans-block-real">
+                <h4 class="ds-faq-ans-title-real">Redes Gigabit Cat6</h4>
+                <div class="ds-faq-divider-real"></div>
+                <p class="ds-faq-text-real">Cabeamento impecável estruturado e access points empresariais integrados, eliminando quedas de Wi-Fi de forma definitiva.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-faq-card-real" onclick="activateFaq(this)">
+          <div class="ds-faq-bg-real"></div>
+          <div class="ds-faq-content-real">
+            <div class="ds-faq-top-real">
+              <span class="ds-faq-serial-real">03</span>
+              <div class="ds-faq-icon-real">
+                <svg class="ds-faq-plus-real" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <div class="ds-faq-minus-real"></div>
+              </div>
+            </div>
+            <div class="ds-faq-bottom-real">
+              <h3 class="ds-faq-q-vertical">Segurança Eletrônica</h3>
+              <div class="ds-faq-ans-block-real">
+                <h4 class="ds-faq-ans-title-real">Proteção Patrimonial IP</h4>
+                <div class="ds-faq-divider-real"></div>
+                <p class="ds-faq-text-real">CFTV digital, fechaduras biométricas inteligentes e monitoramento por vídeo 24h na palma da sua mão.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
+
+  <script>
+    // Ativação interativa local dos painéis
+    function activateFaq(card) {
+      const allCards = document.querySelectorAll('.ds-faq-card-real');
+      allCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    }
+
+    // Adicionar escuta de mouseover local de redundância
+    const localCards = document.querySelectorAll('.ds-faq-card-real');
+    localCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        localCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>

@@ -8,10 +8,10 @@
   <title>Área do Cliente | DMR Info Tecnologia | Portal Corporativo</title>
   <meta name="description" content="Acesse o portal corporativo da DMR Info Tecnologia para gerenciar chamados técnicos, visualizar faturas e acessar relatórios de suporte.">
   
-  <!-- Google Fonts Outfit & Plus Jakarta Sans -->
+  <!-- Google Fonts Instrument Sans & Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS Master Sheets -->
   <link rel="stylesheet" href="css/style.css">
@@ -54,12 +54,34 @@
           </svg>
         </button>
 
-        <a href="area-cliente.html" class="btn-secondary magnetic-btn" id="header-client-btn" style="padding: 0.75rem 1.4rem; font-size: 0.85rem; color:#fff; border-color:var(--color-accent-cyan);">
-          <span>Área do Cliente</span>
+        <a href="area-cliente.html" class="primary-button magnetic-btn" data-variant="border" id="header-client-btn" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-color: var(--color-accent-cyan);">
+          <div class="primary-button-flex">
+            <div class="primary-button-text-wrap">
+              <div class="primary-button-text">Área do Cliente</div>
+              <div class="primary-button-text-hover">Área do Cliente</div>
+            </div>
+          </div>
+          <div class="primary-button-hover-bg"></div>
         </a>
 
-        <a href="contato.html" class="btn-primary magnetic-btn" id="header-cta">
-          <span>Solicitar Orçamento</span>
+        <a href="contato.html" class="primary-button magnetic-btn" data-variant="blue" id="header-cta" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">
+          <div class="primary-button-flex">
+            <div class="primary-button-text-wrap">
+              <div class="primary-button-text">Solicitar Orçamento</div>
+              <div class="primary-button-text-hover">Solicitar Orçamento</div>
+            </div>
+            <div class="primary-button-arrow-wrapper">
+              <div class="primary-button-arrow-wrap">
+                <svg class="primary-button-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                <svg class="primary-button-arrow-hover" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="primary-button-hover-bg"></div>
         </a>
       </div>
     </div>
