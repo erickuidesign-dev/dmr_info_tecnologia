@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="w-mod-js w-mod-ix wf-instrumentsans-n5-active wf-instrumentsans-n6-active wf-instrumentsans-n4-active wf-instrumentsans-n7-active wf-poppins-n4-active wf-poppins-n3-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-active w-mod-ix3" data-wf-domain="dmrinfo.com.br" lang="pt-BR" style="scroll-behavior: auto;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,96 @@
   <title>Área do Cliente | DMR Info Tecnologia | Portal Corporativo</title>
   <meta name="description" content="Acesse o portal corporativo da DMR Info Tecnologia para gerenciar chamados técnicos, visualizar faturas e acessar relatórios de suporte.">
   
-  <!-- Google Fonts Instrument Sans & Poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts & Stylesheets do Design System Arooth -->
+  <link href="css/arooth-base.css" rel="stylesheet" type="text/css"/>
+  <link href="css/arooth.css" rel="stylesheet" type="text/css"/>
   
-  <!-- CSS Master Sheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Estilos Customizados de Compatibilidade -->
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+  <script src="assets/webfont_3a3adf980c7d.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Instrument Sans:regular,500,600,700","Poppins:300,regular,500,600,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    !function(o,c){
+      var n=c.documentElement,t=" w-mod-";
+      n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")
+    }(window,document);
+  </script>
+
+  <link href="assets/690381784b1afbf31fe4b67e_Favic_418a0b140c8d.svg" rel="shortcut icon" type="image/x-icon"/>
+  <link href="assets/6903817abc50f00235e916df_Webcl_54075941d57d.svg" rel="apple-touch-icon"/>
+
+  <style>
+    html, body {
+      background-color: #090c15 !important;
+      color: #ffffff !important;
+      overflow-x: hidden !important;
+    }
+    .navbar {
+      background: rgba(9, 12, 21, 0.75) !important;
+      backdrop-filter: blur(25px) !important;
+      -webkit-backdrop-filter: blur(25px) !important;
+      border-bottom: 1px solid rgba(37, 109, 255, 0.15) !important;
+    }
+    .glass-card-premium {
+      background: rgba(17, 24, 39, 0.65) !important;
+      backdrop-filter: blur(25px) !important;
+      -webkit-backdrop-filter: blur(25px) !important;
+      border: 1px solid rgba(37, 109, 255, 0.2) !important;
+      border-radius: 20px !important;
+      padding: 3rem !important;
+      max-width: 480px;
+      width: 100%;
+    }
+    .hero-canvas-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group label {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #ffffff;
+    }
+    .form-group input {
+      width: 100%;
+      background: rgba(17, 24, 39, 0.5) !important;
+      border: 1px solid rgba(37, 109, 255, 0.25) !important;
+      border-radius: 10px !important;
+      padding: 0.9rem 1.2rem !important;
+      color: #ffffff !important;
+      font-family: var(--font-body) !important;
+      font-size: 0.95rem !important;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    .form-group input:focus {
+      outline: none !important;
+      border-color: #256dff !important;
+      box-shadow: 0 0 15px rgba(37, 109, 255, 0.2) !important;
+      background: rgba(17, 24, 39, 0.8) !important;
+    }
+  </style>
 </head>
-<body>
+<body style="scroll-behavior: auto;">
 
   <!-- Preloader de Elite -->
   <div id="preloader" aria-hidden="true">
@@ -27,154 +108,260 @@
   <!-- Custom Cursor Estético -->
   <div id="custom-cursor" aria-hidden="true"></div>
 
-  <!-- Header Fixo (Sticky Header) -->
-  <header class="header-sticky">
-    <div class="header-container">
-      <a href="index.html" class="logo" aria-label="Home page DMR Info">
-        DMR<span>INFO</span>
-      </a>
-      
-      <!-- Navegação Principal -->
-      <nav aria-label="Menu principal">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-item">Início</a></li>
-          <li><a href="sobre.html" class="nav-item">Sobre</a></li>
-          <li><a href="servicos.html" class="nav-item">Serviços</a></li>
-          <li><a href="contato.html" class="nav-item">Contatos</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <!-- Controle de Áudio SVG Mute -->
-        <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle">
-          <svg class="audio-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <!-- Muted default state -->
-            <path class="volume-path" d="M11 5L6 9H2v6h4l5 4V5z"/>
-            <path class="mute-slash" d="M23 9l-6 6m0-6l6 6" />
-          </svg>
-        </button>
-
-        <a href="area-cliente.html" class="primary-button magnetic-btn" data-variant="border" id="header-client-btn" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; border-color: var(--color-accent-cyan);">
-          <div class="primary-button-flex">
-            <div class="primary-button-text-wrap">
-              <div class="primary-button-text">Área do Cliente</div>
-              <div class="primary-button-text-hover">Área do Cliente</div>
-            </div>
-          </div>
-          <div class="primary-button-hover-bg"></div>
-        </a>
-
-        <a href="contato.html" class="primary-button magnetic-btn" data-variant="blue" id="header-cta" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">
-          <div class="primary-button-flex">
-            <div class="primary-button-text-wrap">
-              <div class="primary-button-text">Solicitar Orçamento</div>
-              <div class="primary-button-text-hover">Solicitar Orçamento</div>
-            </div>
-            <div class="primary-button-arrow-wrapper">
-              <div class="primary-button-arrow-wrap">
-                <svg class="primary-button-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-                <svg class="primary-button-arrow-hover" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+  <div class="page-wrapper">
+    
+    <!-- Navbar Premium do Arooth -->
+    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="0" data-easing="ease" data-easing2="ease" role="banner">
+      <div class="container navbar-container">
+        <div class="navbar-wrap">
+          <div class="navbar-flex-wrap">
+            
+            <div class="nav-flex-left">
+              <a class="main-logo-wrap w-nav-brand" href="index.html">
+                <div style="font-family: var(--font-headline); font-size: 1.7rem; font-weight: 800; color: #fff; letter-spacing: -0.03em;">
+                  DMR<span style="color: #256dff; text-shadow: 0 0 20px rgba(37, 109, 255, 0.4);">INFO</span>
+                </div>
+              </a>
+              
+              <!-- Menu Desktop Fixo -->
+              <div class="nav-links-wrapper">
+                <div class="nav-links-flex">
+                  <a class="single-nav-link w-inline-block" href="index.html"><div>Início</div></a>
+                  <a class="single-nav-link w-inline-block" href="sobre.html"><div>Sobre</div></a>
+                  <a class="single-nav-link w-inline-block" href="servicos.html"><div>Serviços</div></a>
+                  <a class="single-nav-link w-inline-block" href="contato.html"><div>Contatos</div></a>
+                </div>
               </div>
             </div>
+            
+            <div class="nav-flex-right">
+              <div class="nav-right-flex">
+                
+                <!-- Controle de Áudio Sonoro -->
+                <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle" style="background: transparent; border: 1px solid rgba(37, 109, 255, 0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #a8bee7; cursor: pointer; transition: all 0.3s ease; margin-right: 1rem;">
+                  <svg class="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path class="volume-path" d="M11 5L6 9H2v6h4l5 4V5z"/>
+                    <path class="mute-slash" d="M23 9l-6 6m0-6l6 6" />
+                  </svg>
+                </button>
+
+                <!-- Botão de Login na Header -->
+                <div class="nav-button-wrap" style="margin-right: 1rem;">
+                  <a class="primary-button w-inline-block w--current magnetic-btn" data-variant="border" href="area-cliente.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem; border-color: #256dff !important;">
+                    <div class="primary-button-flex">
+                      <div class="primary-button-text-wrap">
+                        <div class="primary-button-text">Área do Cliente</div>
+                        <div class="primary-button-text-hover">Área do Cliente</div>
+                      </div>
+                    </div>
+                    <div class="primary-button-hover-bg"></div>
+                  </a>
+                </div>
+
+                <!-- Botão CTA da Header -->
+                <div class="nav-button-wrap">
+                  <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem;">
+                    <div class="primary-button-flex">
+                      <div class="primary-button-text-wrap">
+                        <div class="primary-button-text">Solicitar Orçamento</div>
+                        <div class="primary-button-text-hover">Solicitar Orçamento</div>
+                      </div>
+                      <div class="primary-button-arrow-wrapper">
+                        <div class="primary-button-arrow-wrap">
+                          <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
+                          <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="primary-button-hover-bg"></div>
+                  </a>
+                </div>
+                
+                <!-- Menu Hambúrguer Overlay -->
+                <div class="navigations-wrapper">
+                  <nav class="navigation w-nav-menu" role="navigation" style="display: none;">
+                    <div class="container navigation-container">
+                      <div class="hamburger-wrapper">
+                        <div class="navigation-content-wrap" id="w-node-_603589df-a36e-3abb-1735-d40c05c2b1c9-b64688fb">
+                          <div class="navigation-content-block">
+                            <div class="navigation-content-wrapper">
+                              <div class="navigation-contents">
+                                <div class="navigation-links-flex">
+                                  <a class="single-navigation-links w-inline-block" href="index.html">
+                                    <div class="navigation-inline-wrap">
+                                      <div class="navigation-text-flex">
+                                        <div class="navigation-link-text">Início</div>
+                                        <div class="navigation-link-count">(01)</div>
+                                      </div>
+                                    </div>
+                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
+                                  </a>
+                                  <a class="single-navigation-links w-inline-block" href="sobre.html">
+                                    <div class="navigation-inline-wrap">
+                                      <div class="navigation-text-flex">
+                                        <div class="navigation-link-text">Sobre Nós</div>
+                                        <div class="navigation-link-count">(02)</div>
+                                      </div>
+                                    </div>
+                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
+                                  </a>
+                                  <a class="single-navigation-links w-inline-block" href="servicos.html">
+                                    <div class="navigation-inline-wrap">
+                                      <div class="navigation-text-flex">
+                                        <div class="navigation-link-text">Nossos Serviços</div>
+                                        <div class="navigation-link-count">(03)</div>
+                                      </div>
+                                    </div>
+                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
+                                  </a>
+                                  <a class="single-navigation-links w-inline-block" href="contato.html">
+                                    <div class="navigation-inline-wrap">
+                                      <div class="navigation-text-flex">
+                                        <div class="navigation-link-text">Fale Conosco</div>
+                                        <div class="navigation-link-count">(04)</div>
+                                      </div>
+                                    </div>
+                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
+                                  </a>
+                                </div>
+                                <div class="navigation-button-wrapper" style="margin-top: 2rem;">
+                                  <a class="navigation-button w-inline-block magnetic-btn" href="area-cliente.html">
+                                    <div class="navigation-button-text-wrap">
+                                      <div class="navigation-button-text">Acessar Portal do Cliente</div>
+                                      <div class="navigation-button-text absolute">Acessar Portal do Cliente</div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="navigation-bg-wrap">
+                                <div class="navigation-bg-top"></div>
+                                <div class="navigation-bg-bottom"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                  
+                  <div aria-controls="w-nav-overlay-0" aria-expanded="false" aria-haspopup="menu" aria-label="menu" class="hamburger-button w-nav-button" data-w-id="9f5a7dc5-49e2-a9c4-07e5-2c6565c6e46e" role="button" tabindex="0">
+                    <div class="hamburger-wrap">
+                      <div class="hamburger-bars-wrap">
+                        <div class="hamburger-bar _01"></div>
+                        <div class="hamburger-bar _02"></div>
+                        <div class="hamburger-bar _03"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
           </div>
-          <div class="primary-button-hover-bg"></div>
-        </a>
+        </div>
       </div>
     </div>
-  </header>
 
-  <main>
-    
     <!-- Seção Central de Login -->
-    <section class="section-padding" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding-top: 10rem;">
-      <!-- Canvas Three.js WebGL integrado no background geral da página de login -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;" aria-hidden="true">
-        <canvas id="canvas-3d" style="width: 100%; height: 100%;"></canvas>
+    <section class="section-padding" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding-top: 10rem; padding-bottom: 6rem;">
+      <!-- Three.js Constellation Canvas -->
+      <div class="hero-canvas-container" aria-hidden="true">
+        <canvas id="canvas-3d"></canvas>
       </div>
 
-      <div class="section-container" style="z-index: 2; display: flex; justify-content: center; width: 100%;">
+      <div class="container" style="position: relative; z-index: 2; display: flex; justify-content: center;">
         
-        <!-- Card de Login Glassmorphic -->
-        <div class="glass-card-premium" style="max-width: 480px; width: 100%; padding: 4rem 3rem; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
-          <div class="glow-beam" style="background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);"></div>
-          
+        <div class="glass-card-premium">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <h2 style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Portal Corporativo</h2>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Digite suas credenciais de parceiro da DMRInfo</p>
+            <h2 style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Portal do Cliente</h2>
+            <p style="color: #a8bee7; font-size: 0.95rem;">Gerencie chamados, visualize faturas e relatórios táticos de suporte.</p>
           </div>
 
-          <!-- Formulário de Login -->
-          <form class="cta-final-form" id="login-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
-            
-            <div class="form-group" style="width: 100%;">
-              <label for="login-email">CNPJ ou E-mail Cadastrado</label>
-              <input type="text" id="login-email" name="username" placeholder="00.000.000/0000-00 ou email" required style="width: 100%;">
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">E-mail ou CNPJ</label>
+              <input type="text" id="login-email" name="email" placeholder="cnpj@empresa.com.br ou 00.000.000/0001-00" required autocomplete="username">
             </div>
 
-            <div class="form-group" style="width: 100%;">
-              <label for="login-password">Senha de Acesso</label>
-              <input type="password" id="login-password" name="password" placeholder="••••••••••••" required style="width: 100%;">
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="login-password">Senha de Acesso</label>
+                <a href="#" style="font-size: 0.8rem; color: #256dff; text-decoration: none;">Esqueceu?</a>
+              </div>
+              <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
             </div>
 
-            <button type="submit" class="btn-premium-submit magnetic-btn" id="login-submit" style="width: 100%; margin-top: 1rem;">
-              <span>Acessar Painel</span>
-            </button>
-
-            <!-- Links Auxiliares -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.85rem;">
-              <a href="#recuperar" style="color: var(--color-text-secondary); text-decoration: none; transition: var(--transition-fast);" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='var(--color-text-secondary)'">Esqueceu a senha?</a>
-              <a href="contato.html" style="color: var(--color-accent-cyan); text-decoration: none; font-weight: 600; transition: var(--transition-fast);" onmouseenter="this.style.textShadow='0 0 10px rgba(6,182,212,0.4)'" onmouseleave="this.style.textShadow='none'">Suporte Técnico Expresso</a>
+            <div style="margin-top: 2rem;">
+              <button type="submit" class="primary-button w-inline-block magnetic-btn" data-variant="blue" style="width: 100%; border: none; padding: 0.9rem 2rem;">
+                <div class="primary-button-flex" style="justify-content: center; width: 100%;">
+                  <div class="primary-button-text-wrap">
+                    <div class="primary-button-text">Entrar no Sistema</div>
+                    <div class="primary-button-text-hover">Entrar no Sistema</div>
+                  </div>
+                </div>
+                <div class="primary-button-hover-bg"></div>
+              </button>
             </div>
 
+            <div id="login-feedback" class="form-feedback-hidden" style="margin-top: 1rem; text-align: center; font-weight: 600;" aria-live="polite"></div>
           </form>
 
+          <div style="margin-top: 2rem; text-align: center; border-top: 1px solid rgba(37, 109, 255, 0.15); padding-top: 1.5rem;">
+            <p style="color: #a8bee7; font-size: 0.85rem;">Problemas com seu acesso? <a href="contato.html" style="color: #256dff; text-decoration: none; font-weight: 600;">Fale com o Suporte</a></p>
+          </div>
         </div>
 
       </div>
     </section>
 
-  </main>
+    <!-- Footer Premium -->
+    <footer class="footer-section" style="background-color: #090c15; border-top: 1px solid rgba(37, 109, 255, 0.15); padding-top: 5rem; padding-bottom: 3rem;">
+      <div class="container">
+        
+        <div class="footer-grid-wrap" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; margin-bottom: 4rem;">
+          
+          <div class="footer-col-1" style="grid-column: span 5;">
+            <div style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 1.5rem;">
+              DMR<span style="color: #256dff;">INFO</span>
+            </div>
+            <p style="color: #a8bee7; font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
+              Estabilidade operacional garantida, cabeamento Gigabit de elite e segurança lógica monitorada ativamente 24h.
+            </p>
+          </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">DMR<span>INFO</span></a>
-        <p>Estabilidade operacional, redes Gigabit de alto padrão e segurança física e digital blindada para a sua empresa.</p>
+          <div class="footer-col-2" style="grid-column: span 3;">
+            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Navegação</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="index.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Início</a></li>
+              <li><a href="sobre.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Sobre Nós</a></li>
+              <li><a href="servicos.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Nossos Serviços</a></li>
+              <li><a href="contato.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Fale Conosco</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-3" style="grid-column: span 4;">
+            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Contato & Suporte</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="color: #a8bee7; font-size: 0.9rem;">contato@dmrinfo.com.br</li>
+              <li style="color: #a8bee7; font-size: 0.9rem;">+55 (11) 99999-8888</li>
+              <li style="color: #a8bee7; font-size: 0.9rem;">São Paulo, SP</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div style="border-top: 1px solid rgba(37, 109, 255, 0.1); padding-top: 2rem; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <p style="color: #a8bee7; font-size: 0.85rem;">&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design System Arooth (Webflow).</p>
+          <a href="design_system.html" style="color: #256dff; font-weight: 600; text-decoration: none; font-size: 0.85rem;">Pattern Library</a>
+        </div>
+
       </div>
+    </footer>
 
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contatos</a></li>
-        </ul>
-      </div>
+  </div>
 
-      <div class="footer-contacts">
-        <h4>Contato</h4>
-        <ul>
-          <li>contato@dmrinfo.com.br</li>
-          <li>+55 (11) 99999-8888</li>
-          <li>São Paulo, SP</li>
-        </ul>
-      </div>
-
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design & Desenvolvimento de Elite.</p>
-    </div>
-  </footer>
-
-  <!-- CDN de Bibliotecas de Elite -->
+  <!-- CDN de Bibliotecas de Alta Velocidade -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

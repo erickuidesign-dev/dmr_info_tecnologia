@@ -614,9 +614,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==========================================
-  // 8. Envio do Formulário de Lead (Qualificação)
+  // 8. Envio do Formulário de Lead & Contato (Qualificação)
   // ==========================================
-  const leadForm = document.getElementById("lead-form");
+  const leadForm = document.getElementById("lead-form") || document.getElementById("contact-form");
   const formFeedback = document.getElementById("form-feedback");
   const submitBtn = document.getElementById("submit-btn");
 
@@ -627,31 +627,31 @@ document.addEventListener("DOMContentLoaded", () => {
       // Mudar estado do botão para envio visual
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.querySelector("span").textContent = "Enviando Proposta...";
+        const btnText = submitBtn.querySelector(".primary-button-text") || submitBtn;
+        if (btnText) btnText.textContent = "Enviando Proposta...";
       }
 
-      // Simulação rápida de envio seguro com atraso de 1.2 segundos (qualidade profissional)
+      // Simulação rápida de envio seguro com atraso de 1.2 segundos
       setTimeout(() => {
-        // Emitir som de sucesso tátil
         playSuccessSound();
 
         // Mostrar feedback visual elegante
         if (formFeedback) {
           formFeedback.className = "form-feedback-success";
-          formFeedback.textContent = "Orçamento enviado com sucesso! Nosso engenheiro entrará em contato em menos de 2 horas.";
+          formFeedback.textContent = "Solicitação enviada com sucesso! Nossos engenheiros entrarão em contato em até 2 horas.";
           
-          // Animá-lo com GSAP
           gsap.fromTo(formFeedback, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" });
         }
 
         // Resetar o formulário
         leadForm.reset();
 
-        // Restaurar botão original após 3 segundos
+        // Restaurar botão original
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.querySelector("span").textContent = "Solicitar Orçamento Agora";
+            const btnText = submitBtn.querySelector(".primary-button-text") || submitBtn;
+            if (btnText) btnText.textContent = "Enviar Proposta Técnica";
           }
           if (formFeedback) {
             gsap.to(formFeedback, { 
@@ -665,6 +665,39 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           }
         }, 5000);
+
+      }, 1200);
+    });
+  }
+
+  // Portal de Login (area-cliente.html)
+  const loginForm = document.getElementById("login-form");
+  const loginFeedback = document.getElementById("login-feedback");
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const submitBtnLogin = loginForm.querySelector("button[type='submit']");
+      if (submitBtnLogin) {
+        submitBtnLogin.disabled = true;
+        const btnText = submitBtnLogin.querySelector(".primary-button-text") || submitBtnLogin;
+        if (btnText) btnText.textContent = "Autenticando...";
+      }
+
+      setTimeout(() => {
+        playSuccessSound();
+
+        if (loginFeedback) {
+          loginFeedback.className = "form-feedback-success";
+          loginFeedback.textContent = "Acesso autorizado! Redirecionando para o painel corporativo...";
+          gsap.fromTo(loginFeedback, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
+        }
+
+        setTimeout(() => {
+          // Redirecionar simulado ao painel do cliente
+          window.location.reload();
+        }, 1500);
 
       }, 1200);
     });
@@ -686,4 +719,64 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("click", triggerAction);
   });
 
+  // ==========================================
+  // 10. Hamburger Menu Cinematic Curtain Overlay (GSAP)
+  // ==========================================
+  const hamburgerBtn = document.querySelector(".hamburger-button");
+  const navMenu = document.querySelector(".navigation");
+  const bgTop = document.querySelector(".navigation-bg-top");
+  const bgBottom = document.querySelector(".navigation-bg-bottom");
+  const navWraps = document.querySelectorAll(".navigation-inline-wrap");
+  const navBtnWrap = document.querySelector(".navigation-button-wrapper");
+  let isMenuOpen = false;
+
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        navMenu.style.display = "block";
+        hamburgerBtn.classList.add("w--open");
+
+        playSuccessSound();
+
+        gsap.killTweensOf([bgTop, bgBottom, navWraps, navBtnWrap]);
+        
+        gsap.timeline()
+          .fromTo([bgTop, bgBottom], 
+            { scaleX: 0, transformOrigin: "left center" }, 
+            { scaleX: 1, duration: 0.65, ease: "power4.inOut", stagger: 0.08 })
+          .fromTo(navWraps, 
+            { y: "130%", opacity: 0 }, 
+            { y: "0%", opacity: 1, duration: 0.6, ease: "power3.out", stagger: 0.06 }, "-=0.25")
+          .fromTo(navBtnWrap, 
+            { y: 30, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, "-=0.3");
+            
+        if (lenis) lenis.stop();
+      } else {
+        hamburgerBtn.classList.remove("w--open");
+        
+        gsap.timeline({
+          onComplete: () => {
+            navMenu.style.display = "none";
+            if (lenis) lenis.start();
+          }
+        })
+        .to(navWraps, { y: "-100%", opacity: 0, duration: 0.4, ease: "power3.in", stagger: 0.04 })
+        .to(navBtnWrap, { y: -20, opacity: 0, duration: 0.3, ease: "power3.in" }, "-=0.3")
+        .to([bgTop, bgBottom], { scaleX: 0, transformOrigin: "right center", duration: 0.5, ease: "power4.inOut", stagger: 0.05 }, "-=0.2");
+      }
+    });
+
+    const menuLinks = navMenu.querySelectorAll("a");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (isMenuOpen) {
+          hamburgerBtn.click();
+        }
+      });
+    });
+  }
+
 });
+
