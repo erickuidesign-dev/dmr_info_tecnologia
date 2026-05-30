@@ -1,0 +1,151 @@
+# Briefing de Design – Site DMRInfo Tecnologia
+
+Documento oficial para orientar o designer na criação do layout visual (UI) do site.
+
+---
+
+## 1. Visão Geral do Projeto
+
+**Projeto:** Redesign completo do site institucional da DMRInfo Tecnologia
+**Objetivo principal:** Criar um site moderno, profissional e orientado à conversão, que transmita confiança, autoridade técnica e clareza nos serviços oferecidos.
+
+O site deve posicionar a DMRInfo como **empresa de tecnologia corporativa confiável**, focada em soluções de TI, infraestrutura, segurança e suporte.
+
+---
+
+## 2. Público-Alvo
+
+* Pequenas e médias empresas
+* Gestores, diretores e proprietários de empresas
+* Responsáveis por TI ou decisores técnicos
+
+**Perfil do usuário:**
+
+* Busca soluções confiáveis
+* Valoriza profissionalismo e clareza
+* Não quer linguagem excessivamente técnica
+* Quer facilidade para entrar em contato
+
+---
+
+## 3. Objetivos do Design
+
+O design deve:
+
+* Transmitir **confiança e profissionalismo**
+* Facilitar a leitura e navegação
+* Guiar o usuário até a conversão (orçamento/contato)
+* Ser moderno, limpo e organizado
+* Funcionar perfeitamente em mobile
+
+---
+
+## 4. Estilo Visual Desejado
+
+### Sensação a transmitir
+
+* Tecnologia
+* Segurança
+* Organização
+* Credibilidade
+
+### Referências conceituais
+
+* Sites corporativos de tecnologia
+* Visual limpo, com bom uso de espaçamento (white space)
+* Evitar aparência amadora ou genérica
+
+---
+
+## 5. Diretrizes de UI (Interface)
+
+### Paleta de Cores
+
+* Cor principal: tons de azul ou grafite (tecnologia/confiança)
+* Cor secundária: cinza claro / branco
+* Cor de destaque (CTA): verde ou laranja discreto
+
+### Tipografia
+
+* Fonte moderna e legível
+* Títulos fortes e bem destacados
+* Texto com bom espaçamento e contraste
+
+### Botões
+
+* CTA bem visível
+* Estados de hover claros
+* Botões primários e secundários bem definidos
+
+---
+
+## 6. Estrutura da Home (Obrigatório seguir wireframe)
+
+O layout da Home deve respeitar a seguinte hierarquia:
+
+1. Header fixo com CTA
+2. Hero section com headline forte + botões
+3. Bloco de benefícios (cards)
+4. Serviços em destaque (cards)
+5. Soluções por perfil de empresa
+6. Prova social (clientes/depoimentos)
+7. Bloco institucional resumido
+8. CTA final forte
+9. Footer completo
+
+---
+
+## 7. Componentes Importantes
+
+* Cards de serviço com ícone
+* Seções bem separadas por espaçamento
+* Ícones simples e modernos
+* Destaque visual para CTAs
+* Possível uso de ilustrações ou imagens técnicas
+
+---
+
+## 8. UX e Usabilidade
+
+* Design mobile-first
+* Leitura em padrão F/Z
+* CTA visível em todas as dobras
+* Evitar blocos de texto longos
+* Navegação simples e intuitiva
+
+---
+
+## 9. Conteúdo
+
+* O designer deve usar a **copy já definida**
+* Não criar textos novos sem alinhamento
+* Priorizar hierarquia visual do conteúdo
+
+---
+
+## 10. Entregáveis Esperados
+
+* Layout da Home page
+* Layout das páginas internas:
+
+  * Serviços
+  * Sobre
+  * Contato
+* Versão desktop e mobile
+* Design system básico (cores, fontes, botões)
+
+---
+
+## 11. Ferramenta Sugerida
+
+* Figma (preferencial)
+
+---
+
+## 12. Observações Finais
+
+O design não deve ser apenas bonito, mas **funcional e orientado à conversão**. Cada elemento visual deve ajudar o usuário a entender melhor a proposta da DMRInfo e facilitar o contato.
+
+---
+
+**Status:** Briefing pronto para envio ao designer.

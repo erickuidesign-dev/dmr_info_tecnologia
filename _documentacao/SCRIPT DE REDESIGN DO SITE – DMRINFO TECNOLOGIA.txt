@@ -1,0 +1,264 @@
+📜 SCRIPT DE REDESIGN DO SITE – DMRINFO TECNOLOGIA
+🎯 OBJETIVO DO PROJETO
+
+Reestruturar completamente o site da DMRInfo para:
+
+Melhorar clareza da proposta de valor
+
+Aumentar conversões (orçamentos e contatos)
+
+Modernizar UI/UX
+
+Melhorar SEO, performance e credibilidade
+
+Tornar o site referência em tecnologia corporativa
+
+🧩 ETAPA 1 – DIAGNÓSTICO (O que analisar)
+1.1 Análise do site atual
+
+Mapear todas as páginas existentes
+
+Identificar conteúdos redundantes ou fracos
+
+Verificar:
+
+Clareza da mensagem principal
+
+Fluxo do usuário
+
+CTAs existentes
+
+Responsividade
+
+Tempo de carregamento
+
+📌 Entrega: Relatório simples com pontos fortes, fracos e oportunidades.
+
+🗺️ ETAPA 2 – ARQUITETURA DA INFORMAÇÃO (Sitemap)
+2.1 Criar novo sitemap
+
+Implementar a seguinte estrutura:
+
+Home
+Serviços
+  - Consultoria em TI
+  - Infraestrutura e Redes
+  - Segurança Eletrônica
+  - Cloud, Backup e Servidores
+Soluções por Perfil
+  - Pequenas Empresas
+  - Médias Empresas
+  - Corporativo
+Sobre a DMRInfo
+  - Quem Somos
+  - Missão, Visão e Valores
+  - Parceiros e Certificações
+Clientes / Cases
+Contato / Orçamento
+Suporte
+Blog (opcional – SEO)
+
+
+📌 Entrega: Sitemap aprovado antes do design.
+
+🧠 ETAPA 3 – ESTRATÉGIA DE CONTEÚDO (Copywriting)
+3.1 Definir tom de voz
+
+Profissional
+
+Claro
+
+Confiante
+
+Sem linguagem técnica excessiva
+
+3.2 Estrutura de texto por página
+
+Para cada página, responder claramente:
+
+Quem somos?
+
+Que problema resolvemos?
+
+Como ajudamos?
+
+Por que confiar?
+
+Qual a próxima ação?
+
+📌 Regra:
+
+Falar menos sobre a empresa e mais sobre os problemas do cliente.
+
+🎨 ETAPA 4 – DESIGN (UI / UX)
+4.1 Criação do Design System
+
+Paleta de cores (1 principal, 1 secundária, 1 destaque)
+
+Tipografia:
+
+Títulos (fortes e modernos)
+
+Texto (limpo e legível)
+
+Estilo de ícones
+
+Botões e estados (hover, active)
+
+4.2 Wireframes (estrutura visual)
+
+Criar wireframes para:
+
+Home
+
+Serviços
+
+Sobre
+
+Contato
+
+📌 Foco:
+
+Hierarquia visual clara
+
+Espaçamento (white space)
+
+CTA visível em todas as páginas
+
+🏠 ETAPA 5 – HOME PAGE (estrutura ideal)
+5.1 Hero Section
+
+Headline clara:
+“Soluções em TI que mantêm sua empresa segura, produtiva e conectada.”
+
+Subheadline curta
+
+CTA primário: Solicitar Orçamento
+
+CTA secundário: Falar com Especialista
+
+5.2 Bloco de Benefícios
+
+Cards com ícones:
+
+Atendimento especializado
+
+Soluções sob medida
+
+Segurança e confiabilidade
+
+Suporte ágil
+
+5.3 Serviços em Destaque
+
+Cards resumidos
+
+Botão “Saiba mais”
+
+5.4 Prova Social
+
+Logos de clientes
+
+Depoimentos curtos
+
+5.5 CTA Final Forte
+
+“Pronto para melhorar a tecnologia da sua empresa?”
+
+Botão: Solicitar Orçamento Agora
+
+📄 ETAPA 6 – PÁGINAS DE SERVIÇO
+
+Para cada serviço:
+
+Estrutura padrão
+
+Problema do cliente
+
+Solução DMRInfo
+
+Benefícios claros
+
+Diferenciais
+
+CTA direto
+
+📌 Exemplo:
+
+“Sua rede vive caindo? Nós projetamos e estruturamos redes estáveis, seguras e escaláveis.”
+
+📬 ETAPA 7 – CONTATO & CONVERSÃO
+7.1 Formulário otimizado
+
+Campos essenciais:
+
+Nome
+
+Empresa
+
+Telefone / WhatsApp
+
+Serviço desejado
+
+Mensagem
+
+📌 Evitar formulários longos.
+
+7.2 CTAs fixos
+
+Botão flutuante WhatsApp
+
+CTA no menu
+
+💻 ETAPA 8 – DESENVOLVIMENTO
+8.1 Boas práticas
+
+Mobile-first
+
+SEO básico (H1, H2, meta tags)
+
+Performance (imagens otimizadas)
+
+Acessibilidade
+
+8.2 CMS
+
+WordPress, Webflow ou similar
+
+Fácil edição de conteúdo
+
+🚀 ETAPA 9 – TESTES E LANÇAMENTO
+
+Testar em:
+
+Desktop
+
+Tablet
+
+Mobile
+
+Testar formulários
+
+Testar velocidade
+
+Revisar textos
+
+📌 Só publicar após checklist completo.
+
+📊 ETAPA 10 – PÓS-LANÇAMENTO
+
+Monitorar:
+
+Acessos
+
+Conversões
+
+Taxa de rejeição
+
+Ajustar CTAs e textos
+
+Evoluir o site continuamente
+
+🏁 RESUMO EXECUTIVO (1 FRASE)
+
+O novo site da DMRInfo deve vender confiança, clareza e profissionalismo, guiando o visitante até o contato com o menor esforço possível.

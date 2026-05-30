@@ -1,0 +1,141 @@
+# Checklist Técnico – SEO e Performance
+
+Checklist prático para validação técnica do site antes e após o lançamento, focado em **ranqueamento, velocidade e experiência do usuário**.
+
+---
+
+## 1. SEO ON-PAGE (Obrigatório)
+
+### Estrutura de Conteúdo
+
+* [ ] Apenas **1 H1 por página** (principal)
+* [ ] Hierarquia correta de títulos (H2, H3)
+* [ ] Conteúdo alinhado à intenção de busca
+* [ ] Textos claros, escaneáveis e bem espaçados
+
+### Meta Tags
+
+* [ ] Meta title único por página
+* [ ] Meta description única e persuasiva
+* [ ] Títulos com até ~60 caracteres
+* [ ] Descriptions com até ~155 caracteres
+
+### URLs
+
+* [ ] URLs amigáveis
+* [ ] Sem parâmetros desnecessários
+* [ ] Sem caracteres especiais
+
+### Imagens
+
+* [ ] Nome de arquivo descritivo
+* [ ] Atributo ALT preenchido
+* [ ] Imagens otimizadas (WebP preferencial)
+
+---
+
+## 2. SEO TÉCNICO
+
+### Indexação
+
+* [ ] Sitemap.xml gerado e enviado ao Google Search Console
+* [ ] Robots.txt configurado corretamente
+* [ ] Páginas importantes indexáveis
+* [ ] Páginas sensíveis bloqueadas
+
+### Estrutura Técnica
+
+* [ ] HTTPS ativo
+* [ ] Canonical tags configuradas
+* [ ] Redirecionamentos 301 corretos
+* [ ] Sem erros 404 críticos
+
+---
+
+## 3. SEO LOCAL (ALTAMENTE RECOMENDADO)
+
+* [ ] Nome, endereço e telefone consistentes (NAP)
+* [ ] Página de contato clara
+* [ ] Integração com Google Maps
+* [ ] Conteúdo com termos regionais (cidade/região)
+
+---
+
+## 4. PERFORMANCE (CORE WEB VITALS)
+
+### Carregamento
+
+* [ ] Imagens com lazy loading
+* [ ] CSS e JS minificados
+* [ ] Scripts carregados de forma assíncrona
+* [ ] Uso de cache
+
+### Métricas desejadas
+
+* [ ] LCP < 2.5s
+* [ ] INP < 200ms
+* [ ] CLS < 0.1
+
+---
+
+## 5. MOBILE-FIRST
+
+* [ ] Site totalmente responsivo
+* [ ] Fontes legíveis em mobile
+* [ ] Botões clicáveis sem erro
+* [ ] Menu funcional em telas pequenas
+
+---
+
+## 6. UX E CONVERSÃO
+
+* [ ] CTA visível acima da dobra
+* [ ] CTA repetido ao longo da página
+* [ ] Formulários funcionando corretamente
+* [ ] Feedback visual ao enviar formulário
+
+---
+
+## 7. ACESSIBILIDADE (BÁSICO)
+
+* [ ] Contraste adequado de cores
+* [ ] Textos legíveis
+* [ ] Navegação por teclado possível
+* [ ] Labels associados aos inputs
+
+---
+
+## 8. SEGURANÇA
+
+* [ ] HTTPS obrigatório
+* [ ] Proteção contra spam nos formulários
+* [ ] Atualizações automáticas (CMS)
+
+---
+
+## 9. FERRAMENTAS DE VALIDAÇÃO
+
+* [ ] Google PageSpeed Insights
+* [ ] Google Search Console
+* [ ] Google Analytics / GA4
+* [ ] Lighthouse
+
+---
+
+## 10. CHECKLIST FINAL DE LANÇAMENTO
+
+* [ ] Todas as páginas revisadas
+* [ ] Links internos funcionando
+* [ ] Formulários testados
+* [ ] SEO básico validado
+* [ ] Performance validada
+
+---
+
+## CRITÉRIO DE APROVAÇÃO
+
+O site só deve ser publicado quando **todos os itens críticos estiverem marcados**, garantindo boa performance, SEO sólido e ótima experiência ao usuário.
+
+---
+
+**Status:** Checklist técnico pronto para uso em homologação e pós-lançamento.

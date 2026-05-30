@@ -1,0 +1,188 @@
+# Wireframe – Home Page (DMRInfo Tecnologia)
+
+Este wireframe define **estrutura, hierarquia e blocos de conteúdo** da Home, focado em conversão, clareza e credibilidade.
+
+---
+
+## 1. Header (fixo / sticky)
+
+**Objetivo:** navegação clara + CTA sempre visível
+
+**Elementos:**
+
+* Logo DMRInfo (lado esquerdo)
+* Menu principal:
+
+  * Serviços
+  * Soluções
+  * Sobre
+  * Clientes
+  * Contato
+* Botão CTA (destaque): **Solicitar Orçamento**
+
+---
+
+## 2. Hero Section (primeira dobra)
+
+**Objetivo:** deixar claro em 5 segundos o que a empresa faz
+
+**Layout:**
+
+* Lado esquerdo (texto)
+* Lado direito (imagem / ilustração tech)
+
+**Conteúdo:**
+
+* Headline (H1):
+  **Soluções em TI para empresas que exigem segurança, performance e confiabilidade**
+
+* Subheadline:
+  Infraestrutura, redes, segurança e suporte técnico especializado para o seu negócio.
+
+* Botões:
+
+  * CTA primário: **Solicitar Orçamento**
+  * CTA secundário: **Falar com um Especialista**
+
+---
+
+## 3. Bloco de Benefícios (4 cards)
+
+**Objetivo:** mostrar valor rapidamente
+
+**Layout:** 4 cards horizontais
+
+**Cards:**
+
+* Atendimento Especializado
+* Soluções Sob Medida
+* Segurança e Confiabilidade
+* Suporte Ágil
+
+Cada card:
+
+* Ícone
+* Título curto
+* Descrição em 1 linha
+
+---
+
+## 4. Serviços em Destaque
+
+**Objetivo:** apresentar o que a empresa faz sem sobrecarregar
+
+**Layout:** grid 2x2 ou 3x2
+
+**Cards de serviço:**
+
+* Consultoria em TI
+* Infraestrutura e Redes
+* Segurança Eletrônica
+* Cloud, Backup e Servidores
+
+Cada card:
+
+* Ícone
+* Nome do serviço
+* Frase focada no problema do cliente
+* Botão: **Saiba mais**
+
+---
+
+## 5. Bloco “Como Podemos Ajudar Sua Empresa”
+
+**Objetivo:** falar com diferentes perfis de cliente
+
+**Layout:** 3 colunas
+
+**Perfis:**
+
+* Pequenas Empresas
+* Médias Empresas
+* Corporativo
+
+Cada bloco:
+
+* Ícone
+* Breve descrição
+* Link: **Ver soluções**
+
+---
+
+## 6. Prova Social / Clientes
+
+**Objetivo:** gerar confiança
+
+**Layout:**
+
+* Logos de clientes
+* 1 ou 2 depoimentos curtos
+
+**Depoimento:**
+
+* Frase curta
+* Nome + Empresa
+
+---
+
+## 7. Bloco Institucional (Sobre resumido)
+
+**Objetivo:** humanizar a marca
+
+**Layout:**
+
+* Texto à esquerda
+* Imagem da equipe ou ambiente técnico à direita
+
+**Conteúdo:**
+
+* Quem é a DMRInfo
+* Anos de experiência
+* Diferenciais
+
+Botão: **Conheça a DMRInfo**
+
+---
+
+## 8. CTA Final (conversão forte)
+
+**Objetivo:** converter o visitante
+
+**Layout:** full width, fundo contrastante
+
+**Texto:**
+Pronto para melhorar a tecnologia da sua empresa?
+
+**Botão grande:**
+👉 **Solicitar Orçamento Agora**
+
+---
+
+## 9. Footer Completo
+
+**Objetivo:** navegação secundária + credibilidade
+
+**Colunas:**
+
+* Logo + breve descrição
+* Links rápidos
+* Serviços
+* Contato
+
+**Extras:**
+
+* WhatsApp
+* E-mail
+* Redes sociais
+* Direitos autorais
+
+---
+
+## Observações de UX
+
+* CTA visível em todas as dobras
+* Espaçamento generoso (white space)
+* Mobile-first
+* Leitura em Z / F-pattern
+* Clareza acima de tudo
+

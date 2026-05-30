@@ -1,0 +1,176 @@
+# Briefing Técnico – Desenvolvimento do Site DMRInfo Tecnologia
+
+Documento para orientar o **desenvolvedor** na construção do site, garantindo fidelidade ao design, performance, SEO e conversão.
+
+---
+
+## 1. Visão Geral do Projeto
+
+**Projeto:** Desenvolvimento do novo site institucional da DMRInfo Tecnologia
+**Base do projeto:**
+
+* Wireframe aprovado
+* Layout UI (Figma)
+* Copy completa definida
+
+O desenvolvimento deve seguir **rigorosamente** o layout e a hierarquia visual definidos no design.
+
+---
+
+## 2. Objetivos Técnicos
+
+* Site rápido, responsivo e estável
+* Excelente experiência em mobile
+* Estrutura preparada para SEO
+* Fácil manutenção e atualização
+* Foco em conversão (orçamentos e contato)
+
+---
+
+## 3. Stack / Tecnologia Sugerida
+
+> Pode ser ajustada conforme expertise do dev
+
+### Opções recomendadas
+
+* **CMS:** WordPress / Webflow / Headless CMS
+* **Frontend:** HTML5, CSS3, JS (ou framework se necessário)
+* **Hospedagem:** Ambiente otimizado (cache, CDN se possível)
+
+📌 Prioridade: simplicidade, performance e segurança.
+
+---
+
+## 4. Estrutura de Páginas
+
+### Páginas obrigatórias
+
+* Home
+* Serviços (com páginas individuais)
+* Soluções por perfil
+* Sobre a DMRInfo
+* Clientes / Cases
+* Contato / Orçamento
+
+---
+
+## 5. Requisitos de Layout
+
+* Fidelidade total ao design (cores, espaçamento, tipografia)
+* Header fixo (sticky)
+* CTAs visíveis em todas as páginas
+* Grid consistente
+* Design mobile-first
+
+---
+
+## 6. Responsividade
+
+Obrigatório testar e otimizar para:
+
+* Desktop
+* Tablet
+* Mobile
+
+📌 Menus, botões e formulários devem ser totalmente funcionais em telas pequenas.
+
+---
+
+## 7. Performance
+
+### Boas práticas obrigatórias
+
+* Imagens otimizadas (WebP se possível)
+* Lazy loading
+* Minificação de CSS e JS
+* Evitar scripts desnecessários
+
+**Meta:**
+
+* Boa pontuação em PageSpeed (desktop e mobile)
+
+---
+
+## 8. SEO Técnico (mínimo obrigatório)
+
+* Estrutura correta de H1, H2, H3
+* Meta title e meta description editáveis
+* URLs amigáveis
+* Sitemap.xml
+* Robots.txt
+* Imagens com alt text
+
+---
+
+## 9. Conversão e UX
+
+### CTAs
+
+* Botões funcionais em todas as páginas
+* CTA principal: Solicitar Orçamento
+
+### Formulário
+
+* Validação de campos
+* Feedback visual (envio com sucesso / erro)
+* Envio para e-mail configurado
+* Integração com WhatsApp (se solicitado)
+
+---
+
+## 10. Segurança
+
+* HTTPS obrigatório
+* Atualizações automáticas (se WordPress)
+* Proteção básica contra spam em formulários
+
+---
+
+## 11. Conteúdo
+
+* Usar exclusivamente a copy fornecida
+* Conteúdo deve ser facilmente editável no CMS
+* Não alterar textos sem aprovação
+
+---
+
+## 12. Integrações (se aplicável)
+
+* WhatsApp flutuante
+* Google Analytics / Tag Manager
+* Google Search Console
+
+---
+
+## 13. Testes Obrigatórios
+
+Antes da entrega:
+
+* Testar formulários
+* Testar links e CTAs
+* Testar responsividade
+* Testar carregamento
+
+---
+
+## 14. Entregáveis Esperados
+
+* Site funcional em produção ou staging
+* Acesso administrativo (CMS)
+* Código organizado
+* Orientação básica para manutenção
+
+---
+
+## 15. Critério de Aceite
+
+O projeto será considerado concluído quando:
+
+* Estiver fiel ao layout aprovado
+* Todas as páginas funcionarem corretamente
+* Formulários ativos
+* Site responsivo e rápido
+
+---
+
+**Status:** Briefing técnico pronto para envio ao desenvolvedor.
