@@ -281,6 +281,32 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
+    // Efeito de Skew/Tilt Dinâmico nos Bento Cards (Motion de Scroll do DS)
+    let proxy = { skew: 0 },
+        skewSetter = gsap.quickSetter(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", "skewY", "deg"),
+        clamp = gsap.utils.clamp(-6, 6);
+
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -400);
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+          proxy.skew = skew;
+          gsap.to(proxy, {
+            skew: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            overwrite: "auto",
+            onUpdate: () => skewSetter(proxy.skew)
+          });
+        }
+      }
+    });
+
+    gsap.set(".glass-card-premium, .service-card, .sol-card, .ds-faq-card-real", { 
+      transformOrigin: "center center", 
+      force3D: true 
+    });
+
     // Animação Hero Entrada
     gsap.from(".headline-xl", {
       y: 50,
