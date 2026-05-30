@@ -35,25 +35,26 @@
 
   <style>
     html, body {
-      background-color: #090c15 !important;
-      color: #ffffff !important;
+      background-color: var(--color-bg) !important;
+      color: var(--color-text-primary) !important;
       overflow-x: hidden !important;
     }
     .navbar {
-      background: rgba(9, 12, 21, 0.75) !important;
+      background: rgba(255, 255, 255, 0.8) !important;
       backdrop-filter: blur(25px) !important;
       -webkit-backdrop-filter: blur(25px) !important;
-      border-bottom: 1px solid rgba(37, 109, 255, 0.15) !important;
+      border-bottom: 1px solid var(--color-border) !important;
     }
     .glass-card-premium {
-      background: rgba(17, 24, 39, 0.65) !important;
+      background: var(--color-card-bg) !important;
       backdrop-filter: blur(25px) !important;
       -webkit-backdrop-filter: blur(25px) !important;
-      border: 1px solid rgba(37, 109, 255, 0.2) !important;
+      border: 1px solid var(--color-border) !important;
       border-radius: 20px !important;
       padding: 3rem !important;
       max-width: 480px;
       width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 64, 193, 0.04) !important;
     }
     .hero-canvas-container {
       position: absolute;
@@ -63,7 +64,7 @@
       height: 100%;
       z-index: 1;
       pointer-events: none;
-      opacity: 0.6;
+      opacity: 0.8;
     }
     
     .form-group {
@@ -76,15 +77,15 @@
       font-family: var(--font-headline);
       font-weight: 600;
       font-size: 0.95rem;
-      color: #ffffff;
+      color: var(--color-text-primary);
     }
     .form-group input {
       width: 100%;
-      background: rgba(17, 24, 39, 0.5) !important;
-      border: 1px solid rgba(37, 109, 255, 0.25) !important;
+      background: #ffffff !important;
+      border: 1px solid var(--color-border) !important;
       border-radius: 10px !important;
       padding: 0.9rem 1.2rem !important;
-      color: #ffffff !important;
+      color: var(--color-text-primary) !important;
       font-family: var(--font-body) !important;
       font-size: 0.95rem !important;
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
@@ -92,8 +93,8 @@
     .form-group input:focus {
       outline: none !important;
       border-color: #256dff !important;
-      box-shadow: 0 0 15px rgba(37, 109, 255, 0.2) !important;
-      background: rgba(17, 24, 39, 0.8) !important;
+      box-shadow: 0 0 15px rgba(37, 109, 255, 0.15) !important;
+      background: #ffffff !important;
     }
   </style>
 </head>
@@ -118,8 +119,8 @@
             
             <div class="nav-flex-left">
               <a class="main-logo-wrap w-nav-brand" href="index.html">
-                <div style="font-family: var(--font-headline); font-size: 1.7rem; font-weight: 800; color: #fff; letter-spacing: -0.03em;">
-                  DMR<span style="color: #256dff; text-shadow: 0 0 20px rgba(37, 109, 255, 0.4);">INFO</span>
+                <div style="font-family: var(--font-headline); font-size: 1.7rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em;">
+                  DMR<span style="color: #256dff;">INFO</span>
                 </div>
               </a>
               
@@ -138,7 +139,7 @@
               <div class="nav-right-flex">
                 
                 <!-- Controle de Áudio Sonoro -->
-                <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle" style="background: transparent; border: 1px solid rgba(37, 109, 255, 0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #a8bee7; cursor: pointer; transition: all 0.3s ease; margin-right: 1rem;">
+                <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle" style="background: transparent; border: 1px solid rgba(37, 109, 255, 0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease; margin-right: 1rem;">
                   <svg class="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <path class="volume-path" d="M11 5L6 9H2v6h4l5 4V5z"/>
                     <path class="mute-slash" d="M23 9l-6 6m0-6l6 6" />
@@ -147,14 +148,14 @@
 
                 <!-- Botão de Login na Header -->
                 <div class="nav-button-wrap" style="margin-right: 1rem;">
-                  <a class="primary-button w-inline-block w--current magnetic-btn" data-variant="border" href="area-cliente.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem; border-color: #256dff !important;">
+                  <a class="primary-button w-inline-block w--current magnetic-btn" data-variant="border" href="area-cliente.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem; border-color: #256dff !important; color: #0040c1;">
                     <div class="primary-button-flex">
                       <div class="primary-button-text-wrap">
                         <div class="primary-button-text">Área do Cliente</div>
                         <div class="primary-button-text-hover">Área do Cliente</div>
                       </div>
                     </div>
-                    <div class="primary-button-hover-bg"></div>
+                    <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
                   </a>
                 </div>
 
@@ -274,8 +275,8 @@
         
         <div class="glass-card-premium">
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <h2 style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Portal do Cliente</h2>
-            <p style="color: #a8bee7; font-size: 0.95rem;">Gerencie chamados, visualize faturas e relatórios táticos de suporte.</p>
+            <h2 style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">Portal do Cliente</h2>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Gerencie chamados, visualize faturas e relatórios táticos de suporte.</p>
           </div>
 
           <form id="login-form">
@@ -300,15 +301,15 @@
                     <div class="primary-button-text-hover">Entrar no Sistema</div>
                   </div>
                 </div>
-                <div class="primary-button-hover-bg"></div>
+                <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
               </button>
             </div>
 
             <div id="login-feedback" class="form-feedback-hidden" style="margin-top: 1rem; text-align: center; font-weight: 600;" aria-live="polite"></div>
           </form>
 
-          <div style="margin-top: 2rem; text-align: center; border-top: 1px solid rgba(37, 109, 255, 0.15); padding-top: 1.5rem;">
-            <p style="color: #a8bee7; font-size: 0.85rem;">Problemas com seu acesso? <a href="contato.html" style="color: #256dff; text-decoration: none; font-weight: 600;">Fale com o Suporte</a></p>
+          <div style="margin-top: 2rem; text-align: center; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+            <p style="color: var(--color-text-secondary); font-size: 0.85rem;">Problemas com seu acesso? <a href="contato.html" style="color: #256dff; text-decoration: none; font-weight: 600;">Fale com o Suporte</a></p>
           </div>
         </div>
 
@@ -316,43 +317,43 @@
     </section>
 
     <!-- Footer Premium -->
-    <footer class="footer-section" style="background-color: #090c15; border-top: 1px solid rgba(37, 109, 255, 0.15); padding-top: 5rem; padding-bottom: 3rem;">
+    <footer class="footer-section" style="background-color: #ffffff; border-top: 1px solid var(--color-border); padding-top: 5rem; padding-bottom: 3rem;">
       <div class="container">
         
         <div class="footer-grid-wrap" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; margin-bottom: 4rem;">
           
           <div class="footer-col-1" style="grid-column: span 5;">
-            <div style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 1.5rem;">
+            <div style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em; margin-bottom: 1.5rem;">
               DMR<span style="color: #256dff;">INFO</span>
             </div>
-            <p style="color: #a8bee7; font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
               Estabilidade operacional garantida, cabeamento Gigabit de elite e segurança lógica monitorada ativamente 24h.
             </p>
           </div>
 
           <div class="footer-col-2" style="grid-column: span 3;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Navegação</h4>
+            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Navegação</h4>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li><a href="index.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Início</a></li>
-              <li><a href="sobre.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Sobre Nós</a></li>
-              <li><a href="servicos.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Nossos Serviços</a></li>
-              <li><a href="contato.html" style="color: #a8bee7; text-decoration: none; font-size: 0.9rem;">Fale Conosco</a></li>
+              <li><a href="index.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Início</a></li>
+              <li><a href="sobre.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Sobre Nós</a></li>
+              <li><a href="servicos.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Nossos Serviços</a></li>
+              <li><a href="contato.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Fale Conosco</a></li>
             </ul>
           </div>
 
           <div class="footer-col-3" style="grid-column: span 4;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Contato & Suporte</h4>
+            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Contato & Suporte</h4>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="color: #a8bee7; font-size: 0.9rem;">contato@dmrinfo.com.br</li>
-              <li style="color: #a8bee7; font-size: 0.9rem;">+55 (11) 99999-8888</li>
-              <li style="color: #a8bee7; font-size: 0.9rem;">São Paulo, SP</li>
+              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">contato@dmrinfo.com.br</li>
+              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">+55 (11) 99999-8888</li>
+              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">São Paulo, SP</li>
             </ul>
           </div>
 
         </div>
 
-        <div style="border-top: 1px solid rgba(37, 109, 255, 0.1); padding-top: 2rem; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-          <p style="color: #a8bee7; font-size: 0.85rem;">&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design System Arooth (Webflow).</p>
+        <div style="border-top: 1px solid var(--color-border); padding-top: 2rem; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <p style="color: var(--color-text-secondary); font-size: 0.85rem;">&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design System Arooth (Webflow).</p>
           <a href="design_system.html" style="color: #256dff; font-weight: 600; text-decoration: none; font-size: 0.85rem;">Pattern Library</a>
         </div>
 

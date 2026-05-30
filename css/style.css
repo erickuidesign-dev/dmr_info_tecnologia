@@ -1,7 +1,7 @@
 /* DMR Info Tecnologia - Premium Stylesheet (Awwwards Aura Standard) */
 
 :root {
-  /* DNA Visual - Paleta Cromática Arooth-DMR HSL & HEX Premium */
+  /* DNA Visual - Paleta Cromática Arooth Light Mode Premium */
   --arooth-primary: #0040c1;
   --arooth-blue-crayola: #256dff;
   --arooth-eerie-black: #111827;
@@ -9,15 +9,15 @@
   --arooth-ghost-white: #f9f9f9;
   --arooth-azureish-white: #d1e0ff;
 
-  --color-bg: #090c15;                       /* Preto Azulado Espacial Profundo */
-  --color-surface: #111827;                  /* Eerie Black do Arooth */
+  --color-bg: #f9f9f9;                       /* Ghost White do Arooth */
+  --color-surface: #ffffff;                  /* Branco puro */
   --color-accent-cobalt: #0040c1;            /* Primary Blue do Arooth */
   --color-accent-cyan: #256dff;              /* Blue Crayola do Arooth (Super vibrante) */
   --color-accent-orange: #ff6b00;            /* Cyber Laranja Ativo */
-  --color-text-primary: #ffffff;             /* Branco puro */
-  --color-text-secondary: #a8bee7;           /* Azureish White suave e escaneável */
-  --color-border: rgba(37, 109, 255, 0.15);  /* Borda sutil de azul cobalto */
-  --color-card-bg: rgba(17, 24, 39, 0.65);   /* Card Translúcido Eerie Black */
+  --color-text-primary: #111827;             /* Eerie Black para contraste */
+  --color-text-secondary: #475569;           /* Independence Cinza */
+  --color-border: #d1e0ff;                   /* Azureish White */
+  --color-card-bg: rgba(255, 255, 255, 0.85); /* Card Translúcido Claro */
   
   /* Tipografia do Arooth */
   --font-headline: 'Instrument Sans', sans-serif;
@@ -139,9 +139,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(4, 8, 17, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-bottom: 1px solid var(--color-border);
   transition: var(--transition-bezier);
 }
@@ -159,14 +159,14 @@ body {
   font-family: var(--font-headline);
   font-size: 1.6rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--color-text-primary);
   text-decoration: none;
   letter-spacing: -0.02em;
 }
 
 .logo span {
-  color: var(--color-accent-cobalt);
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  color: var(--color-accent-cyan);
+  text-shadow: 0 0 20px rgba(37, 109, 255, 0.2);
 }
 
 .nav-links {
@@ -185,7 +185,7 @@ body {
 }
 
 .nav-item:hover {
-  color: #fff;
+  color: var(--color-accent-cyan);
 }
 
 .header-actions {

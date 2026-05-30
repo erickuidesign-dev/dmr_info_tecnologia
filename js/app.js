@@ -175,13 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-    // Material de Partícula (Ciano Brilhante Neon)
+    // Material de Partícula (Azul Cobalto Arooth)
     const material = new THREE.PointsMaterial({
       size: 0.35,
-      color: new THREE.Color(0x06b6d4),
+      color: new THREE.Color(0x0040c1),
       transparent: true,
-      opacity: 0.8,
-      blending: THREE.AdditiveBlending
+      opacity: 0.7,
+      blending: THREE.NormalBlending
     });
 
     const particleSystem = new THREE.Points(geometry, material);
@@ -189,9 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Linhas conectivas dinâmicas
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x2563eb,
+      color: 0x256dff,
       transparent: true,
-      opacity: 0.08
+      opacity: 0.18
     });
     let lineSegments = new THREE.LineSegments(new THREE.BufferGeometry(), lineMaterial);
     scene.add(lineSegments);
