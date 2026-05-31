@@ -674,15 +674,15 @@ document.addEventListener("DOMContentLoaded", () => {
       actionId: "modal-action-redes"
     },
     seguranca: {
-      title: "Segurança Eletrônica & CFTV IP",
-      description: "Proteção física profissional ativa para seus espaços comerciais, escritórios ou condomínios. Planejamos e instalamos câmeras IP de altíssima definição (Full HD/4K) com monitoramento remoto seguro pelo celular. Implementamos fechaduras digitais e controle de acessos biométricos estruturados.",
+      title: "Segurança Cibernética & LGPD",
+      description: "Proteção digital corporativa ativa para sua rede, computadores e dados críticos. Implementamos firewalls de próxima geração, antivírus corporativo avançado (EDR) com monitoramento proativo e redes virtuais privadas (VPNs) seguras. Realizamos auditorias completas de segurança e consultoria de conformidade com a LGPD.",
       bullets: [
-        "Câmeras IP com Gravação Segura",
-        "Acesso Remoto Rápido via Aplicativo",
-        "Controle de Acessos Biométricos/Cartão",
-        "Integração com Portaria Remota Eficiente"
+        "Firewalls de Próxima Geração (NGFW)",
+        "Antivírus Avançado e Endpoint (EDR)",
+        "VPNs Seguras de Acesso Remoto",
+        "Adequação e Consultoria LGPD"
       ],
-      ctaText: "Solicitar Visita de Segurança",
+      ctaText: "Solicitar Análise de Segurança",
       actionId: "modal-action-seguranca"
     },
     cloud: {

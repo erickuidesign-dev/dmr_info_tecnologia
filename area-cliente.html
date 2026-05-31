@@ -1,375 +1,266 @@
 <!DOCTYPE html>
-<html class="w-mod-js w-mod-ix wf-instrumentsans-n5-active wf-instrumentsans-n6-active wf-instrumentsans-n4-active wf-instrumentsans-n7-active wf-poppins-n4-active wf-poppins-n3-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-active w-mod-ix3" data-wf-domain="dmrinfo.com.br" lang="pt-BR" style="scroll-behavior: auto;">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>DMR Info Tecnologia | TI Corporativa de Elite</title>
   
-  <!-- SEO Meta Tags -->
-  <title>Área do Cliente | DMR Info Tecnologia | Portal Corporativo</title>
-  <meta name="description" content="Acesse o portal corporativo da DMR Info Tecnologia para gerenciar chamados técnicos, visualizar faturas e acessar relatórios de suporte.">
-  
-  <!-- Google Fonts & Stylesheets do Design System Arooth -->
-  <link href="css/arooth-base.css" rel="stylesheet" type="text/css"/>
-  <link href="css/arooth.css" rel="stylesheet" type="text/css"/>
-  
-  <!-- Estilos Customizados de Compatibilidade -->
-  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <script src="assets/resource_3fa48481346f.js"></script>
+  <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
+  <link href="assets/css2_79567371cedd.css" rel="stylesheet"/>
 
-  <script src="assets/webfont_3a3adf980c7d.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: ["Instrument Sans:regular,500,600,700","Poppins:300,regular,500,600,700"]
+  <style>
+    @keyframes auraAmbientDriftOne { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 35% { transform: translate3d(4vw, 3vh, 0) scale(1.06); } 70% { transform: translate3d(-2vw, 5vh, 0) scale(0.98); } }
+    @keyframes auraAmbientDriftTwo { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 40% { transform: translate3d(-4vw, -3vh, 0) scale(1.08); } 75% { transform: translate3d(3vw, -5vh, 0) scale(0.96); } }
+    @keyframes auraAmbientDriftThree { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(2vw, -4vh, 0) scale(1.05); } }
+    @keyframes auraDotDrift { 0% { background-position: 0 0; } 100% { background-position: 4rem 4rem; } }
+    .aura-bg-blob-one { animation: auraAmbientDriftOne 26s ease-in-out infinite; }
+    .aura-bg-blob-two { animation: auraAmbientDriftTwo 32s ease-in-out infinite; }
+    .aura-bg-blob-three { animation: auraAmbientDriftThree 30s ease-in-out infinite; }
+    .aura-bg-dots { animation: auraDotDrift 38s linear infinite; }
+    @keyframes aura-float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes aura-bubble-in { 0% { opacity: 0; transform: translateX(18px) translateY(8px) scale(0.96); filter: blur(6px); } 100% { opacity: 1; transform: translateX(0) translateY(0) scale(1); filter: blur(0); } }
+    @keyframes aura-card-in { 0% { opacity: 0; transform: translateY(12px); } 100% { opacity: 1; transform: translateY(0); } }
+    .aura-float-bubble { opacity: 0; animation: aura-bubble-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards, aura-float-soft 4.5s ease-in-out infinite; }
+    .aura-hero-card { opacity: 0; animation: aura-card-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    html { scroll-behavior: smooth; }
+    h1, h2, h3, h4, h5, h6, .font-headline {
+      font-family: 'Impact', 'Arial Black', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 400 !important;
+    }
+    
+    /* Brand Color Theme Overrides */
+    body {
+      background-color: #F1F1F1 !important;
+    }
+    #preloader {
+      background-color: #F1F1F1 !important;
+    }
+    .text-blue-600, .hover\:text-blue-600:hover { color: #0668AB !important; }
+    .text-blue-500, .hover\:text-blue-500:hover { color: #0195D9 !important; }
+    .text-blue-400, .hover\:text-blue-400:hover { color: #009FE3 !important; }
+    
+    .bg-blue-600, .hover\:bg-blue-600:hover { background-color: #0668AB !important; }
+    .bg-blue-500, .hover\:bg-blue-500:hover { background-color: #0195D9 !important; }
+    .bg-blue-50 { background-color: rgba(6, 104, 171, 0.08) !important; }
+    .bg-blue-500\/10 { background-color: rgba(1, 149, 217, 0.1) !important; }
+    
+    .border-blue-600 { border-color: #0668AB !important; }
+    .border-blue-700 { border-color: #0668AB !important; }
+    .border-t-blue-600 { border-top-color: #0668AB !important; }
+    
+    .from-blue-500 { --tw-gradient-from: #0195D9 !important; --tw-gradient-to: rgba(1, 149, 217, 0) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+    .to-blue-600 { --tw-gradient-to: #0668AB !important; }
+    
+    .text-slate-950, .text-slate-900 { color: #000000 !important; }
+  </style>
+</head>
+<body class="bg-[#f3f5f8] text-slate-900 font-['Inter',sans-serif] min-h-screen relative overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Background Effects -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <!-- WebGL Particle/Fluid Liquid Shader from Aura Design System -->
+    <div class="aura-background-component absolute inset-0 opacity-80" data-alpha-mask="80" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
+      <div class="absolute inset-0" data-us-project="ty3N7ZPaIU7KlWixQFIc"></div>
+      <script type="text/javascript">
+        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+      </script>
+    </div>
+    <!-- Moving CSS blobs as high-performance GPU-accelerated backups -->
+    <div class="aura-bg-blob-one absolute top-[-12%] left-[-12%] w-[52vw] h-[52vw] rounded-full bg-blue-200/35 blur-[7.5rem] will-change-transform"></div>
+    <div class="aura-bg-blob-two absolute bottom-[-18%] right-[-10%] w-[62vw] h-[62vw] rounded-full bg-sky-200/22 blur-[8.75rem] will-change-transform"></div>
+    <div class="aura-bg-blob-three absolute top-[36%] left-[36%] w-[30vw] h-[30vw] rounded-full bg-white/55 blur-[5rem] will-change-transform"></div>
+    <div class="aura-bg-dots absolute inset-0 opacity-[0.22]" style="background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,0.09) 1px, transparent 0); background-size: 2rem 2rem;"></div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-[#f3f5f8] z-[9999] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
+    <div class="relative flex flex-col items-center">
+      <!-- Animated glowing background ring -->
+      <div class="absolute w-56 h-56 rounded-full bg-blue-500/10 blur-2xl animate-pulse"></div>
+      
+      <!-- Rotating outer track -->
+      <div class="w-48 h-48 rounded-full border border-slate-200 border-t-2 border-t-blue-600 animate-spin" style="animation-duration: 1.2s;"></div>
+      
+      <!-- Inner logo icon centered -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <img src="assets/svg_logotype_01.svg" alt="DMR Logo Icon" class="w-40 h-40 animate-pulse" />
+      </div>
+    </div>
+    
+    <!-- Micro-progress status indicator -->
+    <div class="mt-8 flex flex-col items-center gap-2">
+      <span class="text-[10px] font-semibold text-slate-400 tracking-[0.2em] uppercase font-mono animate-pulse">Inicializando Sistema</span>
+      <div class="w-28 h-[2px] bg-slate-200/80 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full w-0 transition-all duration-500 ease-out" id="preloader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth Preloader handler
+    window.addEventListener('DOMContentLoaded', () => {
+      const bar = document.getElementById('preloader-bar');
+      if (bar) {
+        setTimeout(() => bar.style.width = '30%', 100);
+        setTimeout(() => bar.style.width = '65%', 300);
+        setTimeout(() => bar.style.width = '100%', 550);
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      const bar = document.getElementById('preloader-bar');
+      if (preloader) {
+        if (bar) bar.style.width = '100%';
+        setTimeout(() => {
+          preloader.classList.add('opacity-0', 'pointer-events-none');
+        }, 650);
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1350);
       }
     });
   </script>
-  <script type="text/javascript">
-    !function(o,c){
-      var n=c.documentElement,t=" w-mod-";
-      n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")
-    }(window,document);
-  </script>
 
-  <link href="assets/690381784b1afbf31fe4b67e_Favic_418a0b140c8d.svg" rel="shortcut icon" type="image/x-icon"/>
-  <link href="assets/6903817abc50f00235e916df_Webcl_54075941d57d.svg" rel="apple-touch-icon"/>
-
-  <style>
-    html, body {
-      background-color: var(--color-bg) !important;
-      color: var(--color-text-primary) !important;
-      overflow-x: hidden !important;
-    }
-    .navbar {
-      background: rgba(255, 255, 255, 0.8) !important;
-      backdrop-filter: blur(25px) !important;
-      -webkit-backdrop-filter: blur(25px) !important;
-      border-bottom: 1px solid var(--color-border) !important;
-    }
-    .glass-card-premium {
-      background: var(--color-card-bg) !important;
-      backdrop-filter: blur(25px) !important;
-      -webkit-backdrop-filter: blur(25px) !important;
-      border: 1px solid var(--color-border) !important;
-      border-radius: 20px !important;
-      padding: 3rem !important;
-      max-width: 480px;
-      width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 64, 193, 0.04) !important;
-    }
-    .hero-canvas-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.8;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .form-group label {
-      font-family: var(--font-headline);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--color-text-primary);
-    }
-    .form-group input {
-      width: 100%;
-      background: #ffffff !important;
-      border: 1px solid var(--color-border) !important;
-      border-radius: 10px !important;
-      padding: 0.9rem 1.2rem !important;
-      color: var(--color-text-primary) !important;
-      font-family: var(--font-body) !important;
-      font-size: 0.95rem !important;
-      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    }
-    .form-group input:focus {
-      outline: none !important;
-      border-color: #256dff !important;
-      box-shadow: 0 0 15px rgba(37, 109, 255, 0.15) !important;
-      background: #ffffff !important;
-    }
-  </style>
-</head>
-<body style="scroll-behavior: auto;">
-
-  <!-- Preloader de Elite -->
-  <div id="preloader" aria-hidden="true">
-    <div class="preloader-glow"></div>
-    <div class="preloader-text">DMR INFO</div>
-  </div>
-
-  <!-- Custom Cursor Estético -->
-  <div id="custom-cursor" aria-hidden="true"></div>
-
-  <div class="page-wrapper">
-    
-    <!-- Navbar Premium do Arooth -->
-    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="0" data-easing="ease" data-easing2="ease" role="banner">
-      <div class="container navbar-container">
-        <div class="navbar-wrap">
-          <div class="navbar-flex-wrap">
-            
-            <div class="nav-flex-left">
-              <a class="main-logo-wrap w-nav-brand" href="index.html">
-                <div style="font-family: var(--font-headline); font-size: 1.7rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em;">
-                  DMR<span style="color: #256dff;">INFO</span>
-                </div>
-              </a>
-              
-              <!-- Menu Desktop Fixo -->
-              <div class="nav-links-wrapper">
-                <div class="nav-links-flex">
-                  <a class="single-nav-link w-inline-block" href="index.html"><div>Início</div></a>
-                  <a class="single-nav-link w-inline-block" href="sobre.html"><div>Sobre</div></a>
-                  <a class="single-nav-link w-inline-block" href="servicos.html"><div>Serviços</div></a>
-                  <a class="single-nav-link w-inline-block" href="contato.html"><div>Contatos</div></a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="nav-flex-right">
-              <div class="nav-right-flex">
-                
-                <!-- Controle de Áudio Sonoro -->
-                <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle" style="background: transparent; border: 1px solid rgba(37, 109, 255, 0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease; margin-right: 1rem;">
-                  <svg class="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path class="volume-path" d="M11 5L6 9H2v6h4l5 4V5z"/>
-                    <path class="mute-slash" d="M23 9l-6 6m0-6l6 6" />
-                  </svg>
-                </button>
-
-                <!-- Botão de Login na Header -->
-                <div class="nav-button-wrap" style="margin-right: 1rem;">
-                  <a class="primary-button w-inline-block w--current magnetic-btn" data-variant="border" href="area-cliente.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem; border-color: #256dff !important; color: #0040c1;">
-                    <div class="primary-button-flex">
-                      <div class="primary-button-text-wrap">
-                        <div class="primary-button-text">Área do Cliente</div>
-                        <div class="primary-button-text-hover">Área do Cliente</div>
-                      </div>
-                    </div>
-                    <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                  </a>
-                </div>
-
-                <!-- Botão CTA da Header -->
-                <div class="nav-button-wrap">
-                  <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem;">
-                    <div class="primary-button-flex">
-                      <div class="primary-button-text-wrap">
-                        <div class="primary-button-text">Solicitar Orçamento</div>
-                        <div class="primary-button-text-hover">Solicitar Orçamento</div>
-                      </div>
-                      <div class="primary-button-arrow-wrapper">
-                        <div class="primary-button-arrow-wrap">
-                          <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
-                          <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="primary-button-hover-bg"></div>
-                  </a>
-                </div>
-                
-                <!-- Menu Hambúrguer Overlay -->
-                <div class="navigations-wrapper">
-                  <nav class="navigation w-nav-menu" role="navigation" style="display: none;">
-                    <div class="container navigation-container">
-                      <div class="hamburger-wrapper">
-                        <div class="navigation-content-wrap" id="w-node-_603589df-a36e-3abb-1735-d40c05c2b1c9-b64688fb">
-                          <div class="navigation-content-block">
-                            <div class="navigation-content-wrapper">
-                              <div class="navigation-contents">
-                                <div class="navigation-links-flex">
-                                  <a class="single-navigation-links w-inline-block" href="index.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Início</div>
-                                        <div class="navigation-link-count">(01)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="sobre.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Sobre Nós</div>
-                                        <div class="navigation-link-count">(02)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="servicos.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Nossos Serviços</div>
-                                        <div class="navigation-link-count">(03)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="contato.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Fale Conosco</div>
-                                        <div class="navigation-link-count">(04)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                </div>
-                                <div class="navigation-button-wrapper" style="margin-top: 2rem;">
-                                  <a class="navigation-button w-inline-block magnetic-btn" href="area-cliente.html">
-                                    <div class="navigation-button-text-wrap">
-                                      <div class="navigation-button-text">Acessar Portal do Cliente</div>
-                                      <div class="navigation-button-text absolute">Acessar Portal do Cliente</div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="navigation-bg-wrap">
-                                <div class="navigation-bg-top"></div>
-                                <div class="navigation-bg-bottom"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                  
-                  <div aria-controls="w-nav-overlay-0" aria-expanded="false" aria-haspopup="menu" aria-label="menu" class="hamburger-button w-nav-button" data-w-id="9f5a7dc5-49e2-a9c4-07e5-2c6565c6e46e" role="button" tabindex="0">
-                    <div class="hamburger-wrap">
-                      <div class="hamburger-bars-wrap">
-                        <div class="hamburger-bar _01"></div>
-                        <div class="hamburger-bar _02"></div>
-                        <div class="hamburger-bar _03"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 pt-5">
+      <div class="relative overflow-hidden rounded-full bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
+        <div class="absolute inset-0 rounded-full bg-white/36 pointer-events-none"></div>
+        <div class="relative z-10 flex items-center justify-between">
+          <a class="flex items-center gap-2 group h-14 md:h-16" href="index.html">
+            <img src="assets/svg_full_logo_version_02.svg" alt="DMR Info Logo" class="h-full w-auto max-w-[240px] md:max-w-[280px] group-hover:scale-[1.02] transition-transform duration-300" />
+          </a>
+          <div class="hidden md:flex items-center gap-7 text-xs text-slate-600 font-normal">
+            <a class="hover:text-blue-600 transition-colors" href="index.html">Início</a>
+            <a class="hover:text-blue-600 transition-colors" href="sobre.html">Sobre</a>
+            <a class="hover:text-blue-600 transition-colors" href="servicos.html">Serviços</a>
+            <a class="hover:text-blue-600 transition-colors" href="contato.html">Contato</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-700 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
+            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="contato.html">Solicitar Orçamento</a>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
+  </header>
+  <main class="relative z-10 pt-32 pb-20">
 
-    <!-- Seção Central de Login -->
-    <section class="section-padding" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding-top: 10rem; padding-bottom: 6rem;">
-      <!-- Three.js Constellation Canvas -->
-      <div class="hero-canvas-container" aria-hidden="true">
-        <canvas id="canvas-3d"></canvas>
-      </div>
+    <section class="max-w-md mx-auto px-6 pt-10">
+      <div class="rounded-3xl bg-white border border-slate-200 shadow-sm p-8 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm text-blue-600 flex items-center justify-center mx-auto mb-6">
+            <svg class="inline-block align-middle text-3xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="url(#paint0_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="url(#paint1_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1663" x1="12" y1="11" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1663" x1="12" y1="2" x2="12" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
 
-      <div class="container" style="position: relative; z-index: 2; display: flex; justify-content: center;">
+        </div>
+        <h1 class="text-3xl font-light text-slate-950 mb-2 tracking-tight">Área do <span class="font-medium">Cliente</span></h1>
+        <p class="text-sm text-slate-500 font-light mb-8">Acesso restrito ao painel de chamados e monitoramento da sua infraestrutura.</p>
         
-        <div class="glass-card-premium">
-          <div style="text-align: center; margin-bottom: 2.5rem;">
-            <h2 style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">Portal do Cliente</h2>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Gerencie chamados, visualize faturas e relatórios táticos de suporte.</p>
-          </div>
-
-          <form id="login-form">
-            <div class="form-group">
-              <label for="login-email">E-mail ou CNPJ</label>
-              <input type="text" id="login-email" name="email" placeholder="cnpj@empresa.com.br ou 00.000.000/0001-00" required autocomplete="username">
+        <form class="space-y-4 text-left">
+            <div>
+                <label class="block text-xs font-medium text-slate-700 mb-1.5 ml-1">E-mail de Acesso</label>
+                <input type="email" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all outline-none" placeholder="seuemail@empresa.com">
             </div>
-
-            <div class="form-group">
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <label for="login-password">Senha de Acesso</label>
-                <a href="#" style="font-size: 0.8rem; color: #256dff; text-decoration: none;">Esqueceu?</a>
-              </div>
-              <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+            <div>
+                <label class="block text-xs font-medium text-slate-700 mb-1.5 ml-1">Senha</label>
+                <input type="password" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all outline-none" placeholder="••••••••">
             </div>
-
-            <div style="margin-top: 2rem;">
-              <button type="submit" class="primary-button w-inline-block magnetic-btn" data-variant="blue" style="width: 100%; border: none; padding: 0.9rem 2rem;">
-                <div class="primary-button-flex" style="justify-content: center; width: 100%;">
-                  <div class="primary-button-text-wrap">
-                    <div class="primary-button-text">Entrar no Sistema</div>
-                    <div class="primary-button-text-hover">Entrar no Sistema</div>
-                  </div>
-                </div>
-                <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-              </button>
+            <div class="flex items-center justify-between mt-2 mb-6">
+                <label class="flex items-center gap-2 text-xs text-slate-600 cursor-pointer">
+                    <input type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                    Lembrar de mim
+                </label>
+                <a href="#" class="text-xs font-medium text-blue-600 hover:text-blue-800">Esqueceu a senha?</a>
             </div>
-
-            <div id="login-feedback" class="form-feedback-hidden" style="margin-top: 1rem; text-align: center; font-weight: 600;" aria-live="polite"></div>
-          </form>
-
-          <div style="margin-top: 2rem; text-align: center; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
-            <p style="color: var(--color-text-secondary); font-size: 0.85rem;">Problemas com seu acesso? <a href="contato.html" style="color: #256dff; text-decoration: none; font-weight: 600;">Fale com o Suporte</a></p>
-          </div>
-        </div>
-
+            <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm font-medium shadow-lg hover:-translate-y-0.5 transition-all">Acessar Painel <svg class="inline-block align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="url(#paint0_linear_4587_1664)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 17L15 12L10 7" stroke="url(#paint1_linear_4587_1664)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 12H3" stroke="url(#paint2_linear_4587_1664)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1664" x1="18" y1="3" x2="18" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1664" x1="12.5" y1="7" x2="12.5" y2="17" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1664" x1="9" y1="12" x2="9" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</button>
+        </form>
       </div>
     </section>
 
-    <!-- Footer Premium -->
-    <footer class="footer-section" style="background-color: #ffffff; border-top: 1px solid var(--color-border); padding-top: 5rem; padding-bottom: 3rem;">
-      <div class="container">
-        
-        <div class="footer-grid-wrap" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; margin-bottom: 4rem;">
-          
-          <div class="footer-col-1" style="grid-column: span 5;">
-            <div style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em; margin-bottom: 1.5rem;">
-              DMR<span style="color: #256dff;">INFO</span>
-            </div>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
-              Estabilidade operacional garantida, cabeamento Gigabit de elite e segurança lógica monitorada ativamente 24h.
-            </p>
-          </div>
-
-          <div class="footer-col-2" style="grid-column: span 3;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Navegação</h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li><a href="index.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Início</a></li>
-              <li><a href="sobre.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Sobre Nós</a></li>
-              <li><a href="servicos.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Nossos Serviços</a></li>
-              <li><a href="contato.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem;">Fale Conosco</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col-3" style="grid-column: span 4;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Contato & Suporte</h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">contato@dmrinfo.com.br</li>
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">+55 (11) 99999-8888</li>
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">São Paulo, SP</li>
-            </ul>
-          </div>
-
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 mt-20">
+      <div class="grid md:grid-cols-3 gap-8 items-center text-sm text-slate-500 mb-8">
+        <div class="text-center md:text-left">
+          <p class="font-semibold text-slate-900 mb-1">DMRInfo Tecnologia</p>
+          <p class="text-xs">Soluções em TI, Segurança Cibernética e Infraestrutura para empresas.</p>
         </div>
-
-        <div style="border-top: 1px solid var(--color-border); padding-top: 2rem; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-          <p style="color: var(--color-text-secondary); font-size: 0.85rem;">&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design System Arooth (Webflow).</p>
-          <a href="design_system.html" style="color: #256dff; font-weight: 600; text-decoration: none; font-size: 0.85rem;">Pattern Library</a>
+        <div class="flex justify-center gap-6 text-xs font-medium">
+          <a href="index.html" class="hover:text-blue-600 transition-colors">Início</a>
+          <a href="sobre.html" class="hover:text-blue-600 transition-colors">Sobre</a>
+          <a href="servicos.html" class="hover:text-blue-600 transition-colors">Serviços</a>
+          <a href="contato.html" class="hover:text-blue-600 transition-colors">Contato</a>
         </div>
-
+        <div class="flex justify-center md:justify-end gap-4 text-lg">
+          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" title="WhatsApp"><svg class="inline-block align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0501 5C16.0268 5.19057 16.9244 5.66826 17.6281 6.37194C18.3318 7.07561 18.8095 7.97326 19.0001 8.95M15.0501 1C17.0793 1.22544 18.9716 2.13417 20.4163 3.57701C21.8609 5.01984 22.7721 6.91101 23.0001 8.94M22.0001 16.92V19.92C22.0012 20.1985 21.9441 20.4742 21.8326 20.7293C21.721 20.9845 21.5574 21.2136 21.3521 21.4019C21.1469 21.5901 20.9046 21.7335 20.6408 21.8227C20.377 21.9119 20.0974 21.9451 19.8201 21.92C16.7429 21.5856 13.7871 20.5341 11.1901 18.85C8.77388 17.3147 6.72539 15.2662 5.19006 12.85C3.50003 10.2412 2.4483 7.27099 2.12006 4.18C2.09507 3.90347 2.12793 3.62476 2.21656 3.36162C2.30518 3.09849 2.44763 2.85669 2.63482 2.65162C2.82202 2.44655 3.04986 2.28271 3.30385 2.17052C3.55783 2.05833 3.8324 2.00026 4.11006 2H7.11006C7.59536 1.99522 8.06585 2.16708 8.43382 2.48353C8.80179 2.79999 9.04213 3.23945 9.11005 3.72C9.23668 4.68007 9.47151 5.62273 9.81006 6.53C9.9446 6.88792 9.97372 7.27691 9.89396 7.65088C9.81421 8.02485 9.62892 8.36811 9.36005 8.64L8.09006 9.91C9.51361 12.4135 11.5865 14.4864 14.0901 15.91L15.3601 14.64C15.6319 14.3711 15.9752 14.1858 16.3492 14.1061C16.7231 14.0263 17.1121 14.0555 17.4701 14.19C18.3773 14.5286 19.32 14.7634 20.2801 14.89C20.7658 14.9585 21.2095 15.2032 21.5266 15.5775C21.8437 15.9518 22.0122 16.4296 22.0001 16.92Z" stroke="url(#paint0_linear_4587_1699)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1699" x1="12.556" y1="1" x2="12.556" y2="21.9281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+          <a href="mailto:contato@dmrinfo.com.br" class="hover:text-blue-600 transition-colors" title="E-mail"><svg class="inline-block align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="url(#paint0_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 6L12 13L2 6" stroke="url(#paint1_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1666" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1666" x1="12" y1="6" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <div>DMRInfo Tecnologia &copy; 2026. Todos os direitos reservados.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-blue-600 transition-colors">Políticas de Privacidade</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Termos de Serviço</a>
+        </div>
       </div>
     </footer>
-
-  </div>
-
-  <!-- CDN de Bibliotecas de Alta Velocidade -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-  
-  <!-- Script Principal -->
-  <script src="js/app.js"></script>
-
+  </main>
 </body>
 </html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:black}
+    .fil1 {fill:#009FE3}
+    .fil2 {fill:black;fill-rule:nonzero}
+    .fil3 {fill:url(#id0)}
+    .fil4 {fill:url(#id1)}
+    .fil17 {fill:url(#id2)}
+    .fil10 {fill:url(#id3)}
+    .fil23 {fill:url(#id4)}
+    .fil13 {fill:url(#id5)}
+    .fil9 {fill:url(#id6)}
+    .fil11 {fill:url(#id7)}
+    .fil12 {fill:url(#id8)}
+    .fil14 {fill:url(#id9)}
+    .fil6 {fill:url(#id10)}
+    .fil15 {fill:url(#id11)}
+    .fil18 {fill:url(#id12)}
+    .fil7 {fill:url(#id13)}
+    .fil8 {fill:url(#id14)}
+    .fil19 {fill:url(#id15)}
+    .fil21 {fill:url(#id16)}
+    .fil20 {fill:url(#id17)}
+    .fil22 {fill:url(#id18)}
+    .fil16 {fill:url(#id19)}
+    .fil5 {fill:url(#id20)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="2951.83" y1="12671.72" x2="7466.13" y2="18536.1">
+   <stop offset="0" style="stop-opacity:1; stop-color:#009FE3"/>
+   <stop offset="0.878431" style="stop-opacity:1; stop-color:#0382C5"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#0764A7"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="17718.27" y1="17477.28" x2="13771.4" y2="11216.91">
+  </linearGradient>
+  <radialGradient id="id2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00008 1 -1)" cx="9057.76" cy="12507.33" r="74.41" fx="9057.76" fy="12507.33">
+   <stop offset="0" style="stop-opacity:1; stop-color:white"/>
+   <stop offset="0.631373" style="stop-opacity:1; stop-color:#F7F7F7"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#F0F0F0"/>
+  </radialGradient>
+  <radialGradient id="id3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="7466.36" cy="15453.67" r="74.41" fx="7466.36" fy="15453.67">
+  </radialGradient>
+  <radialGradient id="id4" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8785.46" cy="16590.47" r="74.41" fx="8785.46" fy="16590.47">
+  </radialGradient>
+  <radialGradient id="id5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="7878.44" cy="13168.78" r="74.41" fx="7878.44" fy="13168.78">
+  </radialGradient>
+  <radialGradient id="id6" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="7740.94" cy="16131.37" r="74.41" fx="7740.94" fy="16131.37">
+  </radialGradient>
+  <radialGradient id="id7" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.99996 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="7395.23" cy="14677.05" r="74.41" fx="7395.23" fy="14677.05">
+  </radialGradient>
+  <radialGradient id="id8" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="7512.57" cy="13891.68" r="74.41" fx="7512.57" fy="13891.68">
+  </radialGradient>
+  <radialGradient id="id9" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.99996 -0 -0 1.00006 0 -1)" xlink:href="#id2" cx="8494.92" cy="12516.82" r="74.41" fx="8494.92" fy="12516.82">
+  </radialGradient>
+  <radialGradient id="id10" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00008 1 -1)" xlink:href="#id2" cx="9523.83" cy="17453.64" r="74.41" fx="9523.83" fy="17453.64">
+  </radialGradient>
+  <radialGradient id="id11" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="9376.89" cy="12006.15" r="74.41" fx="9376.89" fy="12006.15">
+  </radialGradient>
+  <radialGradient id="id12" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8565.89" cy="13190.94" r="74.41" fx="8565.89" fy="13190.94">
+  </radialGradient>
+  <radialGradient id="id13" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00008 1 -1)" xlink:href="#id2" cx="8805.36" cy="17169.19" r="74.41" fx="8805.36" fy="17169.19">
+  </radialGradient>
+  <radialGradient id="id14" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8202.18" cy="16681.31" r="74.41" fx="8202.18" fy="16681.31">
+  </radialGradient>
+  <radialGradient id="id15" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8195.58" cy="13838.47" r="74.41" fx="8195.58" fy="13838.47">
+  </radialGradient>
+  <radialGradient id="id16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8106.84" cy="15302.11" r="74.41" fx="8106.84" fy="15302.11">
+  </radialGradient>
+  <radialGradient id="id17" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="8073.61" cy="14565.83" r="74.41" fx="8073.61" fy="14565.83">
+  </radialGradient>
+  <radialGradient id="id18" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00008 1 -1)" xlink:href="#id2" cx="8377.4" cy="15938.54" r="74.41" fx="8377.4" fy="15938.54">
+  </radialGradient>
+  <radialGradient id="id19" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="10206.88" cy="11859.39" r="74.41" fx="10206.88" fy="11859.39">
+  </radialGradient>
+  <radialGradient id="id20" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.999938 -0 -0 1.00006 1 -1)" xlink:href="#id2" cx="10268.7" cy="17620.59" r="74.41" fx="10268.7" fy="17620.59">
+  </radialGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2446434182560">
+   <g>
+    <g>
+     <circle class="fil0" cx="12108.02" cy="14739.64" r="1627.43"/>
+     <circle class="fil1" cx="12108.02" cy="14739.64" r="1058.94"/>
+     <path class="fil2" d="M11127.21 12004.9c755.08,0 1438.83,306.12 1933.68,801 494.87,494.88 801,1178.57 801,1933.7 0,755.17 -306.13,1438.88 -800.98,1933.79 -494.31,494.31 -1177.97,800.08 -1933.7,800.11l0 0.91c-755.16,0 -1438.91,-306.12 -1933.78,-801 -494.88,-494.9 -801,-1178.64 -801,-1933.81 0,-755.13 306.12,-1438.85 801,-1933.73 494.9,-494.85 1178.62,-800.97 1933.78,-800.97zm1612.59 1122.09c-412.62,-412.65 -982.81,-667.92 -1612.59,-667.92 -629.83,0 -1200.02,255.27 -1612.7,667.89 -412.65,412.65 -667.92,982.84 -667.92,1612.64 0,629.84 255.27,1200.05 667.92,1612.73 412.65,412.65 982.87,667.92 1612.7,667.92l0 0.91c629.16,0 1199.41,-255.65 1612.62,-668.86 412.62,-412.67 667.89,-982.86 667.89,-1612.7 0,-629.8 -255.27,-1199.97 -667.92,-1612.61z"/>
+     <path class="fil2" d="M10270.32 10821.61c1081.85,0 2061.42,438.59 2770.43,1147.59 709,709.01 1147.59,1688.52 1147.59,2770.4 0,1081.89 -438.59,2061.48 -1147.59,2770.48 -709.01,709.04 -1688.52,1147.62 -2770.43,1147.62 -1081.91,0 -2061.45,-438.58 -2770.48,-1147.59 -709.01,-709.03 -1147.59,-1688.57 -1147.59,-2770.51 0,-1081.85 438.58,-2061.42 1147.59,-2770.42 709.03,-708.98 1688.57,-1147.57 2770.48,-1147.57zm2208.5 1709.52c-565.15,-565.14 -1346,-914.74 -2208.5,-914.74 -862.52,0 -1643.38,349.6 -2208.55,914.72 -565.15,565.14 -914.74,1346 -914.74,2208.49 0,862.53 349.59,1643.41 914.74,2208.58 565.17,565.15 1346.05,914.74 2208.55,914.74 862.52,0 1643.35,-349.59 2208.5,-914.76 565.14,-565.15 914.74,-1346.03 914.74,-2208.56 0,-862.47 -349.6,-1643.32 -914.74,-2208.47z"/>
+     <path class="fil2" d="M10494.83 10344.76c1244.17,0 2370.65,504.37 3186.02,1319.75 815.38,815.37 1319.75,1941.83 1319.75,3186.02 0,1244.19 -504.37,2370.65 -1319.75,3186.02 -815.37,815.38 -1941.85,1319.75 -3186.02,1319.75 -1244.2,0 -2370.68,-504.37 -3186.05,-1319.75 -815.38,-815.37 -1319.75,-1941.83 -1319.75,-3186.02 0,-1244.19 504.37,-2370.65 1319.75,-3186.02 815.37,-815.38 1941.85,-1319.75 3186.05,-1319.75zm2784.64 1721.13c-712.6,-712.6 -1697.18,-1153.41 -2784.64,-1153.41 -1087.49,0 -2072.07,440.81 -2784.67,1153.41 -712.6,712.6 -1153.41,1697.15 -1153.41,2784.64 0,1087.49 440.81,2072.04 1153.41,2784.64 712.6,712.6 1697.18,1153.41 2784.67,1153.41 1087.46,0 2072.04,-440.81 2784.64,-1153.41 712.6,-712.6 1153.41,-1697.15 1153.41,-2784.64 0,-1087.49 -440.81,-2072.04 -1153.41,-2784.64z"/>
+    </g>
+    <g>
+     <path class="fil3" d="M7072.75 10923.5c-1948.17,3392.88 -1904.74,5513.05 -749.99,6923.13l-579.59 475.57c501.64,-123.32 1083.11,-32.84 1722.95,213.91 -167.71,-570.65 -179.61,-1107.4 29.82,-1596.01l-600.71 481.43c-1799.88,-1792.91 -1194.8,-4068.45 177.52,-6498.03z"/>
+     <path class="fil4" d="M13452.06 18832.99c2256.54,-3196.1 2411.31,-5311.06 1393.3,-6822.83l621.47 -419.36c-510.96,75.93 -1081.44,-68.46 -1695.43,-373.89 113.67,583.82 75.39,1119.34 -178.75,1586.25l643.05 -423.23c1624.56,1953.18 809.6,4162.26 -783.64,6453.06z"/>
+    </g>
+   </g>
+   <g>
+    <circle class="fil5" cx="10268.7" cy="17620.59" r="226.18"/>
+    <circle class="fil6" cx="9523.83" cy="17453.64" r="226.18"/>
+    <circle class="fil7" cx="8805.36" cy="17169.19" r="226.18"/>
+    <circle class="fil8" cx="8202.18" cy="16681.31" r="226.18"/>
+    <circle class="fil9" cx="7740.94" cy="16131.37" r="226.18"/>
+    <circle class="fil10" cx="7466.36" cy="15453.67" r="226.18"/>
+    <circle class="fil11" cx="7395.23" cy="14677.05" r="226.18"/>
+    <circle class="fil12" cx="7512.57" cy="13891.68" r="226.18"/>
+    <circle class="fil13" cx="7878.44" cy="13168.78" r="226.18"/>
+    <circle class="fil14" cx="8494.92" cy="12516.82" r="226.18"/>
+    <circle class="fil15" cx="9376.89" cy="12006.15" r="226.18"/>
+    <circle class="fil16" cx="10206.88" cy="11859.39" r="226.18"/>
+    <circle class="fil17" cx="9057.76" cy="12507.33" r="226.18"/>
+    <circle class="fil18" cx="8565.89" cy="13190.94" r="226.18"/>
+    <circle class="fil19" cx="8195.58" cy="13838.47" r="226.18"/>
+    <circle class="fil20" cx="8073.61" cy="14565.83" r="226.18"/>
+    <circle class="fil21" cx="8106.84" cy="15302.11" r="226.18"/>
+    <circle class="fil22" cx="8377.4" cy="15938.54" r="226.18"/>
+    <circle class="fil23" cx="8785.46" cy="16590.47" r="226.18"/>
+   </g>
+  </g>
+ </g>
+</svg>

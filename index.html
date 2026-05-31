@@ -1,948 +1,1342 @@
 <!DOCTYPE html>
-<html class="w-mod-js w-mod-ix wf-instrumentsans-n5-active wf-instrumentsans-n6-active wf-instrumentsans-n4-active wf-instrumentsans-n7-active wf-poppins-n4-active wf-poppins-n3-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-active w-mod-ix3" data-wf-domain="dmrinfo.com.br" data-wf-page="68dbb9a72b91c794d0cdd10e" data-wf-site="68dbb9a72b91c794d0cdd10c" data-wf-status="1" lang="pt-BR" style="scroll-behavior: auto;">
+<html lang="pt-BR">
 <head>
-  <style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style>
   <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>DMR Info Tecnologia | TI Corporativa de Elite</title>
   
-  <!-- SEO Meta Tags -->
-  <title>DMR Info Tecnologia | TI Corporativa, Redes e Segurança Eletrônica</title>
-  <meta name="description" content="Soluções em TI para empresas que exigem segurança, performance e estabilidade de infraestrutura, cloud e segurança eletrônica monitorada 24h.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.dmrinfo.com.br/">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.dmrinfo.com.br/">
-  <meta property="og:title" content="DMR Info Tecnologia | TI Corporativa e Segurança Eletrônica">
-  <meta property="og:description" content="Projetamos, implementamos e blindamos a infraestrutura tecnológica do seu negócio para que sua equipe foque exclusivamente em faturar e crescer.">
-  <meta property="og:image" content="assets/693949f4b0511890e6a6a081_Graph_b6facaf07092.jpg"/>
+  <script src="assets/resource_3fa48481346f.js"></script>
+  <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
+  <link href="assets/css2_79567371cedd.css" rel="stylesheet"/>
 
-  <!-- Google Fonts & Stylesheets do Design System Arooth -->
-  <link href="css/arooth-base.css" rel="stylesheet" type="text/css"/>
-  <link href="css/arooth.css" rel="stylesheet" type="text/css"/>
-  
-  <!-- Estilos Customizados de Compatibilidade (Cores Light Luxo, Cursor e Three.js Canvas) -->
-  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <style>
+    @keyframes auraAmbientDriftOne { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 35% { transform: translate3d(4vw, 3vh, 0) scale(1.06); } 70% { transform: translate3d(-2vw, 5vh, 0) scale(0.98); } }
+    @keyframes auraAmbientDriftTwo { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 40% { transform: translate3d(-4vw, -3vh, 0) scale(1.08); } 75% { transform: translate3d(3vw, -5vh, 0) scale(0.96); } }
+    @keyframes auraAmbientDriftThree { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(2vw, -4vh, 0) scale(1.05); } }
+    @keyframes auraDotDrift { 0% { background-position: 0 0; } 100% { background-position: 4rem 4rem; } }
+    .aura-bg-blob-one { animation: auraAmbientDriftOne 26s ease-in-out infinite; }
+    .aura-bg-blob-two { animation: auraAmbientDriftTwo 32s ease-in-out infinite; }
+    .aura-bg-blob-three { animation: auraAmbientDriftThree 30s ease-in-out infinite; }
+    .aura-bg-dots { animation: auraDotDrift 38s linear infinite; }
+    @keyframes aura-float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes aura-bubble-in { 0% { opacity: 0; transform: translateX(18px) translateY(8px) scale(0.96); filter: blur(6px); } 100% { opacity: 1; transform: translateX(0) translateY(0) scale(1); filter: blur(0); } }
+    @keyframes aura-card-in { 0% { opacity: 0; transform: translateY(12px); } 100% { opacity: 1; transform: translateY(0); } }
+    .aura-float-bubble { opacity: 0; animation: aura-bubble-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards, aura-float-soft 4.5s ease-in-out infinite; }
+    .aura-hero-card { opacity: 0; animation: aura-card-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    html { scroll-behavior: smooth; }
+    h1, h2, h3, h4, h5, h6, .font-headline {
+      font-family: 'Impact', 'Arial Black', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 400 !important;
+    }
+    
+    /* Brand Color Theme Overrides */
+    body {
+      background-color: #F1F1F1 !important;
+    }
+    #preloader {
+      background-color: #F1F1F1 !important;
+    }
+    .text-blue-600, .hover\:text-blue-600:hover { color: #0668AB !important; }
+    .text-blue-500, .hover\:text-blue-500:hover { color: #0195D9 !important; }
+    .text-blue-400, .hover\:text-blue-400:hover { color: #009FE3 !important; }
+    
+    .bg-blue-600, .hover\:bg-blue-600:hover { background-color: #0668AB !important; }
+    .bg-blue-505, .hover\:bg-blue-505:hover { background-color: #0195D9 !important; }
+    .bg-blue-50 { background-color: rgba(6, 104, 171, 0.08) !important; }
+    .bg-blue-500\/10 { background-color: rgba(1, 149, 217, 0.1) !important; }
+    
+    .border-blue-600 { border-color: #0668AB !important; }
+    .border-blue-700 { border-color: #0668AB !important; }
+    .border-t-blue-600 { border-top-color: #0668AB !important; }
+    
+    .from-blue-500 { --tw-gradient-from: #0195D9 !important; --tw-gradient-to: rgba(1, 149, 217, 0) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+    .to-blue-600 { --tw-gradient-to: #0668AB !important; }
+    
+    .text-slate-950, .text-slate-900 { color: #000000 !important; }
+  </style>
+</head>
+<body class="bg-[#f3f5f8] text-slate-900 font-['Inter',sans-serif] min-h-screen relative overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
 
-  <script src="assets/webfont_3a3adf980c7d.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: ["Instrument Sans:regular,500,600,700","Poppins:300,regular,500,600,700"]
+  <!-- Background Effects -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <!-- WebGL Particle/Fluid Liquid Shader from Aura Design System -->
+    <div class="aura-background-component absolute inset-0 opacity-80" data-alpha-mask="80" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
+      <div class="absolute inset-0" data-us-project="ty3N7ZPaIU7KlWixQFIc"></div>
+      <script type="text/javascript">
+        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+      </script>
+    </div>
+    <!-- Moving CSS blobs as high-performance GPU-accelerated backups -->
+    <div class="aura-bg-blob-one absolute top-[-12%] left-[-12%] w-[52vw] h-[52vw] rounded-full bg-blue-200/35 blur-[7.5rem] will-change-transform"></div>
+    <div class="aura-bg-blob-two absolute bottom-[-18%] right-[-10%] w-[62vw] h-[62vw] rounded-full bg-sky-200/22 blur-[8.75rem] will-change-transform"></div>
+    <div class="aura-bg-blob-three absolute top-[36%] left-[36%] w-[30vw] h-[30vw] rounded-full bg-white/55 blur-[5rem] will-change-transform"></div>
+    <div class="aura-bg-dots absolute inset-0 opacity-[0.22]" style="background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,0.09) 1px, transparent 0); background-size: 2rem 2rem;"></div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-[#f3f5f8] z-[9999] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
+    <div class="relative flex flex-col items-center">
+      <!-- Animated glowing background ring -->
+      <div class="absolute w-56 h-56 rounded-full bg-blue-500/10 blur-2xl animate-pulse"></div>
+      
+      <!-- Rotating outer track -->
+      <div class="w-48 h-48 rounded-full border border-slate-200 border-t-2 border-t-blue-600 animate-spin" style="animation-duration: 1.2s;"></div>
+      
+      <!-- Inner logo icon centered -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <img src="assets/svg_logotype_01.svg" alt="DMR Logo Icon" class="w-40 h-40 animate-pulse" />
+      </div>
+    </div>
+    
+    <!-- Micro-progress status indicator -->
+    <div class="mt-8 flex flex-col items-center gap-2">
+      <span class="text-[10px] font-semibold text-slate-400 tracking-[0.2em] uppercase font-mono animate-pulse">Inicializando Sistema</span>
+      <div class="w-28 h-[2px] bg-slate-200/80 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full w-0 transition-all duration-500 ease-out" id="preloader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth Preloader handler
+    window.addEventListener('DOMContentLoaded', () => {
+      const bar = document.getElementById('preloader-bar');
+      if (bar) {
+        setTimeout(() => bar.style.width = '30%', 100);
+        setTimeout(() => bar.style.width = '65%', 300);
+        setTimeout(() => bar.style.width = '100%', 550);
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      const bar = document.getElementById('preloader-bar');
+      if (preloader) {
+        if (bar) bar.style.width = '100%';
+        setTimeout(() => {
+          preloader.classList.add('opacity-0', 'pointer-events-none');
+        }, 650);
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1350);
       }
     });
   </script>
-  <script type="text/javascript">
-    !function(o,c){
-      var n=c.documentElement,t=" w-mod-";
-      n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")
-    }(window,document);
-  </script>
 
-  <link href="assets/690381784b1afbf31fe4b67e_Favic_418a0b140c8d.svg" rel="shortcut icon" type="image/x-icon"/>
-  <link href="assets/6903817abc50f00235e916df_Webcl_54075941d57d.svg" rel="apple-touch-icon"/>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 pt-5">
+      <div class="relative overflow-hidden rounded-full bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
+        <div class="absolute inset-0 rounded-full bg-white/36 pointer-events-none"></div>
+        <div class="relative z-10 flex items-center justify-between">
+          <a class="flex items-center gap-2 group h-14 md:h-16" href="index.html">
+            <img src="assets/svg_full_logo_version_02.svg" alt="DMR Info Logo" class="h-full w-auto max-w-[240px] md:max-w-[280px] group-hover:scale-[1.02] transition-transform duration-300" />
+          </a>
+          <div class="hidden md:flex items-center gap-7 text-xs text-slate-600 font-normal">
+            <a class="hover:text-blue-600 transition-colors" href="index.html">Início</a>
+            <a class="hover:text-blue-600 transition-colors" href="sobre.html">Sobre</a>
+            <a class="hover:text-blue-600 transition-colors" href="servicos.html">Serviços</a>
+            <a class="hover:text-blue-600 transition-colors" href="contato.html">Contato</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-700 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
+            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="contato.html">Solicitar Orçamento</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <style>
-    /* Estilos Light Mode premium com variáveis baseadas no Design System Arooth */
-    html, body {
-      background-color: var(--color-bg) !important;
-      color: var(--color-text-primary) !important;
-      overflow-x: hidden !important;
-    }
+  <main class="relative z-10">
     
-    .navbar {
-      background: rgba(255, 255, 255, 0.8) !important;
-      backdrop-filter: blur(25px) !important;
-      -webkit-backdrop-filter: blur(25px) !important;
-      border-bottom: 1px solid var(--color-border) !important;
-    }
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-32 md:pt-40 pb-20">
+      <div class="grid lg:grid-cols-[1.02fr_0.98fr] gap-12 lg:gap-16 items-center">
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/75 border border-white px-3.5 py-2 shadow-sm mb-8">
+            <span class="w-7 h-7 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center"><svg class="inline-block align-middle w-4 h-4 text-blue-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="url(#paint0_linear_4587_1730)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1730" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</span>
+            <span class="text-xs font-medium text-slate-500">TI Corporativa & Segurança Digital de Elite</span>
+          </div>
+          <h1 class="text-[2.25rem] md:text-[3.25rem] lg:text-[3.85rem] font-normal tracking-[-0.02em] leading-[1.1] text-slate-950">
+            <span class="block">Soluções em TI para</span>
+            <span class="block font-medium">empresas que exigem</span>
+            <span class="block text-[#0668AB]">segurança, performance e confiabilidade.</span>
+          </h1>
+          <p class="mt-8 text-lg text-slate-600 font-light max-w-2xl">Projetamos, implementamos e mantemos a infraestrutura tecnológica do seu negócio para que você foque no que realmente importa.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm shadow-lg hover:-translate-y-0.5 transition-all" href="contato.html">Solicitar Orçamento <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-white text-slate-700 text-sm shadow-sm hover:-translate-y-0.5 transition-all" href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer"><svg class="inline-block align-middle w-4 h-4 text-blue-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="url(#paint0_linear_4587_1674)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1674" x1="12" y1="3" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+ Falar com um Especialista</a>
+          </div>
+        </div>
 
-    .glass-card-premium, .single-service-card-wrap, .about-us-stat-wrappper, .ds-faq-card-real {
-      background: var(--color-card-bg) !important;
-      backdrop-filter: blur(20px) !important;
-      -webkit-backdrop-filter: blur(20px) !important;
-      border: 1px solid var(--color-border) !important;
-      border-radius: 20px !important;
-      box-shadow: 0 10px 30px rgba(0, 64, 193, 0.04) !important;
-    }
-
-    .ds-faq-card-real.active {
-      border-color: var(--color-accent-cyan) !important;
-      box-shadow: 0 15px 40px rgba(37, 109, 255, 0.1) !important;
-    }
-    
-    .single-navigation-links {
-      border-bottom-color: var(--color-border) !important;
-    }
-
-    .navigation-link-text {
-      color: var(--color-text-primary) !important;
-    }
-
-    .navigation-bg-wrap div {
-      background-color: var(--color-surface) !important;
-      border-left: 1px solid var(--color-border) !important;
-    }
-    
-    .hero-canvas-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.8;
-    }
-    
-    /* Textos do Accordion FAQ Matrix */
-    .ds-faq-ans-title-real {
-      color: var(--color-text-primary) !important;
-    }
-    .ds-faq-text-real {
-      color: var(--color-text-secondary) !important;
-    }
-    .ds-faq-serial-real {
-      color: var(--color-accent-cyan) !important;
-    }
-    .ds-faq-q-vertical {
-      color: var(--color-text-primary) !important;
-    }
-    
-    .award-count-arrow-text {
-      color: #ffffff !important;
-      font-weight: 700 !important;
-    }
-
-    .single-number {
-      font-family: var(--font-headline) !important;
-      font-weight: 800 !important;
-    }
-  </style>
-
-  <!-- SEO JSON-LD Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ITBusiness",
-    "name": "DMR Info Tecnologia",
-    "url": "https://www.dmrinfo.com.br/",
-    "logo": "https://www.dmrinfo.com.br/assets/690381784b1afbf31fe4b67e_Favic_418a0b140c8d.svg",
-    "description": "Soluções em TI, redes, cloud e segurança eletrônica de alto padrão para pequenas, médias e grandes empresas.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+55-11-99999-8888",
-      "contactType": "customer service"
-    }
-  }
-  </script>
-</head>
-<body style="scroll-behavior: auto;">
-
-  <!-- Preloader de Elite -->
-  <div id="preloader" aria-hidden="true">
-    <div class="preloader-glow"></div>
-    <div class="preloader-text" style="color: #0040c1;">DMR INFO</div>
-  </div>
-
-  <!-- Custom Cursor Estético -->
-  <div id="custom-cursor" aria-hidden="true"></div>
-
-  <div class="page-wrapper">
-    
-    <!-- Navbar Premium do Arooth (Light Mode) -->
-    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="0" data-easing="ease" data-easing2="ease" role="banner">
-      <div class="container navbar-container">
-        <div class="navbar-wrap">
-          <div class="navbar-flex-wrap">
-            
-            <div class="nav-flex-left">
-              <a aria-current="page" aria-label="home" class="main-logo-wrap w-nav-brand w--current" href="index.html">
-                <!-- Logotipo Principal -->
-                <div style="font-family: var(--font-headline); font-size: 1.7rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em;">
-                  DMR<span style="color: #256dff;">INFO</span>
-                </div>
-              </a>
-              
-              <!-- Menu Desktop Fixo -->
-              <div class="nav-links-wrapper">
-                <div class="nav-links-flex">
-                  <a aria-current="page" class="single-nav-link w-inline-block w--current" href="index.html"><div>Início</div></a>
-                  <a class="single-nav-link w-inline-block" href="sobre.html"><div>Sobre</div></a>
-                  <a class="single-nav-link w-inline-block" href="servicos.html"><div>Serviços</div></a>
-                  <a class="single-nav-link w-inline-block" href="contato.html"><div>Contatos</div></a>
-                </div>
-              </div>
+        <div class="relative lg:pl-4">
+          <div class="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-blue-200/40 via-white/20 to-sky-200/30 blur-3xl"></div>
+          <div class="relative rounded-[2rem] bg-[#f8fafc] border border-white shadow-xl p-4 sm:p-5">
+            <!-- Floating Bubbles -->
+            <div class="hidden md:block absolute inset-0 z-20 pointer-events-none">
+              <div class="aura-float-bubble absolute -right-7 top-10 rounded-2xl bg-white/90 backdrop-blur border border-white px-4 py-3 shadow-lg"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center"><svg class="inline-block align-middle w-4 h-4 text-emerald-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="url(#paint0_linear_4587_1730)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1730" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div><div><p class="text-xs text-slate-900">Uptime 99.9%</p><p class="text-xs text-slate-400">Servidores Seguros</p></div></div></div>
+              <div class="aura-float-bubble absolute -left-7 bottom-20 rounded-2xl bg-white/90 backdrop-blur border border-white px-4 py-3 shadow-lg" style="animation-delay: 800ms"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center"><svg class="inline-block align-middle w-4 h-4 text-blue-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H20C21.1046 10 22 9.10457 22 8V4C22 2.89543 21.1046 2 20 2Z" stroke="url(#paint0_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 14H4C2.89543 14 2 14.8954 2 16V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z" stroke="url(#paint1_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6H6.01" stroke="url(#paint2_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 18H6.01" stroke="url(#paint3_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1726" x1="12" y1="2" x2="12" y2="10" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1726" x1="12" y1="14" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1726" x1="6.005" y1="6" x2="6.005" y2="7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint3_linear_4587_1726" x1="6.005" y1="18" x2="6.005" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div><div><p class="text-xs text-slate-900">Monitoramento 24/7</p><p class="text-xs text-slate-400">Rede Protegida</p></div></div></div>
             </div>
             
-            <div class="nav-flex-right">
-              <div class="nav-right-flex">
-                
-                <!-- Controle de Áudio Sonoro -->
-                <button id="btn-mute" aria-label="Ativar micro-sonoplastia tátil" class="audio-toggle" style="background: transparent; border: 1px solid rgba(37, 109, 255, 0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease; margin-right: 1rem;">
-                  <svg class="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path class="volume-path" d="M11 5L6 9H2v6h4l5 4V5z"/>
-                    <path class="mute-slash" d="M23 9l-6 6m0-6l6 6" />
-                  </svg>
-                </button>
-
-                <!-- Botão de Login na Header -->
-                <div class="nav-button-wrap" style="margin-right: 1rem;">
-                  <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="area-cliente.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-                    <div class="primary-button-flex">
-                      <div class="primary-button-text-wrap">
-                        <div class="primary-button-text">Área do Cliente</div>
-                        <div class="primary-button-text-hover">Área do Cliente</div>
-                      </div>
-                    </div>
-                    <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                  </a>
-                </div>
-
-                <!-- Botão CTA da Header -->
-                <div class="nav-button-wrap">
-                  <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 0.65rem 1.5rem; font-size: 0.85rem;">
-                    <div class="primary-button-flex">
-                      <div class="primary-button-text-wrap">
-                        <div class="primary-button-text">Solicitar Orçamento</div>
-                        <div class="primary-button-text-hover">Solicitar Orçamento</div>
-                      </div>
-                      <div class="primary-button-arrow-wrapper">
-                        <div class="primary-button-arrow-wrap">
-                          <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
-                          <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/6910991e7df760b9063f4b51_Butto_45f34d5b07c8.svg"/>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-                  </a>
-                </div>
-                
-                <!-- Menu Hambúrguer Overlay Estilo Arooth -->
-                <div class="navigations-wrapper">
-                  <nav class="navigation w-nav-menu" role="navigation" style="display: none;">
-                    <div class="container navigation-container">
-                      <div class="hamburger-wrapper">
-                        <div class="navigation-content-wrap" id="w-node-_603589df-a36e-3abb-1735-d40c05c2b1c9-b64688fb">
-                          <div class="navigation-content-block">
-                            <div class="navigation-content-wrapper">
-                              <div class="navigation-contents">
-                                <div class="navigation-links-flex">
-                                  <a class="single-navigation-links w-inline-block w--current" href="index.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Início</div>
-                                        <div class="navigation-link-count">(01)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="sobre.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Sobre Nós</div>
-                                        <div class="navigation-link-count">(02)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="servicos.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Nossos Serviços</div>
-                                        <div class="navigation-link-count">(03)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                  <a class="single-navigation-links w-inline-block" href="contato.html">
-                                    <div class="navigation-inline-wrap">
-                                      <div class="navigation-text-flex">
-                                        <div class="navigation-link-text">Fale Conosco</div>
-                                        <div class="navigation-link-count">(04)</div>
-                                      </div>
-                                    </div>
-                                    <div class="navigation-link-border"><div class="navigation-link-border-inner"></div></div>
-                                  </a>
-                                </div>
-                                <div class="navigation-button-wrapper" style="margin-top: 2rem;">
-                                  <a class="navigation-button w-inline-block magnetic-btn" href="area-cliente.html">
-                                    <div class="navigation-button-text-wrap">
-                                      <div class="navigation-button-text" style="color: var(--color-text-primary);">Acessar Portal do Cliente</div>
-                                      <div class="navigation-button-text absolute" style="color: var(--color-text-primary);">Acessar Portal do Cliente</div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="navigation-bg-wrap">
-                                <div class="navigation-bg-top"></div>
-                                <div class="navigation-bg-bottom"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                  
-                  <div aria-controls="w-nav-overlay-0" aria-expanded="false" aria-haspopup="menu" aria-label="menu" class="hamburger-button w-nav-button" data-w-id="9f5a7dc5-49e2-a9c4-07e5-2c6565c6e46e" role="button" tabindex="0">
-                    <div class="hamburger-wrap">
-                      <div class="hamburger-bars-wrap">
-                        <div class="hamburger-bar _01" style="background-color: var(--color-text-primary);"></div>
-                        <div class="hamburger-bar _02" style="background-color: var(--color-text-primary);"></div>
-                        <div class="hamburger-bar _03" style="background-color: var(--color-text-primary);"></div>
-                      </div>
-                    </div>
+            <div class="rounded-[1.5rem] bg-gradient-to-b from-white to-slate-50 border border-slate-200 overflow-hidden">
+              <div class="px-5 py-4 flex items-center justify-between border-b border-slate-200/80">
+                <div class="flex gap-2"><span class="w-2.5 h-2.5 rounded-full bg-red-300"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-300"></span></div>
+                <div class="text-xs text-slate-400 font-mono">DMR_DASHBOARD</div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl text-slate-900 mb-6 font-medium">Status da Infraestrutura</h3>
+                <div class="space-y-3">
+                  <div class="aura-hero-card rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-500"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H20C21.1046 10 22 9.10457 22 8V4C22 2.89543 21.1046 2 20 2Z" stroke="url(#paint0_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 14H4C2.89543 14 2 14.8954 2 16V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z" stroke="url(#paint1_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6H6.01" stroke="url(#paint2_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 18H6.01" stroke="url(#paint3_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1726" x1="12" y1="2" x2="12" y2="10" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1726" x1="12" y1="14" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1726" x1="6.005" y1="6" x2="6.005" y2="7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint3_linear_4587_1726" x1="6.005" y1="18" x2="6.005" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+                    <div class="flex-1"><p class="text-sm font-medium text-slate-800">Servidores Cloud</p><p class="text-xs text-slate-500">Operando com capacidade ideal</p></div>
+                    <div class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Online</div>
                   </div>
-
+                  <div class="aura-hero-card rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3" style="animation-delay: 200ms">
+                    <div class="w-10 h-10 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-indigo-500"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="url(#paint0_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="url(#paint1_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1663" x1="12" y1="11" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1663" x1="12" y1="2" x2="12" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+                    <div class="flex-1"><p class="text-sm font-medium text-slate-800">Segurança de Redes</p><p class="text-xs text-slate-500">Proteção Ativa 24h/7</p></div>
+                    <div class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Ativo</div>
+                  </div>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
-      <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
-    </div>
+    </section>
 
-    <!-- Hero Section Light e Clean (Sem VISION) -->
-    <section class="banner-section" style="padding-top: 12rem; padding-bottom: 8rem; min-height: 90vh; display: flex; align-items: center; justify-content: center; position: relative;">
-      <!-- Three.js Particles no background -->
-      <div class="hero-canvas-container" aria-hidden="true">
-        <div class="canvas-glow" style="background: radial-gradient(circle, rgba(37, 109, 255, 0.08) 0%, transparent 60%);"></div>
-        <canvas id="canvas-3d"></canvas>
+    <!-- Trust Row -->
+    <section class="max-w-7xl mx-auto px-6 py-10 border-t border-b border-slate-200/50 mb-10">
+      <p class="text-center text-[10px] font-semibold text-slate-400 tracking-[0.15em] uppercase mb-8">Parceiros Tecnológicos de Elite & Certificações Globais</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-40 hover:opacity-75 transition-opacity duration-300">
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:amazonaws"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">AWS Partner</span>
+        </div>
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:cisco"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Cisco Gold</span>
+        </div>
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:dell"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">DELL Partner</span>
+        </div>
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:intel"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Intel Tech</span>
+        </div>
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:vmware"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">VMware Gold</span>
+        </div>
+        <div class="flex items-center gap-2 group cursor-default">
+          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:ubiquiti"></iconify-icon>
+          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Ubiquiti Gold</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios Principais Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50">
+      <div class="mb-12 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Diferenciais Competitivos</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-4">Benefícios <span class="text-blue-600">Principais</span></h2>
+        <p class="text-slate-600 text-lg font-light">Os motivos pelos quais as empresas escolhem e confiam nos serviços da DMRInfo.</p>
       </div>
 
-      <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 950px; margin: 0 auto;">
-        <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" style="margin: 0 auto 2.5rem auto;">
-          <div class="subtitle-flex-wrap" style="background: rgba(37, 109, 255, 0.06); border-color: rgba(37, 109, 255, 0.25);">
-            <img alt="Ícone Subtítulo" class="subtitle-icon" loading="lazy" src="assets/690f9e158664fc7bd2753513_Subti_3b26bed6d271.svg"/>
-            <div class="subtitle-text" style="color: #0040c1;">TI Corporativa e Segurança de Elite</div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="url(#paint0_linear_4587_1781)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="url(#paint1_linear_4587_1781)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="url(#paint2_linear_4587_1781)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="url(#paint3_linear_4587_1781)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1781" x1="9" y1="15" x2="9" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1781" x1="9" y1="3" x2="9" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1781" x1="21.5" y1="15.13" x2="21.5" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint3_linear_4587_1781" x1="17.5039" y1="3.13" x2="17.5039" y2="10.88" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Atendimento Especializado</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Equipe técnica qualificada, preparada para atender empresas com agilidade e precisão.</p>
           </div>
         </div>
-
-        <h1 class="headline-xl" style="font-family: var(--font-headline); font-size: 4.8rem; font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #111827; margin-bottom: 2rem;">
-          Soluções em TI para empresas que exigem <span style="color: #256dff; background: transparent; text-shadow: 0 0 30px rgba(37, 109, 255, 0.15);">segurança e performance.</span>
-        </h1>
-
-        <p style="color: #475569; font-size: 1.25rem; line-height: 1.6; max-width: 750px; margin: 0 auto 3rem auto; font-family: var(--font-body);">
-          Projetamos, implementamos e blindamos a infraestrutura tecnológica do seu negócio para que sua equipe foque exclusivamente em faturar e crescer.
-        </p>
-
-        <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap;">
-          
-          <!-- Botão Primário com Animação de Hover -->
-          <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 1rem 2.8rem; font-size: 1rem;">
-            <div class="primary-button-flex">
-              <div class="primary-button-text-wrap">
-                <div class="primary-button-text">Solicitar Orçamento</div>
-                <div class="primary-button-text-hover">Solicitar Orçamento</div>
-              </div>
-              <div class="primary-button-arrow-wrapper">
-                <div class="primary-button-arrow-wrap">
-                  <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                  <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                </div>
-              </div>
-            </div>
-            <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-          </a>
-
-          <!-- Botão Secundário com Animação de Hover -->
-          <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="servicos.html" style="padding: 1rem 2.8rem; font-size: 1rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-            <div class="primary-button-flex">
-              <div class="primary-button-text-wrap">
-                <div class="primary-button-text">Nossas Soluções</div>
-                <div class="primary-button-text-hover">Nossas Soluções</div>
-              </div>
-            </div>
-            <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-          </a>
-
-        </div>
-
-        <div style="margin-top: 3.5rem; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; color: #475569; font-weight: 600; font-size: 0.95rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #256dff;"></span> Suporte Preventivo Preditivo
-          </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #256dff;"></span> Redes Gigabit Estruturadas
-          </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #256dff;"></span> Monitoramento Patrimonial 24h
+        <!-- Card 2 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4587_1727)">
+<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="url(#paint0_linear_4587_1727)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15V15Z" stroke="url(#paint1_linear_4587_1727)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_4587_1727" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1727" x1="12" y1="1" x2="12" y2="23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<clipPath id="clip0_4587_1727">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Soluções Sob Medida</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Cada projeto é planejado de acordo com a necessidade real do seu negócio.</p>
           </div>
         </div>
+        <!-- Card 3 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="url(#paint0_linear_4587_1730)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1730" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Segurança e Confiabilidade</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Protegemos seus dados, equipamentos e ambientes com soluções modernas e eficazes.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="url(#paint0_linear_4587_1799)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1799" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Suporte Ágil</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Atendimento rápido e eficiente para minimizar impactos e manter sua operação ativa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Services Bento -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+      <div class="mb-12 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Portfólio de Soluções</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-4">Serviços em <span class="text-blue-600">Destaque</span></h2>
+        <p class="text-slate-600 text-lg font-light">Soluções definitivas projetadas para blindar e otimizar todo o ecossistema tecnológico corporativo.</p>
       </div>
       
-      <!-- Linhas de borda sutil decorativa igual ao Arooth -->
-      <div class="banner-borders-wrapper" style="bottom: 0;">
-        <div class="banner-borders-flex" style="max-width: 100%;">
-          <div class="banner-border-line" style="background-color: rgba(37, 109, 255, 0.15);"></div>
-          <div class="banner-border-line" style="background-color: rgba(37, 109, 255, 0.15);"></div>
-          <div class="banner-border-line" style="background-color: rgba(37, 109, 255, 0.15);"></div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 3H4C2.89543 3 2 3.89543 2 5V15C2 16.1046 2.89543 17 4 17H20C21.1046 17 22 16.1046 22 15V5C22 3.89543 21.1046 3 20 3Z" stroke="url(#paint0_linear_4587_1682)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 21H16" stroke="url(#paint1_linear_4587_1682)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17V21" stroke="url(#paint2_linear_4587_1682)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1682" x1="12" y1="3" x2="12" y2="17" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1682" x1="12" y1="21" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1682" x1="12.5" y1="17" x2="12.5" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Consultoria em TI</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Analisamos, planejamos e otimizamos o ambiente tecnológico da sua empresa.</p>
+          </div>
+          <a class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors" href="servicos.html">Saiba mais <svg class="inline-block align-middle w-3 h-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12.55C6.97656 10.9037 9.46761 10.0021 12.04 10.0021C14.6124 10.0021 17.1034 10.9037 19.08 12.55" stroke="url(#paint0_linear_4587_1791)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.42004 8.99997C4.34247 6.42394 8.10434 5.00262 12 5.00262C15.8957 5.00262 19.6576 6.42394 22.58 8.99997" stroke="url(#paint1_linear_4587_1791)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.53003 16.11C9.54523 15.3888 10.7597 15.0013 12.005 15.0013C13.2504 15.0013 14.4648 15.3888 15.48 16.11" stroke="url(#paint2_linear_4587_1791)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 20H12.01" stroke="url(#paint3_linear_4587_1791)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1791" x1="12.04" y1="10.0021" x2="12.04" y2="12.55" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1791" x1="12" y1="5.00262" x2="12" y2="8.99997" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1791" x1="12.005" y1="15.0013" x2="12.005" y2="16.11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint3_linear_4587_1791" x1="12.005" y1="20" x2="12.005" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Infraestrutura e Redes</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Projetos de redes cabeadas e wireless estáveis, organizadas e seguras.</p>
+          </div>
+          <a class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors" href="servicos.html">Saiba mais <svg class="inline-block align-middle w-3 h-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="url(#paint0_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="url(#paint1_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1663" x1="12" y1="11" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1663" x1="12" y1="2" x2="12" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Segurança Cibernética & LGPD</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Firewalls, antivírus avançados, VPNs de acesso seguro e adequação completa à LGPD para blindar sua empresa.</p>
+          </div>
+          <a class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors" href="servicos.html">Saiba mais <svg class="inline-block align-middle w-3 h-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="rounded-2xl bg-white/62 backdrop-blur border border-white p-6 shadow-sm hover:-translate-y-1 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4587_1574)">
+<path d="M18 10H16.74C16.3659 8.551 15.5928 7.23599 14.5086 6.2044C13.4245 5.1728 12.0727 4.46599 10.6069 4.16428C9.14112 3.86256 7.62008 3.97804 6.21664 4.49759C4.8132 5.01714 3.58363 5.91993 2.66764 7.10338C1.75165 8.28683 1.18598 9.70348 1.0349 11.1924C0.883813 12.6812 1.15338 14.1826 1.81296 15.526C2.47255 16.8693 3.4957 18.0007 4.76617 18.7916C6.03663 19.5824 7.50347 20.0011 8.99999 20H18C19.3261 20 20.5978 19.4732 21.5355 18.5355C22.4732 17.5979 23 16.3261 23 15C23 13.6739 22.4732 12.4021 21.5355 11.4645C20.5978 10.5268 19.3261 10 18 10Z" stroke="url(#paint0_linear_4587_1574)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_4587_1574" x1="11.997" y1="4" x2="11.997" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<clipPath id="clip0_4587_1574">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</div>
+            <h3 class="text-lg font-medium text-slate-900 mb-2">Cloud, Backup e Servidores</h3>
+            <p class="text-xs text-slate-500 leading-relaxed font-light font-light">Armazenamento seguro, alta disponibilidade e continuidade do seu negócio.</p>
+          </div>
+          <a class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors" href="servicos.html">Saiba mais <svg class="inline-block align-middle w-3 h-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
         </div>
       </div>
     </section>
 
-    <!-- Seção Sobre Nós / Métricas Estilo Arooth -->
-    <section class="section about-us" style="padding-top: 8rem; padding-bottom: 8rem;">
-      <div class="container">
+    <!-- Problem/Agitation (PAS) Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 relative">
+      <div class="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-red-100/30 via-white/10 to-amber-100/20 blur-3xl -z-10"></div>
+      <div class="mb-16 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 rounded-full bg-rose-50 border border-rose-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+          <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">O Ralo Invisível de Caixa</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-6">
+          A instabilidade da sua TI custa mais caro do que você imagina.
+        </h2>
+        <p class="text-slate-600 text-lg font-light leading-relaxed">
+          A maioria das empresas só descobre os graves pontos cegos da sua infraestrutura após interrupções de faturamento catastróficas ou invasões de ransomware.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md hover:border-red-200/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6 group-hover:scale-105 transition-transform"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.29 3.85996L1.82002 18C1.64539 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7238C2.83871 20.9009 3.18082 20.9961 3.53002 21H20.47C20.8192 20.9961 21.1613 20.9009 21.4623 20.7238C21.7633 20.5467 22.0127 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.4471 18.6453 22.3547 18.3024 22.18 18L13.71 3.85996C13.5318 3.56607 13.2807 3.32308 12.9812 3.15444C12.6817 2.98581 12.3438 2.89722 12 2.89722C11.6563 2.89722 11.3184 2.98581 11.0188 3.15444C10.7193 3.32308 10.4683 3.56607 10.29 3.85996V3.85996Z" stroke="url(#paint0_linear_4587_1520)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 9V13" stroke="url(#paint1_linear_4587_1520)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17H12.01" stroke="url(#paint2_linear_4587_1520)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1520" x1="12" y1="2.89722" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1520" x1="12.5" y1="9" x2="12.5" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1520" x1="12.005" y1="17" x2="12.005" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-medium text-slate-950">Ataques Cibernéticos</h3>
+            <span class="text-[9px] font-bold text-red-600 bg-red-50 border border-red-100 rounded-full px-2.5 py-0.5 uppercase tracking-wide">Risco Letal</span>
+          </div>
+          <p class="text-sm text-slate-500 leading-relaxed font-light">
+            Sem processos rígidos de auditoria e backups frios imutáveis isolados (air-gapped), o sequestro de dados criptografa seus arquivos e paralisa a operação, levando 90% das empresas a prejuízos irreversíveis.
+          </p>
+        </div>
         
-        <div class="about-us-title-wrapper">
-          <div class="about-us-title-flex">
-            
-            <!-- Painel de Métricas do Arooth com Crachás Flutuantes -->
-            <div class="about-us-stat-wrappper" data-w-id="497c147f-e0be-3b6c-03c7-3bee10cc43c6" style="background-color: #ffffff !important; border-color: var(--color-border) !important; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1; filter: blur(0px);">
-              <div class="about-us-subtitle-wrap">
-                <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" data-wf--subtitle--variant="borders">
-                  <div class="subtitle-flex-wrap">
-                    <img alt="Ícone Subtítulo" class="subtitle-icon" loading="lazy" src="assets/690f9e158664fc7bd2753513_Subti_3b26bed6d271.svg"/>
-                    <div class="subtitle-text" style="color: #0040c1;">Engenharia de Elite</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Badges de Sucesso Estilo Arooth -->
-              <div class="about-award-count-wrap" data-w-id="497c147f-e0be-3b6c-03c7-3bee10cc43ca">
-                <div class="about-award-count-number" style="color: var(--color-text-primary);">15+</div>
-                
-                <div class="award-count-arrow-wrap one" style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; background-color: #256dff;">
-                  <div class="award-count-arrow-text">Anos de</div>
-                  <img alt="Seta Badge" class="award-count-arrow-icon one" loading="lazy" src="assets/691f33702cc97b2f28589225_Award_ea215386444f.png"/>
-                </div>
-                
-                <div class="award-count-arrow-wrap two" style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; background-color: #0040c1;">
-                  <div class="award-count-arrow-text two">Engenharia</div>
-                  <img alt="Seta Badge" class="award-count-arrow-icon two" loading="lazy" src="assets/691f33700369e38aee50c1d5_Award_41d4b19a01d8.png"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Manifesto DMR Info à Direita -->
-            <div class="about-us-title-flex-right">
-              <div class="about-us-title-border" style="background-color: var(--color-border);"></div>
-              <div class="about-us-title-wrap" data-w-id="497c147f-e0be-3b6c-03c7-3bee10cc43d7" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1; filter: blur(0px);">
-                <h3 class="about-us-title" style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700; line-height: 1.2; color: var(--color-text-primary);">
-                  Nossa equipe de engenheiros projeta e blinda sua infraestrutura tecnológica para <span style="color: #256dff; background: transparent;">descomplicar sua operação corporativa.</span>
-                </h3>
-                <p class="about-section-details" style="color: var(--color-text-secondary); margin-top: 1.5rem; margin-bottom: 2rem;">
-                  Nascemos para preencher a lacuna entre a complexidade técnica e a necessidade real de negócios. Unimos cabeamento estruturado estruturado impecável, conectividade Gigabit e segurança patrimonial eletrônica inteligente monitorada 24h.
-                </p>
-                <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="sobre.html">
-                  <div class="primary-button-flex">
-                    <div class="primary-button-text-wrap">
-                      <div class="primary-button-text">Conhecer Nosso Manifesto</div>
-                      <div class="primary-button-text-hover">Conhecer Nosso Manifesto</div>
-                    </div>
-                    <div class="primary-button-arrow-wrapper">
-                      <div class="primary-button-arrow-wrap">
-                        <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                        <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-                </a>
-              </div>
-            </div>
-
+        <!-- Card 2 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md hover:border-amber-200/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6 group-hover:scale-105 transition-transform"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="url(#paint0_linear_4587_1573)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 6V12L16 14" stroke="url(#paint1_linear_4587_1573)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1573" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1573" x1="14" y1="6" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-medium text-slate-950">Lentidão & Instabilidade</h3>
+            <span class="text-[9px] font-bold text-amber-600 bg-amber-50 border border-amber-100 rounded-full px-2.5 py-0.5 uppercase tracking-wide">Perda Produtiva</span>
           </div>
+          <p class="text-sm text-slate-500 leading-relaxed font-light">
+            Conexões Wi-Fi instáveis, cabeamento ultrapassado e switches lentos geram micro-quedas que frustram colaboradores. Um funcionário perde em média 120 horas anuais esperando sistemas responderem.
+          </p>
         </div>
 
-        <!-- Seção Estática de Sucesso do Cliente -->
-        <div class="about-vh-wrap" style="margin-top: 5rem;">
-          <div class="about-stat-wrapper">
-            <div class="about-stat-flex">
-              <div class="about-stat-image-wrap">
-                <img alt="Tecnologia Corporativa" class="about-stat-image" loading="lazy" src="assets/691f399a64049d0423783289_About_fb69584f27ff.jpg"/>
-              </div>
-              <div class="about-stats-counters-flex">
-                
-                <div class="single-testimonial-stat-wrap about-us" style="background-color: #ffffff !important; border-color: var(--color-border) !important;">
-                  <div class="testimonial-counter-wrap about-us" style="display: flex; gap: 0.1rem;">
-                    <h2 class="single-number about-us" style="color: var(--color-text-primary);">9</h2>
-                    <h2 class="single-number about-us" style="color: var(--color-text-primary);">9</h2>
-                    <h2 class="single-number about-us" style="color: #256dff;">%</h2>
-                  </div>
-                  <div class="testimonial-stat-text" style="color: var(--color-text-secondary);">Uptime e Disponibilidade de Servidores</div>
-                </div>
+        <!-- Card 3 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md hover:border-orange-200/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6 group-hover:scale-105 transition-transform"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.86 2H16.14L22 7.86V16.14L16.14 22H7.86L2 16.14V7.86L7.86 2Z" stroke="url(#paint0_linear_4587_1519)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8V12" stroke="url(#paint1_linear_4587_1519)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 16H12.01" stroke="url(#paint2_linear_4587_1519)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1519" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1519" x1="12.5" y1="8" x2="12.5" y2="12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1519" x1="12.005" y1="16" x2="12.005" y2="17" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-medium text-slate-950">Brechas & Conformidade</h3>
+            <span class="text-[9px] font-bold text-orange-600 bg-orange-50 border border-orange-100 rounded-full px-2.5 py-0.5 uppercase tracking-wide">Vazamento</span>
+          </div>
+          <p class="text-sm text-slate-500 leading-relaxed font-light">
+            Sistemas sem antivírus ativo, vazamento de dados de clientes, falta de controle de acessos digitais e processos fora da conformidade legal expõem sua empresa a multas severas da LGPD e crises de reputação.
+          </p>
+        </div>
+      </div>
 
-                <div class="single-testimonial-stat-wrap about-us" style="background-color: #ffffff !important; border-color: var(--color-border) !important;">
-                  <div class="testimonial-counter-wrap about-us" style="display: flex; gap: 0.1rem;">
-                    <h2 class="single-number about-us" style="color: var(--color-text-primary);">5</h2>
-                    <h2 class="single-number about-us" style="color: var(--color-text-primary);">0</h2>
-                    <h2 class="single-number about-us" style="color: var(--color-text-primary);">0</h2>
-                    <h2 class="single-number about-us" style="color: #256dff;">+</h2>
-                  </div>
-                  <div class="testimonial-stat-text" style="color: var(--color-text-secondary);">Empresas Blindadas Ativamente</div>
-                </div>
-
-              </div>
-            </div>
-            <div class="about-stat-blur" style="background: radial-gradient(circle, rgba(37, 109, 255, 0.08) 0%, transparent 70%);"></div>
+      <!-- Solution bridge banner -->
+      <div class="mt-12 rounded-2xl bg-white/80 backdrop-blur border border-slate-200/50 p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="url(#paint0_linear_4587_1651)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 16V12" stroke="url(#paint1_linear_4587_1651)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8H12.01" stroke="url(#paint2_linear_4587_1651)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1651" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1651" x1="12.5" y1="12" x2="12.5" y2="16" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1651" x1="12.005" y1="8" x2="12.005" y2="9" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+          <div>
+            <h4 class="text-sm font-semibold text-slate-900">Como a DMR blinda seu negócio contra esses riscos?</h4>
+            <p class="text-xs text-slate-500 mt-0.5">Eliminamos vulnerabilidades com engenharia robusta de segurança cibernética e monitoramento preditivo.</p>
           </div>
         </div>
-
+        <a href="#auditoria" class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-xs shadow-sm hover:-translate-y-0.5 transition-all">Quero uma Auditoria Gratuita <svg class="inline-block align-middle w-3 h-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
       </div>
     </section>
 
-    <!-- Seção de Serviços Accordion FAQ Matrix do Arooth -->
-    <section class="section services" style="padding-top: 8rem; padding-bottom: 8rem; border-top: 1px solid var(--color-border);">
-      <div class="container">
-        
-        <div class="section-title-wrapper margin-bottom">
-          <div class="section-subtile-wrap">
-            <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" data-wf--subtitle--variant="borders">
-              <div class="subtitle-flex-wrap">
-                <img alt="Ícone Subtítulo" class="subtitle-icon" loading="lazy" src="assets/690f9e158664fc7bd2753513_Subti_3b26bed6d271.svg"/>
-                <div class="subtitle-text" style="color: #0040c1;">Nossas Competências</div>
-              </div>
+    <!-- Soluções por Perfil de Empresa Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50">
+      <div class="mb-12 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Soluções Customizadas</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-4">Soluções por Perfil de <span class="text-blue-600">Empresa</span></h2>
+        <p class="text-slate-600 text-lg font-light">Projetos sob medida focados na maturidade tecnológica e nas demandas de cada modelo de negócio.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="url(#paint0_linear_4587_1554)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="url(#paint1_linear_4587_1554)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1554" x1="12" y1="7" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1554" x1="12" y1="3" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-xl font-semibold text-slate-950 mb-4">Pequenas Empresas</h3>
+            <p class="text-sm text-slate-500 leading-relaxed font-light mb-6 font-light">Tecnologia acessível e eficiente para crescer com segurança.</p>
+          </div>
+          <a href="contato.html?perfil=pequena" class="inline-flex items-center gap-2 text-sm text-blue-600 font-semibold hover:text-blue-800 transition-colors">Solicitar Solução <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="url(#paint0_linear_4587_1554)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="url(#paint1_linear_4587_1554)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1554" x1="12" y1="7" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1554" x1="12" y1="3" x2="12" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-xl font-semibold text-slate-950 mb-4">Médias Empresas</h3>
+            <p class="text-sm text-slate-500 leading-relaxed font-light mb-6 font-light">Infraestrutura escalável, preparada para expansão e novas demandas.</p>
+          </div>
+          <a href="contato.html?perfil=media" class="inline-flex items-center gap-2 text-sm text-blue-600 font-semibold hover:text-blue-800 transition-colors">Solicitar Projeto <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-3xl bg-white/70 backdrop-blur border border-white p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-6"><svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#paint0_linear_4587_1655)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 17L12 22L22 17" stroke="url(#paint1_linear_4587_1655)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 12L12 17L22 12" stroke="url(#paint2_linear_4587_1655)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1655" x1="12" y1="2" x2="12" y2="12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1655" x1="12" y1="17" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4587_1655" x1="12" y1="12" x2="12" y2="17" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</div>
+            <h3 class="text-xl font-semibold text-slate-950 mb-4">Corporativo</h3>
+            <p class="text-sm text-slate-500 leading-relaxed font-light mb-6 font-light">Projetos robustos, alta disponibilidade e gestão profissional de TI.</p>
+          </div>
+          <a href="contato.html?perfil=corporativo" class="inline-flex items-center gap-2 text-sm text-blue-600 font-semibold hover:text-blue-800 transition-colors">Falar com Especialista <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats & About -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+      <div class="rounded-3xl bg-gradient-to-br from-[#172033] to-[#101827] border border-white/10 p-10 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-medium mb-6 leading-tight">Sobre a DMRInfo Tecnologia</h2>
+            <p class="text-slate-400 mb-8 font-light leading-relaxed font-light">A DMRInfo Tecnologia é especializada em soluções completas de TI para empresas. Atuamos com foco em segurança, desempenho e continuidade operacional, oferecendo projetos personalizados e suporte técnico de confiança.</p>
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-white text-slate-900 text-sm font-medium hover:bg-blue-50 transition-colors shadow-lg" href="sobre.html">Conheça a DMRInfo <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur">
+              <div class="text-4xl font-bold text-blue-400 mb-2">15+</div>
+              <div class="text-xs text-slate-400 font-medium">Anos de Engenharia</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur">
+              <div class="text-4xl font-bold text-emerald-400 mb-2">99.9%</div>
+              <div class="text-xs text-slate-400 font-medium">Uptime de Servidores</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur col-span-2">
+              <div class="text-4xl font-bold text-sky-400 mb-2">500+</div>
+              <div class="text-xs text-slate-400 font-medium">Empresas Blindadas Ativamente</div>
             </div>
           </div>
-          <h2 class="section-title" style="font-family: var(--font-headline); font-size: 3rem; font-weight: 700; color: var(--color-text-primary);">Engenharia de <span style="color: #256dff;">Alta Performance.</span></h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof (Testimonials) Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 relative border-t border-slate-200/50">
+      <div class="mb-16 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Prova Social</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-6">
+          Empresas que confiam na DMRInfo para manter suas operações seguras e eficientes.
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- Testimonial Master Card -->
+        <div class="rounded-3xl bg-white/62 backdrop-blur border border-white p-8 md:p-12 shadow-sm text-center flex flex-col items-center hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-1 text-amber-400 mb-6">
+            <svg class="inline-block align-middle w-6 h-6 text-amber-400 fill-amber-450" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            <svg class="inline-block align-middle w-6 h-6 text-amber-400 fill-amber-450" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            <svg class="inline-block align-middle w-6 h-6 text-amber-400 fill-amber-450" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            <svg class="inline-block align-middle w-6 h-6 text-amber-400 fill-amber-450" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            <svg class="inline-block align-middle w-6 h-6 text-amber-400 fill-amber-450" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+          </div>
+          <p class="text-slate-800 font-light italic text-lg md:text-xl leading-relaxed mb-8 font-light">
+            "Equipe extremamente profissional e ágil. Hoje temos uma infraestrutura estável e confiável."
+          </p>
+          <div class="border-t border-slate-100 pt-6 w-full">
+            <p class="text-sm font-semibold text-[#0668AB]">— Cliente DMRInfo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto px-6 py-20 relative">
+      <div class="mb-16 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Perguntas Frequentes</span>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-6">
+          Dúvidas Frequentes Resolvidas
+        </h2>
+        <p class="text-slate-600 text-lg font-light leading-relaxed">
+          Entenda como funciona o nosso suporte corporativo premium e a engenharia de segurança de dados.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 overflow-hidden transition-all duration-300">
+          <button class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none group" onclick="toggleFaq(this)">
+            <span class="text-base font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">Qual é o tempo de atendimento (SLA) para chamados emergenciais?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0 group-hover:bg-blue-50 group-hover:text-blue-500 transition-all faq-icon-box">
+              <svg class="inline-block align-middle w-4 h-4 transition-transform duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="url(#paint0_linear_4587_1562)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1562" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            </span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 text-sm text-slate-500 font-light leading-relaxed border-t border-slate-100 pt-4 font-light">
+              Para ocorrências críticas (ex: servidores corporativos inoperantes, internet principal da matriz fora do ar), o tempo máximo de início de atendimento remoto é de 15 minutos e físico de até 30 minutos em horário comercial, com garantia de SLA firmada em contrato registrado.
+            </div>
+          </div>
         </div>
 
-        <!-- Matriz Horizontal do Flex Accordion do Arooth (Light Theme) -->
-        <div class="faq-flex-wrap">
+        <!-- FAQ 2 -->
+        <div class="rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 overflow-hidden transition-all duration-300">
+          <button class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none group" onclick="toggleFaq(this)">
+            <span class="text-base font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">Como funciona a blindagem de backups contra ransomware?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0 group-hover:bg-blue-50 group-hover:text-blue-500 transition-all faq-icon-box">
+              <svg class="inline-block align-middle w-4 h-4 transition-transform duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="url(#paint0_linear_4587_1562)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1562" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            </span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 text-sm text-slate-500 font-light leading-relaxed border-t border-slate-100 pt-4 font-light">
+              Aplicamos a estratégia militar 3-2-1: geramos 3 cópias de backup diariamente em 2 tipos de mídias físicas diferentes (servidor de arquivos local NAS e storage em nuvem pública criptografada). Adicionalmente, 1 dessas cópias é mantida offline e imutável (air-gapped), o que impossibilita que qualquer invasor ou ransomware consiga apagar ou corromper seus históricos de dados.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 overflow-hidden transition-all duration-300">
+          <button class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none group" onclick="toggleFaq(this)">
+            <span class="text-base font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">Vocês realizam a instalação física ou apenas a gestão remota?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0 group-hover:bg-blue-50 group-hover:text-blue-500 transition-all faq-icon-box">
+              <svg class="inline-block align-middle w-4 h-4 transition-transform duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="url(#paint0_linear_4587_1562)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1562" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            </span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 text-sm text-slate-500 font-light leading-relaxed border-t border-slate-100 pt-4 font-light">
+              Somos uma integradora completa ponta a ponta. Dispomos de engenheiros credenciados para realizar projetos complexos como cabeamento estruturado de redes Cat6/Fibra Óptica, implementação de firewalls gerenciáveis, montagem física e lógica de rack de servidores, bem como a configuração lógica inteira e posterior gestão 24h/7d.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 overflow-hidden transition-all duration-300">
+          <button class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none group" onclick="toggleFaq(this)">
+            <span class="text-base font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">Minha empresa já tem uma equipe de TI interna. Qual o papel da DMR?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0 group-hover:bg-blue-50 group-hover:text-blue-500 transition-all faq-icon-box">
+              <svg class="inline-block align-middle w-4 h-4 transition-transform duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="url(#paint0_linear_4587_1562)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1562" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+
+            </span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 text-sm text-slate-500 font-light leading-relaxed border-t border-slate-100 pt-4 font-light">
+              Atuamos em regime de co-sourcing ou suporte Nível 3 especializado. Suportamos e agregamos valor ao seu time interno assumindo tarefas pesadas de monitoramento automatizado, gestão de backup cibernético em nuvem e segurança lógica complexa de borda de rede, liberando seus técnicos locais para focar nas demandas diretas do dia a dia.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA & Form Section -->
+    <section id="auditoria" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Auditoria Gratuita</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 mb-6">
+            Obtenha uma Análise de Vulnerabilidade Gratuita da sua TI.
+          </h2>
+          <p class="text-slate-600 text-lg font-light leading-relaxed mb-8">
+            Nossos engenheiros analisarão a segurança da sua rede, backups e infraestrutura lógica para identificar pontos cegos e riscos reais para a sua operação comercial.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-600"><svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="url(#paint0_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 4L12 14.01L9 11.01" stroke="url(#paint1_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1560" x1="12" y1="1.99426" x2="12" y2="21.9943" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1560" x1="15.5" y1="4" x2="15.5" y2="14.01" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</span>
+              <span class="text-sm text-slate-700 font-medium">Relatório detalhado de riscos e melhorias</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-600"><svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="url(#paint0_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 4L12 14.01L9 11.01" stroke="url(#paint1_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1560" x1="12" y1="1.99426" x2="12" y2="21.9943" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1560" x1="15.5" y1="4" x2="15.5" y2="14.01" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</span>
+              <span class="text-sm text-slate-700 font-medium">Chamada estratégica de 30 minutos com especialistas</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-600"><svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="url(#paint0_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 4L12 14.01L9 11.01" stroke="url(#paint1_linear_4587_1560)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1560" x1="12" y1="1.99426" x2="12" y2="21.9943" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1560" x1="15.5" y1="4" x2="15.5" y2="14.01" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</span>
+              <span class="text-sm text-slate-700 font-medium">Sem custo e sem qualquer compromisso comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-white border border-slate-200 p-8 shadow-xl">
+          <h3 class="text-2xl text-slate-900 mb-6 font-medium">Solicite Sua Proposta</h3>
           
-          <!-- Pilar 1: Consultoria em TI (Active por padrão) -->
-          <div class="single-faq-wrapper _01" data-w-id="6526e32c-12d0-b77a-c990-ae5c0e8c25eb" style="width: 45%; background-color: #ffffff !important; border-color: var(--color-border) !important;">
-            <div class="faq-bg-shape" style="background: linear-gradient(135deg, rgba(239, 244, 255, 0.9) 0%, #ffffff 100%);"></div>
-            <div class="faq-content-wrap">
-              <div class="faq-top-wrap">
-                <div class="faq-question-serial _01" style="color: var(--color-text-primary);">01</div>
-                <div class="faq-icon-wrap">
-                  <img alt="Plus" class="faq-plus _01" loading="lazy" src="assets/6918c248f9814be60b14699f_FAQ-P_efb8d17e7612.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                  <img alt="Minus" class="faq-minus _01" loading="lazy" src="assets/6918c248c089ceee5ca1daae_FAQ-M_3c7833300f5b.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                </div>
-              </div>
-              <div class="faq-bottom-wrap">
-                <div class="faq-question-wrap _01" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <h3 class="faq-question" style="color: var(--color-text-primary);">Consultoria em TI</h3>
-                </div>
-                <div class="faq-ans-wrap _01" style="width: 100%; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <div class="faq-ans-content">
-                    <h4 class="faq-ans-title" style="font-family: var(--font-headline); color: var(--color-text-primary);">Consultoria e SLA</h4>
-                    <div class="faq-ans-divider" style="background-color: var(--color-border);"></div>
-                    <p class="faq-details" style="color: var(--color-text-secondary);">Analisamos, estruturamos e gerenciamos estrategicamente a infraestrutura de TI da sua empresa, reduzindo desperdícios e alinhando tecnologia a metas de faturamento comercial.</p>
-                    
-                    <div class="faq-button-wrap" style="margin-top: 1.5rem;">
-                      <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="servicos.html" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-                        <div class="primary-button-flex">
-                          <div class="primary-button-text-wrap">
-                            <div class="primary-button-text">Detalhes do Pilar</div>
-                            <div class="primary-button-text-hover">Detalhes do Pilar</div>
-                          </div>
-                        </div>
-                        <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Solicitação de orçamento enviada com sucesso! Nossa equipe entrará em contato em até 2 horas úteis.'); this.reset();">
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Nome</label>
+              <input type="text" required placeholder="Seu nome completo" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:outline-none transition-all" />
             </div>
-          </div>
-
-          <!-- Pilar 2: Infraestrutura e Redes -->
-          <div class="single-faq-wrapper _02" data-w-id="9b4c1208-9cd5-655e-7d5e-b78a33b093e3" style="width: 20%; background-color: #ffffff !important; border-color: var(--color-border) !important;">
-            <div class="faq-bg-shape" style="background: linear-gradient(135deg, rgba(239, 244, 255, 0.9) 0%, #ffffff 100%);"></div>
-            <div class="faq-content-wrap">
-              <div class="faq-top-wrap">
-                <div class="faq-question-serial _02" style="color: var(--color-text-primary);">02</div>
-                <div class="faq-icon-wrap">
-                  <img alt="Plus" class="faq-plus _02" loading="lazy" src="assets/6918c248f9814be60b14699f_FAQ-P_efb8d17e7612.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                  <img alt="Minus" class="faq-minus _02" loading="lazy" src="assets/6918c248c089ceee5ca1daae_FAQ-M_3c7833300f5b.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                </div>
-              </div>
-              <div class="faq-bottom-wrap">
-                <div class="faq-question-wrap _02" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <h3 class="faq-question" style="color: var(--color-text-primary);">Infraestrutura & Redes</h3>
-                </div>
-                <div class="faq-ans-wrap _02" style="width: 0%; opacity: 0; display: none; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <div class="faq-ans-content">
-                    <h4 class="faq-ans-title" style="font-family: var(--font-headline); color: var(--color-text-primary);">Redes Gigabit</h4>
-                    <div class="faq-ans-divider" style="background-color: var(--color-border);"></div>
-                    <p class="faq-details" style="color: var(--color-text-secondary);">Projetos de cabeamento de rede de alto padrão, switches Gigabit gerenciáveis, racks organizados com rigor estético de engenharia e roteamento Wi-Fi corporativo de alta estabilidade.</p>
-                    
-                    <div class="faq-button-wrap" style="margin-top: 1.5rem;">
-                      <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="servicos.html" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-                        <div class="primary-button-flex">
-                          <div class="primary-button-text-wrap">
-                            <div class="primary-button-text">Detalhes do Pilar</div>
-                            <div class="primary-button-text-hover">Detalhes do Pilar</div>
-                          </div>
-                        </div>
-                        <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Empresa</label>
+              <input type="text" required placeholder="Nome da sua empresa" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:outline-none transition-all" />
             </div>
-          </div>
-
-          <!-- Pilar 3: Segurança Eletrônica -->
-          <div class="single-faq-wrapper _03" data-w-id="9b4c1208-9cd5-655e-7d5e-b78a33b093fa" style="width: 20%; background-color: #ffffff !important; border-color: var(--color-border) !important;">
-            <div class="faq-bg-shape" style="background: linear-gradient(135deg, rgba(239, 244, 255, 0.9) 0%, #ffffff 100%);"></div>
-            <div class="faq-content-wrap">
-              <div class="faq-top-wrap">
-                <div class="faq-question-serial _03" style="color: var(--color-text-primary);">03</div>
-                <div class="faq-icon-wrap">
-                  <img alt="Plus" class="faq-plus _03" loading="lazy" src="assets/6918c248f9814be60b14699f_FAQ-P_efb8d17e7612.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                  <img alt="Minus" class="faq-minus _03" loading="lazy" src="assets/6918c248c089ceee5ca1daae_FAQ-M_3c7833300f5b.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                </div>
-              </div>
-              <div class="faq-bottom-wrap">
-                <div class="faq-question-wrap _03" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <h3 class="faq-question" style="color: var(--color-text-primary);">Segurança Eletrônica</h3>
-                </div>
-                <div class="faq-ans-wrap _03" style="width: 0%; opacity: 0; display: none; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <div class="faq-ans-content">
-                    <h4 class="faq-ans-title" style="font-family: var(--font-headline); color: var(--color-text-primary);">Segurança Patrimonial</h4>
-                    <div class="faq-ans-divider" style="background-color: var(--color-border);"></div>
-                    <p class="faq-details" style="color: var(--color-text-secondary);">Blindagem física com CFTV IP inteligente de alta definição, portarias eletrônicas, controle biométrico de acessos de colaboradores e monitoramento tático 24 horas.</p>
-                    
-                    <div class="faq-button-wrap" style="margin-top: 1.5rem;">
-                      <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="servicos.html" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-                        <div class="primary-button-flex">
-                          <div class="primary-button-text-wrap">
-                            <div class="primary-button-text">Detalhes do Pilar</div>
-                            <div class="primary-button-text-hover">Detalhes do Pilar</div>
-                          </div>
-                        </div>
-                        <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Telefone / WhatsApp</label>
+              <input type="tel" required placeholder="DDD + Número" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:outline-none transition-all" />
             </div>
-          </div>
-
-          <!-- Pilar 4: Servidores e Cloud -->
-          <div class="single-faq-wrapper _04" data-w-id="9b4c1208-9cd5-655e-7d5e-b78a33b09411" style="width: 20%; background-color: #ffffff !important; border-color: var(--color-border) !important;">
-            <div class="faq-bg-shape" style="background: linear-gradient(135deg, rgba(239, 244, 255, 0.9) 0%, #ffffff 100%);"></div>
-            <div class="faq-content-wrap">
-              <div class="faq-top-wrap">
-                <div class="faq-question-serial _04" style="color: var(--color-text-primary);">04</div>
-                <div class="faq-icon-wrap">
-                  <img alt="Plus" class="faq-plus _04" loading="lazy" src="assets/6918c248f9814be60b14699f_FAQ-P_efb8d17e7612.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                  <img alt="Minus" class="faq-minus _04" loading="lazy" src="assets/6918c248c089ceee5ca1daae_FAQ-M_3c7833300f5b.svg" style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"/>
-                </div>
-              </div>
-              <div class="faq-bottom-wrap">
-                <div class="faq-question-wrap _04" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <h3 class="faq-question" style="color: var(--color-text-primary);">Servidores & Cloud</h3>
-                </div>
-                <div class="faq-ans-wrap _04" style="width: 0%; opacity: 0; display: none; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  <div class="faq-ans-content">
-                    <h4 class="faq-ans-title" style="font-family: var(--font-headline); color: var(--color-text-primary);">Cloud & Redundância</h4>
-                    <div class="faq-ans-divider" style="background-color: var(--color-border);"></div>
-                    <p class="faq-details" style="color: var(--color-text-secondary);">Projetos de servidores de arquivos corporativos, migração e gerenciamento na nuvem (AWS/Azure) e sistemas automáticos de backups criptografados com tolerância a ransomware.</p>
-                    
-                    <div class="faq-button-wrap" style="margin-top: 1.5rem;">
-                      <a class="primary-button w-inline-block magnetic-btn" data-variant="border" href="servicos.html" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; border-color: rgba(37, 109, 255, 0.3); color: #0040c1;">
-                        <div class="primary-button-flex">
-                          <div class="primary-button-text-wrap">
-                            <div class="primary-button-text">Detalhes do Pilar</div>
-                            <div class="primary-button-text-hover">Detalhes do Pilar</div>
-                          </div>
-                        </div>
-                        <div class="primary-button-hover-bg" style="background-color: rgba(37, 109, 255, 0.05);"></div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Serviço Desejado</label>
+              <select required class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:bg-white focus:border-blue-500 focus:outline-none transition-all">
+                <option value="">Selecione o serviço...</option>
+                <option value="consultoria">Consultoria em TI</option>
+                <option value="redes">Infraestrutura e Redes</option>
+                <option value="seguranca">Segurança Cibernética & LGPD</option>
+                <option value="cloud">Cloud, Backup e Servidores</option>
+              </select>
             </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Bento Grid de Soluções Baseado nos Projetos Arooth -->
-    <section class="section projects" style="padding-top: 8rem; padding-bottom: 8rem; border-top: 1px solid var(--color-border);">
-      <div class="container">
-        
-        <div class="home-projects-wrapper">
-          <div class="section-title-wrapper flex projects-title">
-            <div class="section-title-left-wrap project">
-              <div class="section-subtile-wrap">
-                <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" data-wf--subtitle--variant="borders">
-                  <div class="subtitle-flex-wrap">
-                    <img alt="Ícone Subtítulo" class="subtitle-icon" loading="lazy" src="assets/690f9e158664fc7bd2753513_Subti_3b26bed6d271.svg"/>
-                    <div class="subtitle-text" style="color: #0040c1;">Escopo Operacional</div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="section-title" style="font-family: var(--font-headline); font-size: 3rem; font-weight: 700; color: var(--color-text-primary);">Modelos de <span style="color: #256dff;">Atendimento.</span></h2>
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Mensagem</label>
+              <textarea rows="3" required placeholder="Descreva brevemente o que sua empresa precisa..." class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:outline-none transition-all resize-none"></textarea>
             </div>
             
-            <div class="section-title-right-wrap project-button-wrap">
-              <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 0.65rem 1.6rem; font-size: 0.9rem;">
-                <div class="primary-button-flex">
-                  <div class="primary-button-text-wrap">
-                    <div class="primary-button-text">Entrar em Contato</div>
-                    <div class="primary-button-text-hover">Entrar em Contato</div>
-                  </div>
-                  <div class="primary-button-arrow-wrapper">
-                    <div class="primary-button-arrow-wrap">
-                      <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                      <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-              </a>
-            </div>
-          </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-full py-4 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-md hover:-translate-y-0.5 transition-all mt-4 border border-blue-700">
+              Solicitar Orçamento <svg class="inline-block align-middle text-base" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
 
-          <!-- Mapeamento Bento Assimétrico do Grid de Projetos do Arooth (Light Theme) -->
-          <div class="projects-wrapper">
-            <div class="projects-flex-wrapper">
-              
-              <!-- Cartões de Lado a Lado (Pequenas & Médias Empresas) -->
-              <div class="single-projects-row">
-                <div class="projects-row-flex">
-                  
-                  <div class="single-project-collection _01 w-dyn-list">
-                    <div class="w-dyn-items" role="list">
-                      <div class="w-dyn-item" role="listitem">
-                        <div class="single-project-wrapper glass-card-premium" style="padding: 2.5rem; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-                          <div class="project-serial" style="color: #256dff;">01</div>
-                          <div class="single-project-contents">
-                            <h3 class="project-name" style="font-family: var(--font-headline); font-size: 1.8rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1rem;">Pequenas Empresas</h3>
-                            <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">TI estável, segura e de custos controlados para sua operação comercial decolar e crescer sem dores de cabeça técnicas.</p>
-                            <a class="more-button w-inline-block magnetic-btn" href="contato.html">
-                              <div class="more-button-flex">
-                                <div class="more-button-text" style="color: #256dff;">Falar com Engenheiro</div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="single-project-collection _02 w-dyn-list">
-                    <div class="w-dyn-items" role="list">
-                      <div class="w-dyn-item" role="listitem">
-                        <div class="single-project-wrapper glass-card-premium" style="padding: 2.5rem; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-                          <div class="project-serial" style="color: #256dff;">02</div>
-                          <div class="single-project-contents">
-                            <h3 class="project-name" style="font-family: var(--font-headline); font-size: 1.8rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1rem;">Médias Empresas</h3>
-                            <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">Redes estruturadas Gigabit, suporte técnico com SLA rígido de 2h e auditoria de TI focada em performance operacional.</p>
-                            <a class="more-button w-inline-block magnetic-btn" href="contato.html">
-                              <div class="more-button-flex">
-                                <div class="more-button-text" style="color: #256dff;">Projetar Escopo</div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- Cartão de Destaque Grande de Baixo (Grandes Corporações) -->
-              <div class="single-projects-row" style="margin-top: 2rem;">
-                <div class="single-project-collection w-dyn-list">
-                  <div class="w-dyn-items" role="list">
-                    <div class="w-dyn-item" role="listitem">
-                      <div class="large-project-wrap glass-card-premium" style="padding: 3rem; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-                        <div class="project-serial" style="color: #256dff;">03</div>
-                        <div class="single-project-contents">
-                          <h3 class="project-name" style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1rem;">Corporativo & Redundância</h3>
-                          <p style="color: var(--color-text-secondary); font-size: 1rem; margin-bottom: 2.5rem; max-width: 750px;">Engenharia sob medida de segurança física e lógica. Servidores locais e cloud em alta disponibilidade, SLA prioritário de suporte preventivo 24/7 e planos rígidos de tolerância a falhas empresariais.</p>
-                          <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 0.8rem 2.2rem;">
-                            <div class="primary-button-flex">
-                              <div class="primary-button-text-wrap">
-                                <div class="primary-button-text">Ver Soluções Corporativas</div>
-                                <div class="primary-button-text-hover">Ver Soluções Corporativas</div>
-                              </div>
-                            </div>
-                            <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+            </button>
+          </form>
         </div>
-
       </div>
     </section>
 
-    <!-- Depoimentos e Metas de SLA Estilo Arooth -->
-    <section class="section testimonials" style="padding-top: 8rem; padding-bottom: 8rem; border-top: 1px solid var(--color-border);">
-      <div class="container">
-        
-        <div class="section-title-wrapper margin-bottom">
-          <div class="section-subtile-wrap">
-            <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" data-wf--subtitle--variant="borders">
-              <div class="subtitle-flex-wrap">
-                <img alt="Ícone Subtítulo" class="subtitle-icon" loading="lazy" src="assets/690f9e158664fc7bd2753513_Subti_3b26bed6d271.svg"/>
-                <div class="subtitle-text" style="color: #0040c1;">Clientes Satisfeitos</div>
-              </div>
-            </div>
-          </div>
-          <h3 class="testimonial-title" style="font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700; line-height: 1.3; color: var(--color-text-primary);">
-            A DMR Info estabilizou nossa infraestrutura com maestria técnica e <span style="color: #256dff;">compromisso imediato de atendimento técnico.</span>
-          </h3>
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 mt-20">
+      <div class="grid md:grid-cols-3 gap-8 items-center text-sm text-slate-500 mb-8">
+        <div class="text-center md:text-left">
+          <p class="font-semibold text-slate-900 mb-1">DMRInfo Tecnologia</p>
+          <p class="text-xs">Soluções em TI, Segurança Cibernética e Infraestrutura para empresas.</p>
         </div>
-
-        <!-- Slider de Prova Social Adaptado de forma Simples e Estável -->
-        <div class="testimonials-stats-wrapper" style="margin-top: 4rem;">
-          <div class="testimonials-stats-flex">
-            
-            <div class="single-testimonial-stat-wrap glass-card-premium" style="padding: 2.5rem; text-align: center; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-              <h2 class="single-number" style="font-size: 2.5rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">SLA de 2h</h2>
-              <div class="testimonial-stat-text" style="color: var(--color-text-secondary);">Atendimento imediato e preventivo</div>
-            </div>
-
-            <div class="single-testimonial-stat-wrap glass-card-premium" style="padding: 2.5rem; text-align: center; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-              <h2 class="single-number" style="font-size: 2.5rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">100% Blindado</h2>
-              <div class="testimonial-stat-text" style="color: var(--color-text-secondary);">Criptografia e segurança monitorada</div>
-            </div>
-
-            <div class="single-testimonial-stat-wrap glass-card-premium" style="padding: 2.5rem; text-align: center; background-color: #ffffff !important; border: 1px solid var(--color-border) !important;">
-              <h2 class="single-number" style="font-size: 2.5rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">24/7 Suporte</h2>
-              <div class="testimonial-stat-text" style="color: var(--color-text-secondary);">Engenheiros ativos em tempo integral</div>
-            </div>
-
-          </div>
+        <div class="flex justify-center gap-6 text-xs font-medium">
+          <a href="index.html" class="hover:text-blue-600 transition-colors">Início</a>
+          <a href="sobre.html" class="hover:text-blue-600 transition-colors">Sobre</a>
+          <a href="servicos.html" class="hover:text-blue-600 transition-colors">Serviços</a>
+          <a href="contato.html" class="hover:text-blue-600 transition-colors">Contato</a>
         </div>
-
+        <div class="flex justify-center md:justify-end gap-4 text-lg">
+          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" title="WhatsApp"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0501 5C16.0268 5.19057 16.9244 5.66826 17.6281 6.37194C18.3318 7.07561 18.8095 7.97326 19.0001 8.95M15.0501 1C17.0793 1.22544 18.9716 2.13417 20.4163 3.57701C21.8609 5.01984 22.7721 6.91101 23.0001 8.94M22.0001 16.92V19.92C22.0012 20.1985 21.9441 20.4742 21.8326 20.7293C21.721 20.9845 21.5574 21.2136 21.3521 21.4019C21.1469 21.5901 20.9046 21.7335 20.6408 21.8227C20.377 21.9119 20.0974 21.9451 19.8201 21.92C16.7429 21.5856 13.7871 20.5341 11.1901 18.85C8.77388 17.3147 6.72539 15.2662 5.19006 12.85C3.50003 10.2412 2.4483 7.27099 2.12006 4.18C2.09507 3.90347 2.12793 3.62476 2.21656 3.36162C2.30518 3.09849 2.44763 2.85669 2.63482 2.65162C2.82202 2.44655 3.04986 2.28271 3.30385 2.17052C3.55783 2.05833 3.8324 2.00026 4.11006 2H7.11006C7.59536 1.99522 8.06585 2.16708 8.43382 2.48353C8.80179 2.79999 9.04213 3.23945 9.11005 3.72C9.23668 4.68007 9.47151 5.62273 9.81006 6.53C9.9446 6.88792 9.97372 7.27691 9.89396 7.65088C9.81421 8.02485 9.62892 8.36811 9.36005 8.64L8.09006 9.91C9.51361 12.4135 11.5865 14.4864 14.0901 15.91L15.3601 14.64C15.6319 14.3711 15.9752 14.1858 16.3492 14.1061C16.7231 14.0263 17.1121 14.0555 17.4701 14.19C18.3773 14.5286 19.32 14.7634 20.2801 14.89C20.7658 14.9585 21.2095 15.2032 21.5266 15.5775C21.8437 15.9518 22.0122 16.4296 22.0001 16.92Z" stroke="url(#paint0_linear_4587_1699)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1699" x1="12.556" y1="1" x2="12.556" y2="21.9281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+          <a href="mailto:contato@dmrinfo.com.br" class="hover:text-blue-600 transition-colors" title="E-mail"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="url(#paint0_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 6L12 13L2 6" stroke="url(#paint1_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_4587_1666" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4587_1666" x1="12" y1="6" x2="12" y2="13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#59EBFF"/>
+<stop offset="1" stop-color="#009FE3"/>
+</linearGradient>
+</defs>
+</svg>
+</a>
+        </div>
       </div>
-    </section>
-
-    <!-- Chamada para Ação CTA Monumental de Alta Conversão do Arooth -->
-    <section class="section cta" style="padding-top: 6rem; padding-bottom: 6rem; border-top: 1px solid var(--color-border);">
-      <div class="container">
-        
-        <div class="cta-wrapper">
-          <div class="cta-content-wrap" style="position: relative; overflow: hidden; border-radius: 30px; padding: 6rem 3rem; border: 1px solid var(--color-border) !important; background: #ffffff;">
-            <div class="cta-inner" style="z-index: 2; position: relative; max-width: 650px; margin: 0 auto; text-align: center;">
-              
-              <div class="subtitle-wrap w-variant-89dd2e21-7faa-27ca-a536-110057684450" style="margin: 0 auto 2rem auto;">
-                <div class="subtitle-flex-wrap" style="background: rgba(37, 109, 255, 0.06); border-color: rgba(37, 109, 255, 0.2);">
-                  <div class="subtitle-text" style="color: #256dff;">Vamos Blindar Sua TI?</div>
-                </div>
-              </div>
-              
-              <h2 class="cta-heading" style="font-family: var(--font-headline); font-size: 3rem; font-weight: 800; color: var(--color-text-primary); line-height: 1.1; margin-bottom: 2rem;">
-                Pronto para garantir a estabilidade operacional da sua empresa?
-              </h2>
-              
-              <p style="color: var(--color-text-secondary); font-size: 1.05rem; margin-bottom: 3rem;">
-                Agende uma reunião estratégica de diagnóstico gratuito da segurança lógica e cabeamento Gigabit com nosso squad de engenheiros seniores.
-              </p>
-              
-              <a class="primary-button w-inline-block magnetic-btn" data-variant="blue" href="contato.html" style="padding: 1rem 3rem; font-size: 1rem;">
-                <div class="primary-button-flex">
-                  <div class="primary-button-text-wrap">
-                    <div class="primary-button-text">Diagnóstico Gratuito</div>
-                    <div class="primary-button-text-hover">Diagnóstico Gratuito</div>
-                  </div>
-                  <div class="primary-button-arrow-wrapper">
-                    <div class="primary-button-arrow-wrap">
-                      <img alt="Seta" class="primary-button-arrow" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                      <img alt="Seta" class="primary-button-arrow-hover" loading="lazy" src="assets/69108960e3284bb1a2e481a4_Butto_2bc450c69045.svg"/>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-button-hover-bg" style="background-color: #256dff;"></div>
-              </a>
-
-            </div>
-
-            <!-- Fundo de Vídeo Premium Otimizado do Arooth -->
-            <div class="cta-bg-wrap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.15; pointer-events: none;">
-              <video autoplay="" loop="" muted="" playsinline="" style="width: 100%; height: 100%; object-fit: cover;">
-                <source src="assets/68dbb9a72b91c794d0cdd10c_2F691_83b9a8d36b54.mp4" type="video/mp4">
-              </video>
-            </div>
-
-          </div>
+      <div class="border-t border-slate-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <div>DMRInfo Tecnologia &copy; 2026. Todos os direitos reservados.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-blue-600 transition-colors">Políticas de Privacidade</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Termos de Serviço</a>
         </div>
-
-      </div>
-    </section>
-
-    <!-- Footer Premium Arooth Mapeado de Elite -->
-    <footer class="footer-section" style="background-color: #ffffff; border-top: 1px solid var(--color-border); padding-top: 5rem; padding-bottom: 3rem;">
-      <div class="container">
-        
-        <div class="footer-grid-wrap" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; margin-bottom: 4rem;">
-          
-          <!-- Coluna Identidade -->
-          <div class="footer-col-1" style="grid-column: span 5;">
-            <div style="font-family: var(--font-headline); font-size: 2rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.03em; margin-bottom: 1.5rem;">
-              DMR<span style="color: #256dff;">INFO</span>
-            </div>
-            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 350px;">
-              Estabilidade operacional garantida, cabeamento Gigabit de elite e segurança lógica monitorada ativamente 24h.
-            </p>
-          </div>
-
-          <!-- Coluna Navegação -->
-          <div class="footer-col-2" style="grid-column: span 3;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Navegação</h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li><a href="index.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;">Início</a></li>
-              <li><a href="sobre.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;">Sobre Nós</a></li>
-              <li><a href="servicos.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;">Nossos Serviços</a></li>
-              <li><a href="contato.html" style="color: var(--color-text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;">Fale Conosco</a></li>
-            </ul>
-          </div>
-
-          <!-- Coluna Contatos -->
-          <div class="footer-col-3" style="grid-column: span 4;">
-            <h4 style="font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">Contato & Suporte</h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">contato@dmrinfo.com.br</li>
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">+55 (11) 99999-8888</li>
-              <li style="color: var(--color-text-secondary); font-size: 0.9rem;">São Paulo, SP</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div style="border-top: 1px solid var(--color-border); padding-top: 2rem; text-align: center; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-          <p style="color: var(--color-text-secondary); font-size: 0.85rem;">&copy; 2026 DMR Info Tecnologia. Todos os direitos reservados. Design System Arooth (Webflow).</p>
-          <a href="design_system.html" style="color: #256dff; font-weight: 600; text-decoration: none; font-size: 0.85rem;">Pattern Library</a>
-        </div>
-
       </div>
     </footer>
+  </main>
 
-  </div>
-
-  <!-- CDN de Bibliotecas de Alta Velocidade -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-  
-  <!-- Script Principal -->
-  <script src="js/app.js"></script>
-
+  <script>
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon-box svg');
+      
+      if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+        answer.style.maxHeight = '0px';
+        button.parentElement.classList.remove('border-blue-500');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = '0px');
+        document.querySelectorAll('.faq-icon-box svg').forEach(svg => svg.style.transform = 'rotate(0deg)');
+        
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        button.parentElement.classList.add('border-blue-500');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
 </body>
 </html>
