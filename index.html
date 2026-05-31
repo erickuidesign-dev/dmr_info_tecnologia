@@ -369,41 +369,87 @@
         <!-- Cards / Stats Grid -->
         <div class="grid sm:grid-cols-3 lg:grid-cols-1 gap-6 lg:pl-8">
           <!-- Card 1: 99.9% Uptime -->
-          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex items-center gap-5">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 shadow-sm flex items-center justify-center text-emerald-500 group-hover:scale-105 transition-transform duration-300">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
+          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <p class="text-3xl md:text-4xl font-headline text-slate-950 font-bold leading-none tracking-tight">99.9%</p>
-              <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Uptime</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-12 h-12 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-500 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H20C21.1046 10 22 9.10457 22 8V4C22 2.89543 21.1046 2 20 2Z" stroke="url(#paint0_linear_stat1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 14H4C2.89543 14 2 14.8954 2 16V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z" stroke="url(#paint1_linear_stat1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6H6.01" stroke="url(#paint2_linear_stat1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 18H6.01" stroke="url(#paint3_linear_stat1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_stat1" x1="12" y1="2" x2="12" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint1_linear_stat1" x1="12" y1="14" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint2_linear_stat1" x1="6.005" y1="6" x2="6.005" y2="7" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint3_linear_stat1" x1="6.005" y1="18" x2="6.005" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="text-right">
+                  <p class="text-3xl font-headline text-slate-950 font-bold leading-none tracking-tight">99.9%</p>
+                  <p class="text-[10px] font-semibold text-blue-600 mt-1.5 uppercase tracking-wider">Uptime</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-light mt-3">
+                Garantia de estabilidade e servidores online para que a operação da sua empresa nunca pare.
+              </p>
             </div>
           </div>
 
           <!-- Card 2: 500+ Clientes -->
-          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex items-center gap-5">
-            <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100/80 shadow-sm flex items-center justify-center text-blue-500 group-hover:scale-105 transition-transform duration-300">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
+          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <p class="text-3xl md:text-4xl font-headline text-slate-950 font-bold leading-none tracking-tight">500+</p>
-              <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Clientes</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-12 h-12 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-500 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="url(#paint0_linear_stat2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="url(#paint1_linear_stat2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="url(#paint2_linear_stat2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="url(#paint3_linear_stat2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_stat2" x1="9" y1="15" x2="9" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint1_linear_stat2" x1="9" y1="3" x2="9" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint2_linear_stat2" x1="21.5" y1="15.13" x2="21.5" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint3_linear_stat2" x1="17.5039" y1="3.13" x2="17.5039" y2="10.88" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="text-right">
+                  <p class="text-3xl font-headline text-slate-950 font-bold leading-none tracking-tight">500+</p>
+                  <p class="text-[10px] font-semibold text-blue-600 mt-1.5 uppercase tracking-wider">Clientes</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-light mt-3">
+                Empresas de diversos setores que confiam na nossa equipe para gerenciar e proteger sua TI.
+              </p>
             </div>
           </div>
 
           <!-- Card 3: 15+ Anos -->
-          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex items-center gap-5">
-            <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100/80 shadow-sm flex items-center justify-center text-[#0668AB] group-hover:scale-105 transition-transform duration-300">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
+          <div class="group rounded-2xl bg-white/62 backdrop-blur-md border border-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <p class="text-3xl md:text-4xl font-headline text-slate-950 font-bold leading-none tracking-tight">15+</p>
-              <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Anos</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-12 h-12 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-500 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="inline-block align-middle w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9H4.5C3.67 9 3 9.67 3 10.5V12C3 12.83 3.67 13.5 4.5 13.5H6M18 9H19.5C20.33 9 21 9.67 21 10.5V12C21 12.83 20.33 13.5 19.5 13.5H18" stroke="url(#paint0_linear_stat3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22V18M18 6V13C18 16.31 15.31 19 12 19C8.69 19 6 16.31 6 13V6H18Z" stroke="url(#paint1_linear_stat3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 22H14" stroke="url(#paint2_linear_stat3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_stat3" x1="12" y1="9" x2="12" y2="13.5" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint1_linear_stat3" x1="12" y1="6" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                      <linearGradient id="paint2_linear_stat3" x1="12" y1="22" x2="12" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#59EBFF"/><stop offset="1" stop-color="#009FE3"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="text-right">
+                  <p class="text-3xl font-headline text-slate-950 font-bold leading-none tracking-tight">15+</p>
+                  <p class="text-[10px] font-semibold text-blue-600 mt-1.5 uppercase tracking-wider">Anos</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed font-light mt-3">
+                De experiência no mercado corporativo de TI, entregando governança e soluções de alta confiabilidade.
+              </p>
             </div>
           </div>
         </div>
