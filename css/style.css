@@ -66,6 +66,20 @@ body {
   perspective: 1000px;
 }
 
+/* Blindagem do Canvas WebGL do UnicornStudio no Mobile e Breakpoints */
+.aura-background-component canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+  .aura-background-component {
+    transform: scale(1.06) translate3d(0, 0, 0) !important;
+    transform-origin: center top !important;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
