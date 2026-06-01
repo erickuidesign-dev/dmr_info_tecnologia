@@ -39,6 +39,8 @@
 html {
   scroll-behavior: auto; /* Desativar para Lenis scroll suave */
   background-color: var(--color-bg);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -47,6 +49,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
