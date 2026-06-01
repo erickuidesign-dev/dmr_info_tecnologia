@@ -354,62 +354,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ─── Revelações Cinéticas Slide-Up Gerais (Aura Motion Standard) ─────────────
-    // Animador de Scroll Universal e Inteligente. Triggers mais altos (68%) para aparecer depois e durar mais (1.4s)
+    // Animador de Scroll Universal, Robusto e Elegante.
+    // Anima a seção completa para evitar colisões de opacidade entre contêineres pais e filhos.
     gsap.utils.toArray('[data-reveal="slide-up"]').forEach((el) => {
-      const heading = el.querySelector('h2, h3, .inline-flex, [class*="section-title"]');
-      const paragraph = el.querySelector('p');
-      const cards = el.querySelectorAll('.grid > div, .rounded-2xl, .rounded-3xl, .service-card, .sol-card, .partner-logo-item, .blog-post-card, .ds-faq-card-real');
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: "top 68%", // Triggers later (higher up) as requested by the user!
-          toggleActions: "play none none none"
-        }
-      });
-
-      if (heading) {
-        tl.from(heading, {
-          y: 40,
-          opacity: 0,
-          duration: 1.4,
-          ease: "power4.out"
-        });
-      }
-      if (paragraph) {
-        tl.from(paragraph, {
-          y: 25,
-          opacity: 0,
-          duration: 1.3,
-          ease: "power4.out"
-        }, "-=1.1");
-      }
-      if (cards.length > 0) {
-        tl.from(cards, {
-          y: 45,
-          opacity: 0,
-          scale: 0.97,
-          duration: 1.4,
-          stagger: 0.12,
-          ease: "power4.out"
-        }, "-=1.1");
-      }
-
-      // Fallback if structure is generic, animates the entire block beautifully
-      if (!heading && !paragraph && cards.length === 0) {
-        gsap.from(el, {
-          y: 50,
-          opacity: 0,
-          scale: 0.98,
-          duration: 1.4,
-          ease: "power4.out",
+      gsap.fromTo(el,
+        { y: 55, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.4, // Luxuosa e cadenciada, mais premium (Awwwards Aura Standard)
+          ease: "power3.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 68%",
+            start: "top 78%", // Aparece ligeiramente depois (78% da tela) de forma intencional e confortável
             toggleActions: "play none none none"
           }
-        });
-      }
+        }
+      );
     });
 
     // ─── Parallax Sutil nos Section Borders ───────────────────────────────────
@@ -430,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".award-count-arrow-wrap", {
       scrollTrigger: {
         trigger: ".about-award-count-wrap",
-        start: "top 68%",
+        start: "top 78%",
         toggleActions: "play none none none"
       },
       y: 30,
@@ -438,6 +399,13 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 0.8,
       stagger: 0.2,
       ease: "back.out(1.5)"
+    });
+
+    // Recalcular as posições físicas de todos os triggers após o desaparecimento do preloader
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 3000);
     });
   }
 
