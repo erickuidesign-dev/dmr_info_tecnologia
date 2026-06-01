@@ -73,33 +73,53 @@ body {
   object-fit: cover !important;
 }
 
+@keyframes auraMobileDriftOne {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(18vw, 12vh, 0) scale(1.15); }
+  66% { transform: translate3d(-10vw, 20vh, 0) scale(0.9); }
+}
+@keyframes auraMobileDriftTwo {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  40% { transform: translate3d(-15vw, -15vh, 0) scale(1.2); }
+  70% { transform: translate3d(10vw, -20vh, 0) scale(0.85); }
+}
+@keyframes auraMobileDriftThree {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(12vw, -10vh, 0) scale(1.08); }
+}
+
 @media (max-width: 768px) {
   .aura-background-component {
     transform: scale(1.06) translate3d(0, 0, 0) !important;
     transform-origin: center top !important;
   }
   
-  /* Turbinar Blobs CSS no Mobile para Animação Fluida Premium sem Lag */
+  /* Wrapper do Background com gradiente premium para evitar o flat branco sem graça */
+  .fixed.inset-0.w-full.h-full.z-0 {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf4 50%, #eef5fc 100%) !important;
+  }
+  
+  /* Turbinar Blobs CSS no Mobile com cores vibrantes, menor blur e drift ágil e visível */
   .aura-bg-blob-one {
-    background-color: rgba(1, 149, 217, 0.28) !important; /* Azul Ciano Vibrante */
-    width: 85vw !important;
-    height: 85vw !important;
-    filter: blur(5rem) !important;
-    animation: auraAmbientDriftOne 12s ease-in-out infinite !important; /* Drift ágil de 12s */
+    background-color: rgba(1, 149, 217, 0.42) !important; /* Azul Ciano Vibrante */
+    width: 90vw !important;
+    height: 90vw !important;
+    filter: blur(3.5rem) !important;
+    animation: auraMobileDriftOne 14s ease-in-out infinite !important;
   }
   .aura-bg-blob-two {
-    background-color: rgba(6, 104, 171, 0.22) !important; /* Azul Cobalto */
-    width: 95vw !important;
-    height: 95vw !important;
-    filter: blur(6rem) !important;
-    animation: auraAmbientDriftTwo 16s ease-in-out infinite !important; /* Drift ágil de 16s */
+    background-color: rgba(6, 104, 171, 0.35) !important; /* Azul Cobalto */
+    width: 100vw !important;
+    height: 100vw !important;
+    filter: blur(4rem) !important;
+    animation: auraMobileDriftTwo 18s ease-in-out infinite !important;
   }
   .aura-bg-blob-three {
-    background-color: rgba(255, 255, 255, 0.75) !important;
-    width: 70vw !important;
-    height: 70vw !important;
-    filter: blur(4rem) !important;
-    animation: auraAmbientDriftThree 14s ease-in-out infinite !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    width: 80vw !important;
+    height: 80vw !important;
+    filter: blur(3rem) !important;
+    animation: auraMobileDriftThree 16s ease-in-out infinite !important;
   }
 }
 
