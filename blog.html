@@ -90,62 +90,82 @@
     <div class="aura-bg-dots absolute inset-0 opacity-[0.22]" style="background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,0.09) 1px, transparent 0); background-size: 2rem 2rem;"></div>
   </div>
 
-  <!-- Preloader Cinematic Breath -->
-  <div id="preloader" class="fixed inset-0 bg-[#f3f5f8] z-[9999] flex items-center justify-center transition-opacity duration-700 ease-in-out">
+  <!-- Preloader Cinematic Brand -->
+  <div id="preloader" style="position: fixed; inset: 0; background-color: #f3f5f8; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
     <div class="relative flex flex-col items-center justify-center">
-      <!-- Minimal soft breathing glow behind logo -->
-      <div class="absolute w-64 h-64 rounded-full bg-blue-500/10 blur-3xl animate-preloader-glow"></div>
+      <!-- Halo de brilho pulsante no background -->
+      <div class="absolute w-80 h-40 rounded-full bg-blue-500/8 blur-3xl animate-preloader-glow"></div>
       
-      <!-- Logo Container with Inline Fade-In Styles to Prevent Flash -->
-      <div id="preloader-logo-container" style="opacity: 0; transform: scale(0.85); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); z-index: 10;">
-        <img src="assets/svg_logotype_01.svg" alt="DMR Logo Icon" width="112" height="112" style="width: 112px; height: 112px; opacity: 0; transition: opacity 0.5s ease;" onload="this.style.opacity = '1';" class="w-28 h-28 md:w-36 md:h-36 animate-preloader-pulse" />
+      <!-- Contêiner do Logotipo e Barra de Progresso -->
+      <div id="preloader-logo-container" style="opacity: 0; transform: scale(0.96); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); z-index: 10; display: flex; flex-direction: column; align-items: center;">
+        <!-- Logotipo Horizontal Principal -->
+        <img src="assets/svg_full_logo_version_02.svg" alt="DMR Info Logo" width="280" height="80" style="width: 280px; height: auto; max-width: 88vw; opacity: 0; transition: opacity 0.6s ease;" onload="this.style.opacity = '1';" class="animate-preloader-pulse" />
+        
+        <!-- Micro barra de progresso futurista -->
+        <div class="w-48 h-[2px] bg-slate-200/80 rounded-full overflow-hidden mt-8 relative shadow-inner">
+          <div id="preloader-progress-bar" style="width: 0%; height: 100%; background: linear-gradient(to right, #0195D9, #0668AB); transition: width 2.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 8px rgba(1, 149, 217, 0.5);"></div>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    // Fade-In the Logo smoothly and instantly
+    // Inicialização síncrona imediata para evitar FOUC e iniciar a barra de progresso
     (function() {
       var container = document.getElementById('preloader-logo-container');
+      var bar = document.getElementById('preloader-progress-bar');
       if (container) {
-        // Force reflow
+        // Força o reflow para garantir a transição de entrada
         container.offsetHeight;
         container.style.opacity = '1';
         container.style.transform = 'scale(1)';
       }
+      if (bar) {
+        setTimeout(function() {
+          bar.style.width = '100%';
+        }, 100);
+      }
     })();
 
-    // Fade-Out sequence when window is fully loaded
+    // Lógica de saída coordenada com duração mínima garantida de 2.2s
     (function() {
+      var startTime = Date.now();
+      
       function startFadeOut() {
-        var preloader = document.getElementById('preloader');
-        var container = document.getElementById('preloader-logo-container');
-        if (preloader) {
-          // Step 1: Smoothly fade out the pulsing logo first (keep it longer, e.g. 1400ms minimum)
-          setTimeout(function() {
+        var elapsed = Date.now() - startTime;
+        // Garante que o usuário experimente a animação da barra por pelo menos 2.2s
+        var delay = Math.max(0, 2200 - elapsed);
+        
+        setTimeout(function() {
+          var preloader = document.getElementById('preloader');
+          var container = document.getElementById('preloader-logo-container');
+          
+          if (preloader) {
+            // Fase 1: Slide-up elegante e esmaecimento dos elementos do logo
             if (container) {
               container.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
               container.style.opacity = '0';
-              container.style.transform = 'scale(0.9)';
+              container.style.transform = 'translateY(-20px) scale(0.96)';
             }
-          }, 1400);
 
-          // Step 2: Fade out the entire preloader background container afterwards
-          setTimeout(function() {
-            preloader.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            preloader.style.opacity = '0';
-            preloader.style.pointerEvents = 'none';
-          }, 2100);
+            // Fase 2: Desvanecimento suave do fundo do pré-loader
+            setTimeout(function() {
+              preloader.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+              preloader.style.opacity = '0';
+              preloader.style.pointerEvents = 'none';
+            }, 700);
 
-          // Step 3: Remove from display flow
-          setTimeout(function() {
-            preloader.style.display = 'none';
-          }, 2900);
-        }
+            // Fase 3: Ocultação completa do elemento
+            setTimeout(function() {
+              preloader.style.display = 'none';
+            }, 1500);
+          }
+        }, delay);
       }
 
+      // Fallback de segurança contra cache ou atraso no carregamento
       if (document.readyState === 'complete') {
-        startFadeOut();
+        setTimeout(startFadeOut, 500);
       } else {
         window.addEventListener('load', startFadeOut);
       }
