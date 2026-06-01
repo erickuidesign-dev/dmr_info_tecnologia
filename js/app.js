@@ -5,15 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   // 0. Preloader & Setup Inicial
   // ==========================================
-  const preloader = document.getElementById("preloader");
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      preloader.style.opacity = "0";
-      setTimeout(() => {
-        preloader.style.display = "none";
-      }, 1000);
-    }, 500);
-  });
+  // (Preloader sequence is handled directly in HTML to guarantee zero flash and optimal breath timeline)
 
   // ==========================================
   // 1. Lenis Smooth Scroll
@@ -316,178 +308,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.set(skewTargets, { transformOrigin: "center center", force3D: true });
 
-    // ─── Hero — Entrada Cinética ───────────────────────────────────────────────
-    gsap.from(".banner-section .headline-xl, .banner-section h1", {
-      y: 60,
-      opacity: 0,
-      duration: 1.3,
-      ease: "power4.out",
-      delay: 0.1
-    });
-    gsap.from(".banner-section p", {
-      y: 35,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.3,
-      ease: "power4.out"
-    });
-    gsap.from(".banner-section .primary-button", {
-      y: 25,
-      opacity: 0,
-      duration: 1.1,
-      delay: 0.5,
-      stagger: 0.12,
-      ease: "power3.out"
-    });
-    gsap.from(".subtitle-wrap", {
-      y: 20,
-      opacity: 0,
-      duration: 1.0,
-      delay: 0.05,
-      ease: "power3.out"
-    });
+    // ─── Hero — Entrada Cinética Universal ──────────────────────────────────────
+    // Sincronizado dinamicamente para iniciar quando o backdrop do preloader começa a sumir (1.6s)
+    const heroTimeline = gsap.timeline({ delay: 1.6 });
 
-    // ─── Seção About / Métricas ────────────────────────────────────────────────
-    gsap.from(".about-us-stat-wrappper", {
-      scrollTrigger: {
-        trigger: ".section.about-us",
-        start: "top 78%",
-        toggleActions: "play none none none"
-      },
-      y: 70,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out"
-    });
+    if (document.querySelector("main h1")) {
+      heroTimeline.from("main h1", {
+        y: 60,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out"
+      });
+    }
 
-    gsap.from(".about-us-title-wrap", {
-      scrollTrigger: {
-        trigger: ".section.about-us",
-        start: "top 75%",
-        toggleActions: "play none none none"
-      },
-      x: 50,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out"
-    });
+    if (document.querySelector("main h1 + p, main h1 ~ p")) {
+      heroTimeline.from("main h1 + p, main h1 ~ p", {
+        y: 35,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power4.out"
+      }, "-=1.2");
+    }
 
-    // Contadores animados (métricas do About)
-    gsap.from(".single-testimonial-stat-wrap.about-us", {
-      scrollTrigger: {
-        trigger: ".about-vh-wrap",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.18,
-      ease: "power3.out"
-    });
+    const heroButtons = document.querySelectorAll("main section:first-of-type a, main section:first-of-type button");
+    if (heroButtons.length > 0) {
+      heroTimeline.from(heroButtons, {
+        y: 25,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.12,
+        ease: "power3.out"
+      }, "-=1.1");
+    }
 
-    gsap.from(".about-stat-image-wrap", {
-      scrollTrigger: {
-        trigger: ".about-vh-wrap",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      x: -60,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out"
-    });
+    const heroGraphics = document.querySelectorAll(".aura-float-bubble, .aura-hero-card, .hero-slider-container, main section:first-of-type img");
+    if (heroGraphics.length > 0) {
+      heroTimeline.from(heroGraphics, {
+        scale: 0.95,
+        y: 40,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.15,
+        ease: "power4.out"
+      }, "-=1.3");
+    }
 
-    // ─── Seção Serviços (Flex FAQ) ─────────────────────────────────────────────
-    gsap.from(".section.services .section-title-wrapper", {
-      scrollTrigger: {
-        trigger: ".section.services",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 45,
-      opacity: 0,
-      duration: 1.0,
-      ease: "power3.out"
-    });
+    // ─── Revelações Cinéticas Slide-Up Gerais (Aura Motion Standard) ─────────────
+    // Animador de Scroll Universal e Inteligente. Triggers mais altos (68%) para aparecer depois e durar mais (1.4s)
+    gsap.utils.toArray('[data-reveal="slide-up"]').forEach((el) => {
+      const heading = el.querySelector('h2, h3, .inline-flex, [class*="section-title"]');
+      const paragraph = el.querySelector('p');
+      const cards = el.querySelectorAll('.grid > div, .rounded-2xl, .rounded-3xl, .service-card, .sol-card, .partner-logo-item, .blog-post-card, .ds-faq-card-real');
 
-    gsap.from(".single-faq-wrapper", {
-      scrollTrigger: {
-        trigger: ".faq-flex-wrap",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 80,
-      opacity: 0,
-      duration: 1.0,
-      stagger: 0.1,
-      ease: "power3.out"
-    });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: "top 68%", // Triggers later (higher up) as requested by the user!
+          toggleActions: "play none none none"
+        }
+      });
 
-    // ─── Seção Projetos / Bento Grid ──────────────────────────────────────────
-    gsap.from(".section.projects .section-title-wrapper", {
-      scrollTrigger: {
-        trigger: ".section.projects",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 1.0,
-      ease: "power3.out"
-    });
+      if (heading) {
+        tl.from(heading, {
+          y: 40,
+          opacity: 0,
+          duration: 1.4,
+          ease: "power4.out"
+        });
+      }
+      if (paragraph) {
+        tl.from(paragraph, {
+          y: 25,
+          opacity: 0,
+          duration: 1.3,
+          ease: "power4.out"
+        }, "-=1.1");
+      }
+      if (cards.length > 0) {
+        tl.from(cards, {
+          y: 45,
+          opacity: 0,
+          scale: 0.97,
+          duration: 1.4,
+          stagger: 0.12,
+          ease: "power4.out"
+        }, "-=1.1");
+      }
 
-    gsap.from(".single-project-wrapper, .large-project-wrap", {
-      scrollTrigger: {
-        trigger: ".projects-wrapper",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 70,
-      opacity: 0,
-      duration: 0.95,
-      stagger: 0.14,
-      ease: "power3.out"
-    });
-
-    // ─── Seção Depoimentos / SLA ──────────────────────────────────────────────
-    gsap.from(".section.testimonials .single-testimonial-stat-wrap", {
-      scrollTrigger: {
-        trigger: ".testimonials-stats-wrapper",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 55,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.15,
-      ease: "power3.out"
-    });
-
-    gsap.from(".testimonial-title", {
-      scrollTrigger: {
-        trigger: ".section.testimonials",
-        start: "top 78%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 1.0,
-      ease: "power3.out"
-    });
-
-    // ─── Seção CTA ─────────────────────────────────────────────────────────────
-    gsap.from(".cta-content-wrap", {
-      scrollTrigger: {
-        trigger: ".section.cta",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 50,
-      opacity: 0,
-      scale: 0.97,
-      duration: 1.1,
-      ease: "power3.out"
+      // Fallback if structure is generic, animates the entire block beautifully
+      if (!heading && !paragraph && cards.length === 0) {
+        gsap.from(el, {
+          y: 50,
+          opacity: 0,
+          scale: 0.98,
+          duration: 1.4,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 68%",
+            toggleActions: "play none none none"
+          }
+        });
+      }
     });
 
     // ─── Parallax Sutil nos Section Borders ───────────────────────────────────
@@ -508,7 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".award-count-arrow-wrap", {
       scrollTrigger: {
         trigger: ".about-award-count-wrap",
-        start: "top 80%",
+        start: "top 68%",
         toggleActions: "play none none none"
       },
       y: 30,
@@ -516,24 +438,6 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 0.8,
       stagger: 0.2,
       ease: "back.out(1.5)"
-    });
-
-    // ─── Revelações cinéticas Slide-Up Gerais ──────────────────────────────────
-    gsap.utils.toArray('[data-reveal="slide-up"]').forEach((el) => {
-      gsap.fromTo(el, 
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 88%",
-            toggleActions: "play none none none"
-          }
-        }
-      );
     });
   }
 
