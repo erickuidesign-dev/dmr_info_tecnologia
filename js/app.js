@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderer.setSize(canvas3D.clientWidth, canvas3D.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Constelação de Partículas
-    const particleCount = 180;
+    // Constelação de Partículas (Reduzido para 70 por performance e suavidade)
+    const particleCount = 70;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const velocities = [];
@@ -196,12 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let lineSegments = new THREE.LineSegments(new THREE.BufferGeometry(), lineMaterial);
     scene.add(lineSegments);
 
-    // Interação com Mouse (Paralaxe suave)
+    // Interação com Mouse (Removida por performance extrema em computadores corporativos de trabalho)
     let mouseX = 0, mouseY = 0;
-    document.addEventListener("mousemove", (e) => {
-      mouseX = (e.clientX - window.innerWidth / 2) * 0.015;
-      mouseY = (e.clientY - window.innerHeight / 2) * 0.015;
-    });
 
     // Loop de Animação
     function animate() {
@@ -241,14 +237,13 @@ document.addEventListener("DOMContentLoaded", () => {
           const y2 = positionsArr[j3+1];
           const z2 = positionsArr[j3+2];
 
-          const dist = Math.sqrt(
-            Math.pow(x1 - x2, 2) +
-            Math.pow(y1 - y2, 2) +
-            Math.pow(z1 - z2, 2)
-          );
+          const dx = x1 - x2;
+          const dy = y1 - y2;
+          const dz = z1 - z2;
+          const distSq = dx * dx + dy * dy + dz * dz;
 
-          // Se a distância for pequena, conecte com uma linha de rede sutil
-          if (dist < 6.5) {
+          // Se a distância for pequena (6.5 * 6.5 = 42.25), conecte com uma linha de rede sutil
+          if (distSq < 42.25) {
             linePositions.push(x1, y1, z1);
             linePositions.push(x2, y2, z2);
           }
