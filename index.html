@@ -8,6 +8,7 @@
   <script src="assets/resource_3fa48481346f.js"></script>
   <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
   <link href="assets/css2_79567371cedd.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
 
   <style>
     @keyframes auraAmbientDriftOne { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 35% { transform: translate3d(4vw, 3vh, 0) scale(1.06); } 70% { transform: translate3d(-2vw, 5vh, 0) scale(0.98); } }
@@ -128,8 +129,8 @@
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-7xl mx-auto px-6 pt-5">
-      <div class="relative overflow-hidden rounded-full bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
-        <div class="absolute inset-0 rounded-full bg-white/36 pointer-events-none"></div>
+      <div class="relative overflow-hidden rounded-xl bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
+        <div class="absolute inset-0 rounded-xl bg-white/36 pointer-events-none"></div>
         <div class="relative z-10 flex items-center justify-between">
           <a class="flex items-center gap-2 group h-14 md:h-16" href="index.html">
             <img src="assets/svg_full_logo_version_02.svg" alt="DMR Info Logo" class="h-full w-auto max-w-[240px] md:max-w-[280px] group-hover:scale-[1.02] transition-transform duration-300" />
@@ -138,11 +139,12 @@
             <a class="hover:text-blue-600 transition-colors" href="index.html">Início</a>
             <a class="hover:text-blue-600 transition-colors" href="sobre.html">Sobre</a>
             <a class="hover:text-blue-600 transition-colors" href="servicos.html">Serviços</a>
+            <a class="hover:text-blue-600 transition-colors" href="blog.html">Blog</a>
             <a class="hover:text-blue-600 transition-colors" href="contato.html">Contato</a>
           </div>
           <div class="flex items-center gap-2">
-            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-700 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
-            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="contato.html">Solicitar Orçamento</a>
+            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="area-cliente.html">Área do Cliente</a>
+            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-700 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
             
             <!-- Hamburger Button for Mobile -->
             <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-slate-100/80 text-slate-700 hover:bg-slate-200 transition-all shadow-sm focus:outline-none" aria-label="Abrir Menu">
@@ -163,10 +165,11 @@
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="index.html">Início</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="sobre.html">Sobre</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="servicos.html">Serviços</a>
+          <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="blog.html">Blog</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="contato.html">Contato</a>
           <div class="flex flex-col gap-2 pt-2">
-            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-700 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
-            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:bg-blue-700 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.2)]" href="contato.html">Solicitar Orçamento</a>
+            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:bg-blue-700 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.2)]" href="area-cliente.html">Área do Cliente</a>
+            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-700 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
           </div>
         </div>
       </div>
@@ -253,31 +256,19 @@
           </h1>
           <p class="mt-8 text-lg text-slate-600 font-light max-w-2xl">Projetamos, implementamos e mantemos a infraestrutura tecnológica do seu negócio para que você foque no que realmente importa.</p>
           <div class="mt-10 flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
-            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm shadow-lg hover:-translate-y-0.5 transition-all" href="contato.html">Solicitar Orçamento <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 12H19" stroke="url(#paint0_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 5L19 12L12 19" stroke="url(#paint1_linear_4587_1534)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1534" x1="12" y1="12" x2="12" y2="13" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1534" x1="15.5" y1="5" x2="15.5" y2="19" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</a>
-            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-white text-slate-700 text-sm shadow-sm hover:-translate-y-0.5 transition-all" href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer"><svg class="inline-block align-middle w-4 h-4 text-blue-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="url(#paint0_linear_4587_1674)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1674" x1="12" y1="3" x2="12" y2="21" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
- Falar com um Especialista</a>
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm shadow-lg hover:-translate-y-0.5 transition-all font-bold uppercase" href="contato.html">
+              <svg class="inline-block align-middle w-4 h-4 text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Fale Conosco
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-transparent border-2 border-[#0668AB] text-[#0668AB] hover:bg-[#0668AB]/10 text-sm shadow-sm hover:-translate-y-0.5 transition-all font-bold uppercase" href="servicos.html">
+              Nossos Serviços
+              <svg class="inline-block align-middle w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -329,57 +320,62 @@
                 <div class="text-xs text-slate-400 font-mono">DMR_DASHBOARD</div>
               </div>
               <div class="p-6">
-                <h3 class="text-2xl text-slate-900 mb-6 font-medium">Status da Infraestrutura</h3>
-                <div class="space-y-3">
-                  <div class="aura-hero-card rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-blue-500"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H20C21.1046 10 22 9.10457 22 8V4C22 2.89543 21.1046 2 20 2Z" stroke="url(#paint0_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 14H4C2.89543 14 2 14.8954 2 16V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z" stroke="url(#paint1_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 6H6.01" stroke="url(#paint2_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 18H6.01" stroke="url(#paint3_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1726" x1="12" y1="2" x2="12" y2="10" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1726" x1="12" y1="14" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint2_linear_4587_1726" x1="6.005" y1="6" x2="6.005" y2="7" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint3_linear_4587_1726" x1="6.005" y1="18" x2="6.005" y2="19" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                    <div class="flex-1"><p class="text-sm font-medium text-slate-800">Servidores Cloud</p><p class="text-xs text-slate-500">Operando com capacidade ideal</p></div>
-                    <div class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Online</div>
+                <h3 class="text-2xl text-slate-900 mb-6 font-medium">Status da TI Corporativa</h3>
+                
+                <div class="hero-slider-container">
+                  <!-- Slide 1: Notebook/Estações de Trabalho -->
+                  <div class="hero-slider-slide active">
+                    <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-500 shadow-sm shrink-0">
+                        <iconify-icon icon="material-symbols:laptop-mac-outline" class="text-xl"></iconify-icon>
+                      </div>
+                      <div class="flex-1">
+                        <p class="text-sm font-medium text-slate-800">Estações de Trabalho</p>
+                        <p class="text-[11px] text-slate-500">Dispositivos protegidos por Antivírus EDR</p>
+                        <div class="mini-mockup-bar mt-2" data-target-width="100%">
+                          <div class="mini-mockup-bar-fill" style="--percent-width: 100%;"></div>
+                        </div>
+                      </div>
+                      <div class="text-[10px] bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider">Seguro</div>
+                    </div>
                   </div>
-                  <div class="aura-hero-card rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3" style="animation-delay: 200ms">
-                    <div class="w-10 h-10 rounded-xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center text-indigo-500"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="url(#paint0_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="url(#paint1_linear_4587_1663)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1663" x1="12" y1="11" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1663" x1="12" y1="2" x2="12" y2="11" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                    <div class="flex-1"><p class="text-sm font-medium text-slate-800">Segurança de Redes</p><p class="text-xs text-slate-500">Proteção Ativa 24h/7</p></div>
-                    <div class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Ativo</div>
+
+                  <!-- Slide 2: Servidores/Cloud -->
+                  <div class="hero-slider-slide">
+                    <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-500 shadow-sm shrink-0">
+                        <iconify-icon icon="material-symbols:dns-outline" class="text-xl"></iconify-icon>
+                      </div>
+                      <div class="flex-1">
+                        <p class="text-sm font-medium text-slate-800">Servidores & Nuvem Híbrida</p>
+                        <p class="text-[11px] text-slate-500">Backups diários automatizados e replicados</p>
+                        <div class="mini-mockup-bar mt-2" data-target-width="100%">
+                          <div class="mini-mockup-bar-fill" style="--percent-width: 100%;"></div>
+                        </div>
+                      </div>
+                      <div class="text-[10px] bg-indigo-100 text-indigo-700 px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider">Redundante</div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3: Redes/Firewall pfSense & Fortinet -->
+                  <div class="hero-slider-slide">
+                    <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-500 shadow-sm shrink-0">
+                        <iconify-icon icon="material-symbols:shield-lock-outline" class="text-xl"></iconify-icon>
+                      </div>
+                      <div class="flex-1">
+                        <p class="text-sm font-medium text-slate-800">Segurança de Redes (pfSense)</p>
+                        <p class="text-[11px] text-slate-500">Links redundantes e VPN criptografada</p>
+                        <div class="mini-mockup-bar mt-2" data-target-width="15%">
+                          <div class="mini-mockup-bar-fill" style="--percent-width: 15%;"></div>
+                        </div>
+                      </div>
+                      <div class="text-[10px] bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider">Ativo</div>
+                    </div>
                   </div>
                 </div>
+
+                <div class="hero-slider-dots"></div>
               </div>
             </div>
           </div>
@@ -388,38 +384,84 @@
     </section>
 
     <!-- Trust Row -->
-    <section class="max-w-7xl mx-auto px-6 py-10 border-t border-b border-slate-200/50 mb-10">
+    <section class="max-w-7xl mx-auto px-6 py-10 border-t border-b border-slate-200/50 mb-10 overflow-hidden" data-reveal="slide-up">
       <p class="text-center text-[10px] font-semibold text-slate-400 tracking-[0.15em] uppercase mb-8">Parceiros Tecnológicos de Elite & Certificações Globais</p>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-40 hover:opacity-75 transition-opacity duration-300">
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:amazonaws"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">AWS Partner</span>
-        </div>
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:cisco"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Cisco Gold</span>
-        </div>
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:dell"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">DELL Partner</span>
-        </div>
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:intel"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Intel Tech</span>
-        </div>
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:vmware"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">VMware Gold</span>
-        </div>
-        <div class="flex items-center gap-2 group cursor-default">
-          <iconify-icon class="text-4xl text-slate-400 group-hover:text-blue-600 transition-colors" icon="simple-icons:ubiquiti"></iconify-icon>
-          <span class="text-xs font-semibold tracking-tight text-slate-500 group-hover:text-slate-900 transition-colors">Ubiquiti Gold</span>
+      
+      <div class="partners-marquee-container opacity-45 hover:opacity-85 transition-opacity duration-300">
+        <div class="partners-marquee-track">
+          <!-- Slide List -->
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:amazonaws"></iconify-icon>
+            <span>AWS Partner</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:cisco"></iconify-icon>
+            <span>Cisco Gold</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:dell"></iconify-icon>
+            <span>DELL Partner</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:intel"></iconify-icon>
+            <span>Intel Tech</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:vmware"></iconify-icon>
+            <span>VMware Gold</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:ubiquiti"></iconify-icon>
+            <span>Ubiquiti Gold</span>
+          </div>
+          <div class="partner-logo-item logo-fortinet">
+            <iconify-icon icon="simple-icons:fortinet"></iconify-icon>
+            <span>Fortinet Partner</span>
+          </div>
+          <div class="partner-logo-item logo-pfsense">
+            <iconify-icon icon="material-symbols:shield-lock-outline"></iconify-icon>
+            <span>pfSense Security</span>
+          </div>
+          
+          <!-- Duplicate for infinite seamless scroll -->
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:amazonaws"></iconify-icon>
+            <span>AWS Partner</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:cisco"></iconify-icon>
+            <span>Cisco Gold</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:dell"></iconify-icon>
+            <span>DELL Partner</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:intel"></iconify-icon>
+            <span>Intel Tech</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:vmware"></iconify-icon>
+            <span>VMware Gold</span>
+          </div>
+          <div class="partner-logo-item">
+            <iconify-icon icon="simple-icons:ubiquiti"></iconify-icon>
+            <span>Ubiquiti Gold</span>
+          </div>
+          <div class="partner-logo-item logo-fortinet">
+            <iconify-icon icon="simple-icons:fortinet"></iconify-icon>
+            <span>Fortinet Partner</span>
+          </div>
+          <div class="partner-logo-item logo-pfsense">
+            <iconify-icon icon="material-symbols:shield-lock-outline"></iconify-icon>
+            <span>pfSense Security</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Sobre a DMR Info Tecnologia Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50 relative z-10">
+    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50 relative z-10" data-reveal="slide-up">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Text Content -->
         <div class="space-y-6">
@@ -534,8 +576,67 @@
       </div>
     </section>
 
+    <!-- Suporte & Infraestrutura Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50 relative z-10" data-reveal="slide-up">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Text Content -->
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100/80 px-3.5 py-1.5 shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider font-bold">Suporte & Infraestrutura</span>
+          </div>
+          <h2 class="text-3xl md:text-4.5xl lg:text-5xl font-medium tracking-tight text-slate-950 leading-tight">
+            Mantemos sua empresa funcionando <span class="text-blue-600">sem interrupções</span>
+          </h2>
+          <p class="text-slate-900 text-lg font-normal leading-relaxed">
+            Oferecemos suporte técnico especializado para computadores e servidores empresariais, com atendimento rápido, seguro e confiável para empresas que não podem parar.
+          </p>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Nossa equipe atua com manutenção preventiva, resolução de problemas, otimização de infraestrutura e suporte estratégico para garantir estabilidade, segurança e alta performance no dia a dia da operação.
+          </p>
+          <div class="pt-4">
+            <a class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 bg-gradient-to-b from-blue-500 to-blue-600 text-white text-xs font-bold tracking-wider hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.3)] uppercase" href="servicos.html">
+              SAIBA MAIS
+              <svg class="w-3.5 h-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Content and Floating Glass Card -->
+        <div class="relative lg:pl-8">
+          <!-- Decorative Blur Blob Behind -->
+          <div class="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-blue-200/30 to-sky-200/20 blur-3xl"></div>
+          
+          <!-- Image Wrapper -->
+          <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white p-3">
+            <img src="assets/infrastructure_support.png" alt="Suporte e Infraestrutura DMR Info" class="w-full h-[400px] object-cover rounded-2xl shadow-inner" />
+          </div>
+
+          <!-- Floating Glass Card -->
+          <div class="absolute -bottom-6 -left-4 md:-left-6 rounded-2xl bg-white/78 backdrop-blur-xl border border-white/90 p-5 shadow-xl max-w-[250px] transition-all hover:scale-105 duration-300">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-3xl font-headline font-semibold text-slate-950 leading-none">4.9</span>
+              <div class="flex text-amber-500 text-xl">
+                <!-- Golden Star Icon -->
+                <svg class="w-5 h-5 fill-current text-amber-500" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              </div>
+            </div>
+            <p class="text-xs font-bold text-slate-900 uppercase tracking-wide">Clientes Satisfeitos</p>
+            <p class="text-[10px] text-slate-400 mt-1 font-light leading-relaxed">Infraestrutura gerenciada e suporte técnico de elite para centenas de empresas parceiras.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Benefícios Principais Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50">
+    <section class="max-w-7xl mx-auto px-6 py-20 border-b border-slate-200/50" data-reveal="slide-up">
       <div class="mb-12 text-center max-w-3xl mx-auto">
         <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
           <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
@@ -821,7 +922,7 @@
     </section>
 
     <!-- Problem/Agitation (PAS) Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 relative">
+    <section class="max-w-7xl mx-auto px-6 py-20 relative" data-reveal="slide-up">
       <div class="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-red-100/30 via-white/10 to-amber-100/20 blur-3xl -z-10"></div>
       <div class="mb-16 text-center max-w-3xl mx-auto">
         <div class="inline-flex items-center gap-2 rounded-full bg-rose-50 border border-rose-100 px-3.5 py-1.5 shadow-sm mb-4">
@@ -973,7 +1074,7 @@
     </section>
 
     <!-- Soluções por Perfil de Empresa Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50">
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50" data-reveal="slide-up">
       <div class="mb-12 text-center max-w-3xl mx-auto">
         <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
           <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
@@ -1104,7 +1205,7 @@
     </section>
 
     <!-- Stats & About -->
-    <section class="max-w-7xl mx-auto px-6 py-20">
+    <section class="max-w-7xl mx-auto px-6 py-20" data-reveal="slide-up">
       <div class="rounded-3xl bg-gradient-to-br from-[#172033] to-[#101827] border border-white/10 p-10 lg:p-16 text-white shadow-2xl relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none"></div>
         <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -1146,7 +1247,7 @@
     </section>
 
     <!-- Social Proof (Testimonials) Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 relative border-t border-slate-200/50">
+    <section class="max-w-7xl mx-auto px-6 py-20 relative border-t border-slate-200/50" data-reveal="slide-up">
       <div class="mb-16 text-center max-w-3xl mx-auto">
         <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 shadow-sm mb-4">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
@@ -1337,7 +1438,7 @@
     </section>
 
     <!-- CTA & Form Section -->
-    <section id="auditoria" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50">
+    <section id="auditoria" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200/50" data-reveal="slide-up">
       <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
         <div>
           <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
@@ -1472,6 +1573,7 @@
           <a href="index.html" class="hover:text-blue-600 transition-colors">Início</a>
           <a href="sobre.html" class="hover:text-blue-600 transition-colors">Sobre</a>
           <a href="servicos.html" class="hover:text-blue-600 transition-colors">Serviços</a>
+          <a href="blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
           <a href="contato.html" class="hover:text-blue-600 transition-colors">Contato</a>
         </div>
         <div class="flex justify-center md:justify-end gap-4 text-lg">
@@ -1532,5 +1634,10 @@
       }
     }
   </script>
+  
+  <!-- GSAP, ScrollTrigger & App JS -->
+  <script src="assets/gsap_8e6c1f2e24a8.js"></script>
+  <script src="assets/ScrollTrigger_3b69999534fd.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

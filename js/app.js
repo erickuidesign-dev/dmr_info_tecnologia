@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(updateCursor);
 
   // Efeitos de Hover no Cursor (Compatível com botões e Flex Accordion do Arooth)
-  const hoverElements = document.querySelectorAll("a, button, .glass-card-premium, .primary-button, .ds-faq-card-real, select, input, textarea");
+  const hoverElements = document.querySelectorAll("a, button, .glass-card-premium, .primary-button, .ds-faq-card-real, select, input, textarea, .blog-post-card, .blog-featured-card, .partner-logo-item");
   hoverElements.forEach((el) => {
     el.addEventListener("mouseenter", () => {
       cursor.style.width = "40px";
@@ -522,6 +522,24 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2,
       ease: "back.out(1.5)"
     });
+
+    // ─── Revelações cinéticas Slide-Up Gerais ──────────────────────────────────
+    gsap.utils.toArray('[data-reveal="slide-up"]').forEach((el) => {
+      gsap.fromTo(el, 
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 88%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
   }
 
   // ==========================================
@@ -630,7 +648,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Vincular sons aos Hovers e Cliques do Menu, Cards e Botões Premium Arooth
-  const interactiveNodes = document.querySelectorAll("a, button, .primary-button, .ds-faq-card-real, .service-card, .sol-card");
+  const interactiveNodes = document.querySelectorAll("a, button, .primary-button, .ds-faq-card-real, .service-card, .sol-card, .blog-post-card, .blog-featured-card, .partner-logo-item");
   interactiveNodes.forEach((node) => {
     node.addEventListener("mouseenter", () => {
       playHoverSound();
@@ -1014,6 +1032,67 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+  }
+
+  // ==========================================
+  // 11. Slider Automático de Mockups da Hero
+  // ==========================================
+  const slides = document.querySelectorAll(".hero-slider-slide");
+  const dotsContainer = document.querySelector(".hero-slider-dots");
+  let currentSlide = 0;
+  let slideInterval;
+
+  if (slides.length > 0) {
+    // Criar os dots dinamicamente
+    slides.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.className = `hero-slider-dot ${index === 0 ? "active" : ""}`;
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        resetSlideTimer();
+      });
+      if (dotsContainer) dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".hero-slider-dot");
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove("active");
+      if (dots[currentSlide]) dots[currentSlide].classList.remove("active");
+      
+      currentSlide = index;
+      
+      slides[currentSlide].classList.add("active");
+      if (dots[currentSlide]) dots[currentSlide].classList.add("active");
+      
+      // Se houver uma barra de progresso de mockup, ativar
+      const fillBar = slides[currentSlide].querySelector(".mini-mockup-bar-fill");
+      if (fillBar) {
+        const targetWidth = fillBar.parentElement.getAttribute("data-target-width") || "100%";
+        fillBar.style.width = "0%";
+        setTimeout(() => {
+          fillBar.style.width = targetWidth;
+        }, 50);
+      }
+    }
+
+    function nextSlide() {
+      let next = (currentSlide + 1) % slides.length;
+      goToSlide(next);
+    }
+
+    function startSlideTimer() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetSlideTimer() {
+      clearInterval(slideInterval);
+      startSlideTimer();
+    }
+
+    // Inicializar o primeiro slide
+    goToSlide(0);
+    startSlideTimer();
   }
 
 });

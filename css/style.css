@@ -236,7 +236,7 @@ body {
   text-decoration: none;
   background-color: var(--color-accent-cobalt);
   border: 1px solid var(--color-border);
-  border-radius: 50px;
+  border-radius: 12px;
   padding: 0.85rem 2.2rem;
   color: var(--color-text-primary);
   font-family: var(--font-headline);
@@ -244,6 +244,8 @@ body {
   font-size: 0.95rem;
   cursor: pointer;
   z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition: border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -901,12 +903,14 @@ body {
   font-family: var(--font-headline);
   font-weight: 600;
   padding: 1rem 2rem;
-  border-radius: 50px;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
   transition: var(--transition-bezier);
 }
@@ -1597,5 +1601,309 @@ footer {
   .testimonials-stats-flex {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================
+   11. Overrides Globais de Botões (12px & Uppercase)
+   ========================================== */
+.btn-primary, 
+.btn-secondary, 
+.primary-button, 
+.btn-premium-submit,
+a[class*="rounded-full"][class*="px-"],
+button[class*="rounded-full"][class*="px-"],
+a[class*="rounded-full"][class*="py-"],
+button[class*="rounded-full"][class*="py-"] {
+  border-radius: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ==========================================
+   12. Carrossel Infinito de Parceiros (Marquee)
+   ========================================== */
+.partners-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.partners-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partnersMarqueeScroll 32s linear infinite;
+}
+
+.partners-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.partner-logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 3rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover {
+  color: var(--color-accent-cyan);
+}
+
+.partner-logo-item iconify-icon {
+  font-size: 2.2rem;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover iconify-icon {
+  color: var(--color-accent-cyan);
+  transform: scale(1.08);
+}
+
+@keyframes partnersMarqueeScroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* ==========================================
+   13. Estilos do Slider Dinâmico da Hero
+   ========================================== */
+.hero-slider-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.hero-slider-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-slider-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.hero-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-slider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.hero-slider-dot.active {
+  background: var(--color-accent-cyan);
+  width: 16px;
+  border-radius: 3px;
+}
+
+/* Mini Mockup Visuals for Slider */
+.mini-mockup-bar {
+  height: 6px;
+  background: #eff4ff;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mini-mockup-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-cyan), var(--color-accent-cobalt));
+  border-radius: 3px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slider-slide.active .mini-mockup-bar-fill {
+  width: var(--percent-width);
+}
+
+/* ==========================================
+   14. Estilos de Suporte e Animações do Blog
+   ========================================== */
+.blog-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.blog-featured-card {
+  grid-column: span 12;
+}
+
+.blog-post-card {
+  grid-column: span 4;
+}
+
+.blog-newsletter-card {
+  grid-column: span 12;
+}
+
+@media (max-width: 1024px) {
+  .blog-post-card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post-card {
+    grid-column: span 12;
+  }
+  .blog-bento-grid {
+    gap: 1rem;
+  }
+}
+
+/* Inicialização Oculta para Revelações cinéticas */
+[data-reveal="slide-up"] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Custom Partner Logo Hovers */
+.partner-logo-item.logo-fortinet iconify-icon {
+  color: var(--color-text-secondary);
+}
+.partner-logo-item.logo-fortinet:hover iconify-icon {
+  color: #FF5A00 !important;
+}
+.partner-logo-item.logo-pfsense iconify-icon {
+  color: var(--color-text-secondary);
+}
+.partner-logo-item.logo-pfsense:hover iconify-icon {
+  color: #E02020 !important;
+}
+
+/* Button Font Bold Override */
+.primary-button, 
+.btn-premium-submit, 
+a[class*="rounded-full"][class*="px-"], 
+a[class*="rounded-xl"][class*="px-"], 
+button[class*="rounded-full"][class*="px-"], 
+button[type="submit"],
+.magnetic-btn {
+  font-weight: 700 !important;
+}
+
+/* ==========================================
+   15. Micro Interações Avançadas de Botões (Awwwards Aura)
+   ========================================== */
+
+/* Transições ultra suaves e fluidas para interações premium */
+.primary-button,
+.btn-primary,
+.btn-secondary,
+.btn-premium-submit,
+a[class*="rounded-full"][class*="px-"],
+button[class*="rounded-full"][class*="px-"],
+a[class*="rounded-xl"][class*="px-"],
+button[class*="rounded-xl"][class*="px-"],
+button[type="submit"],
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              color 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Hover: Elevação suave, escala sutil e sombra azul premium expandida */
+.primary-button:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-premium-submit:hover,
+a[class*="rounded-full"][class*="px-"]:hover,
+button[class*="rounded-full"][class*="px-"]:hover,
+a[class*="rounded-xl"][class*="px-"]:hover,
+button[class*="rounded-xl"][class*="px-"]:hover,
+button[type="submit"]:hover,
+.magnetic-btn:hover {
+  transform: translateY(-2px) scale(1.025) !important;
+  box-shadow: 0 10px 20px rgba(6, 104, 171, 0.22), 0 4px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Hover em botões brancos ou translúcidos (sombra suave discreta) */
+a[class*="bg-white/78"]:hover,
+a[class*="bg-slate-50"]:hover {
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.02) !important;
+}
+
+/* Clique (Active): Feedback físico instantâneo que simula botão mecânico de hardware */
+.primary-button:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-premium-submit:active,
+a[class*="rounded-full"][class*="px-"]:active,
+button[class*="rounded-full"][class*="px-"]:active,
+a[class*="rounded-xl"][class*="px-"]:active,
+button[class*="rounded-xl"][class*="px-"]:active,
+button[type="submit"]:active,
+.magnetic-btn:active {
+  transform: translateY(1px) scale(0.965) !important;
+  box-shadow: 0 4px 8px rgba(6, 104, 171, 0.12) !important;
+}
+
+/* Efeito Shimmer Sweep (Reflexo de brilho linear) no Hover para botões de destaque sólido */
+.btn-primary::after,
+.btn-premium-submit::after,
+a[class*="bg-gradient-to-b"]::after,
+button[class*="bg-gradient-to-b"]::after,
+.primary-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.btn-primary:hover::after,
+.btn-premium-submit:hover::after,
+a[class*="bg-gradient-to-b"]:hover::after,
+button[class*="bg-gradient-to-b"]:hover::after,
+.primary-button:hover::after {
+  left: 150%;
+  transition: left 0.9s cubic-bezier(0.25, 1, 0.5, 1);
 }
 

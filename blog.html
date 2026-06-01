@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>DMR Info Tecnologia | TI Corporativa de Elite</title>
+  <title>Blog & Insights | DMR Info Tecnologia</title>
   
   <script src="assets/resource_3fa48481346f.js"></script>
   <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
@@ -19,11 +19,7 @@
     .aura-bg-blob-two { animation: auraAmbientDriftTwo 32s ease-in-out infinite; }
     .aura-bg-blob-three { animation: auraAmbientDriftThree 30s ease-in-out infinite; }
     .aura-bg-dots { animation: auraDotDrift 38s linear infinite; }
-    @keyframes aura-float-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    @keyframes aura-bubble-in { 0% { opacity: 0; transform: translateX(18px) translateY(8px) scale(0.96); filter: blur(6px); } 100% { opacity: 1; transform: translateX(0) translateY(0) scale(1); filter: blur(0); } }
-    @keyframes aura-card-in { 0% { opacity: 0; transform: translateY(12px); } 100% { opacity: 1; transform: translateY(0); } }
-    .aura-float-bubble { opacity: 0; animation: aura-bubble-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards, aura-float-soft 4.5s ease-in-out infinite; }
-    .aura-hero-card { opacity: 0; animation: aura-card-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    
     html { scroll-behavior: smooth; }
     h1, h2, h3, h4, h5, h6, .font-headline {
       font-family: 'Impact', 'Arial Black', sans-serif !important;
@@ -44,7 +40,7 @@
     .text-blue-400, .hover\:text-blue-400:hover { color: #009FE3 !important; }
     
     .bg-blue-600, .hover\:bg-blue-600:hover { background-color: #0668AB !important; }
-    .bg-blue-500, .hover\:bg-blue-500:hover { background-color: #0195D9 !important; }
+    .bg-blue-505, .hover\:bg-blue-505:hover { background-color: #0195D9 !important; }
     .bg-blue-50 { background-color: rgba(6, 104, 171, 0.08) !important; }
     .bg-blue-500\/10 { background-color: rgba(1, 149, 217, 0.1) !important; }
     
@@ -60,16 +56,11 @@
 </head>
 <body class="bg-[#f3f5f8] text-slate-900 font-['Inter',sans-serif] min-h-screen relative overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
 
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="fixed top-0 left-0 w-5 h-5 rounded-full border-2 border-[#0195D9] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-[width,height,background-color,border-color] duration-300"></div>
+
   <!-- Background Effects -->
   <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-    <!-- WebGL Particle/Fluid Liquid Shader from Aura Design System -->
-    <div class="aura-background-component absolute inset-0 opacity-80" data-alpha-mask="80" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
-      <div class="absolute inset-0" data-us-project="ty3N7ZPaIU7KlWixQFIc"></div>
-      <script type="text/javascript">
-        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
-      </script>
-    </div>
-    <!-- Moving CSS blobs as high-performance GPU-accelerated backups -->
     <div class="aura-bg-blob-one absolute top-[-12%] left-[-12%] w-[52vw] h-[52vw] rounded-full bg-blue-200/35 blur-[7.5rem] will-change-transform"></div>
     <div class="aura-bg-blob-two absolute bottom-[-18%] right-[-10%] w-[62vw] h-[62vw] rounded-full bg-sky-200/22 blur-[8.75rem] will-change-transform"></div>
     <div class="aura-bg-blob-three absolute top-[36%] left-[36%] w-[30vw] h-[30vw] rounded-full bg-white/55 blur-[5rem] will-change-transform"></div>
@@ -79,19 +70,12 @@
   <!-- Preloader -->
   <div id="preloader" class="fixed inset-0 bg-[#f3f5f8] z-[9999] flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
     <div class="relative flex flex-col items-center">
-      <!-- Animated glowing background ring -->
       <div class="absolute w-56 h-56 rounded-full bg-blue-500/10 blur-2xl animate-pulse"></div>
-      
-      <!-- Rotating outer track -->
       <div class="w-48 h-48 rounded-full border border-slate-200 border-t-2 border-t-blue-600 animate-spin" style="animation-duration: 1.2s;"></div>
-      
-      <!-- Inner logo icon centered -->
       <div class="absolute inset-0 flex items-center justify-center">
         <img src="assets/svg_logotype_01.svg" alt="DMR Logo Icon" class="w-40 h-40 animate-pulse" />
       </div>
     </div>
-    
-    <!-- Micro-progress status indicator -->
     <div class="mt-8 flex flex-col items-center gap-2">
       <span class="text-[10px] font-semibold text-slate-400 tracking-[0.2em] uppercase font-mono animate-pulse">Inicializando Sistema</span>
       <div class="w-28 h-[2px] bg-slate-200/80 rounded-full overflow-hidden">
@@ -101,7 +85,6 @@
   </div>
 
   <script>
-    // Smooth Preloader handler
     window.addEventListener('DOMContentLoaded', () => {
       const bar = document.getElementById('preloader-bar');
       if (bar) {
@@ -139,7 +122,7 @@
             <a class="hover:text-blue-600 transition-colors" href="index.html">Início</a>
             <a class="hover:text-blue-600 transition-colors" href="sobre.html">Sobre</a>
             <a class="hover:text-blue-600 transition-colors" href="servicos.html">Serviços</a>
-            <a class="hover:text-blue-600 transition-colors" href="blog.html">Blog</a>
+            <a class="text-blue-600 font-medium transition-colors" href="blog.html">Blog</a>
             <a class="hover:text-blue-600 transition-colors" href="contato.html">Contato</a>
           </div>
           <div class="flex items-center gap-2">
@@ -165,11 +148,11 @@
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="index.html">Início</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="sobre.html">Sobre</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="servicos.html">Serviços</a>
-          <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="blog.html">Blog</a>
+          <a class="text-blue-600 py-2 border-b border-slate-100" href="blog.html">Blog</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="contato.html">Contato</a>
           <div class="flex flex-col gap-2 pt-2">
             <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:bg-blue-700 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.2)]" href="area-cliente.html">Área do Cliente</a>
-            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-700 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
+            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-770 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
           </div>
         </div>
       </div>
@@ -187,7 +170,6 @@
               const isHidden = mobileMenu.classList.contains('hidden');
               
               if (isHidden) {
-                // Open
                 mobileMenu.classList.remove('hidden');
                 setTimeout(() => {
                   mobileMenu.classList.remove('opacity-0', 'translate-y-[-10px]', 'pointer-events-none');
@@ -197,7 +179,6 @@
                 closeIcon.classList.remove('hidden');
                 mobileMenuButton.setAttribute('aria-label', 'Fechar Menu');
               } else {
-                // Close
                 mobileMenu.classList.add('opacity-0', 'translate-y-[-10px]', 'pointer-events-none');
                 mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
                 hamburgerIcon.classList.remove('hidden');
@@ -209,7 +190,6 @@
               }
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', (e) => {
               if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
                 if (!mobileMenu.classList.contains('hidden')) {
@@ -229,179 +209,167 @@
       </script>
     </nav>
   </header>
+
   <main class="relative z-10 pt-32 pb-20">
-
-    <section class="max-w-7xl mx-auto px-6 pt-10" data-reveal="slide-up">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h1 class="text-4xl md:text-6xl font-light text-slate-950 tracking-tight">Sobre a <span class="font-medium text-[#0668AB]">DMRInfo</span></h1>
-        <p class="mt-6 text-lg text-slate-600 font-light">Especialistas em prover estabilidade, segurança e continuidade operacional para o seu negócio.</p>
+    
+    <!-- Hero / Title -->
+    <section class="max-w-7xl mx-auto px-6 pt-10 pb-16 text-center md:text-left" data-reveal="slide-up">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs text-blue-600 font-semibold mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+        DMR INSIGHTS
       </div>
+      <h1 class="text-4xl md:text-6xl font-light text-slate-950 leading-tight mb-4 tracking-tight">Minds & <span class="font-medium">Infrastructure</span></h1>
+      <p class="text-slate-600 text-sm md:text-base max-w-2xl font-light leading-relaxed">
+        Artigos técnicos densos, análises detalhadas de cibersegurança e guias de governança de TI. Compartilhamos o conhecimento dos nossos especialistas para blindar e acelerar a sua operação corporativa.
+      </p>
+    </section>
 
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="rounded-3xl bg-white p-8 shadow-sm border border-slate-200 flex flex-col justify-between h-full">
-            <div>
-              <h2 class="text-2xl font-medium text-slate-900 mb-4">Quem Somos</h2>
-              <p class="text-slate-600 font-light leading-relaxed mb-4 text-sm">A DMRInfo Tecnologia atua no mercado oferecendo soluções completas em tecnologia da informação, com foco em empresas que buscam estabilidade, segurança e eficiência.</p>
-              <p class="text-slate-600 font-light leading-relaxed text-sm">Nosso compromisso é entregar projetos bem executados, suporte técnico ágil e relacionamento transparente com nossos clientes.</p>
-            </div>
+    <!-- Featured Post -->
+    <section class="max-w-7xl mx-auto px-6 mb-16" data-reveal="slide-up">
+      <div class="blog-featured-card rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 grid md:grid-cols-12">
+        <div class="md:col-span-7 h-64 md:h-[420px] overflow-hidden relative group">
+          <img src="assets/69163a128551ce062ec12c66_Blog-_af43f5405032.jpg" alt="Custo oculto do Ransomware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent pointer-events-none"></div>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm text-center">
-                <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mx-auto mb-3"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="url(#paint0_linear_4587_1730)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1730" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                <h3 class="font-medium text-slate-900 text-sm">Segurança</h3>
-            </div>
-            <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm text-center">
-                <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mx-auto mb-3"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="url(#paint0_linear_4587_1573)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 6V12L16 14" stroke="url(#paint1_linear_4587_1573)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1573" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1573" x1="14" y1="6" x2="14" y2="14" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                <h3 class="font-medium text-slate-900 text-sm">Suporte Ágil</h3>
-            </div>
-            <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm text-center">
-                <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mx-auto mb-3"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H20C21.1046 10 22 9.10457 22 8V4C22 2.89543 21.1046 2 20 2Z" stroke="url(#paint0_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 14H4C2.89543 14 2 14.8954 2 16V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z" stroke="url(#paint1_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 6H6.01" stroke="url(#paint2_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 18H6.01" stroke="url(#paint3_linear_4587_1726)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1726" x1="12" y1="2" x2="12" y2="10" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1726" x1="12" y1="14" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint2_linear_4587_1726" x1="6.005" y1="6" x2="6.005" y2="7" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint3_linear_4587_1726" x1="6.005" y1="18" x2="6.005" y2="19" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                <h3 class="font-medium text-slate-900 text-sm">Alta Conexão</h3>
-            </div>
-            <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm text-center">
-                <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mx-auto mb-3"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23 6L13.5 15.5L8.5 10.5L1 18" stroke="url(#paint0_linear_4587_1765)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 6H23V12" stroke="url(#paint1_linear_4587_1765)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1765" x1="12" y1="6" x2="12" y2="18" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1765" x1="20" y1="6" x2="20" y2="12" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-                <h3 class="font-medium text-slate-900 text-sm">Confiabilidade</h3>
-            </div>
-        </div>
-      </div>
-
-      <!-- Missão, Visão e Valores -->
-      <div class="mt-20 grid md:grid-cols-3 gap-8" data-reveal="slide-up">
-        <div class="rounded-3xl bg-white p-8 shadow-sm border border-slate-200 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="url(#paint0_linear_4587_1753)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="url(#paint1_linear_4587_1753)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="url(#paint2_linear_4587_1753)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1753" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1753" x1="12" y1="6" x2="12" y2="18" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint2_linear_4587_1753" x1="12" y1="10" x2="12" y2="14" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Missão</h3>
-          <p class="text-sm text-slate-500 font-light leading-relaxed">Fornecer soluções tecnológicas confiáveis que impulsionem o crescimento dos nossos clientes.</p>
-        </div>
-        <div class="rounded-3xl bg-white p-8 shadow-sm border border-slate-200 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="url(#paint0_linear_4587_1615)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="url(#paint1_linear_4587_1615)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1615" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_4587_1615" x1="12" y1="9" x2="12" y2="15" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Visão</h3>
-          <p class="text-sm text-slate-500 font-light leading-relaxed">Ser referência regional em serviços de TI corporativa.</p>
-        </div>
-        <div class="rounded-3xl bg-white p-8 shadow-sm border border-slate-200 text-center flex flex-col items-center">
-          <div class="w-12 h-12 rounded-full bg-white/42 backdrop-blur-md border border-white/60 shadow-sm flex items-center justify-center mb-4"><svg class="inline-block align-middle text-2xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="url(#paint0_linear_4587_1745)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_4587_1745" x1="12" y1="2" x2="12" y2="21.02" gradientUnits="userSpaceOnUse">
-<stop stop-color="#59EBFF"/>
-<stop offset="1" stop-color="#009FE3"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Valores</h3>
-          <p class="text-sm text-slate-500 font-light leading-relaxed">Comprometimento, ética, qualidade e inovação.</p>
-        </div>
-      </div>
-
-      <!-- Clientes Section -->
-      <div class="mt-20 border-t border-slate-200 pt-16 mb-10" data-reveal="slide-up">
-        <div class="max-w-3xl mx-auto text-center">
-          <div class="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1.5 shadow-sm mb-4">
-            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Clientes</span>
+        <div class="md:col-span-5 p-8 md:p-12 flex flex-col justify-between h-full bg-white/70 backdrop-blur-md">
+          <div class="space-y-4">
+            <span class="inline-block text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2.5 py-1 rounded-md">Cibersegurança</span>
+            <h2 class="text-2xl md:text-3xl font-light text-slate-950 leading-snug tracking-tight">O Custo Oculto do <span class="font-medium">Ransomware</span>: Como Blindar sua Empresa</h2>
+            <p class="text-slate-500 text-xs md:text-sm font-light leading-relaxed">
+              O ransomware não representa apenas uma ameaça digital: é um risco existencial para negócios de todos os portes. Saiba como arquitetar uma defesa ativa multicamadas para garantir que sua operação nunca pare.
+            </p>
           </div>
-          <h2 class="text-3xl font-medium text-slate-950 mb-4">Compromisso e Confiança</h2>
-          <p class="text-slate-600 text-lg font-light leading-relaxed mb-4">
-            Atendemos empresas de diversos segmentos, oferecendo soluções personalizadas de acordo com cada necessidade.
-          </p>
-          <p class="text-slate-500 font-light leading-relaxed">
-            A confiança dos nossos clientes é o reflexo da qualidade do nosso trabalho.
-          </p>
+          
+          <div class="pt-6 border-t border-slate-100 flex items-center justify-between mt-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-b from-blue-400 to-blue-600 flex items-center justify-center text-white font-medium text-sm">ER</div>
+              <div>
+                <p class="text-xs font-semibold text-slate-800">Erick Ribeiro</p>
+                <p class="text-[10px] text-slate-400">31 de Maio, 2026 &bull; 7 min</p>
+              </div>
+            </div>
+            
+            <a class="primary-button magnetic-btn" href="contato.html">
+              <div class="primary-button-flex">
+                <div class="primary-button-text-wrap">
+                  <div class="primary-button-text">Ler Artigo</div>
+                  <div class="primary-button-text-hover">Ler Artigo</div>
+                </div>
+              </div>
+              <div class="primary-button-hover-bg"></div>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid with 4 Post Cards & Newsletter -->
+    <section class="max-w-7xl mx-auto px-6 mb-20" data-reveal="slide-up">
+      <div class="blog-bento-grid">
+        
+        <!-- Post 1 -->
+        <article class="blog-post-card rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/69163a128551ce062ec12c66_Blog-_789120d3183e.jpg" alt="Migração para Cloud" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <span class="inline-block text-[9px] font-bold text-sky-600 uppercase tracking-widest bg-slate-50 px-2 py-0.5 rounded mb-3">Cloud & Server</span>
+              <h3 class="text-lg font-light text-slate-950 mb-2 leading-snug tracking-tight">Migração para Cloud: Híbrido, Privado ou Público?</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">
+                Descubra qual modelo de nuvem maximiza a segurança dos seus dados críticos mantendo a performance operacional ideal para sua infraestrutura corporativa.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span>28 de Maio, 2026</span>
+            <span class="font-medium text-slate-600">5 min de leitura</span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-post-card rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/69163a128551ce062ec12c66_Blog-_2ebe9eca485c.jpg" alt="Redes Wi-Fi Gigabit Corporativas" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <span class="inline-block text-[9px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-0.5 rounded mb-3">Infraestrutura</span>
+              <h3 class="text-lg font-light text-slate-950 mb-2 leading-snug tracking-tight">Redes Wi-Fi Gigabit Corporativas: O Fim das Instabilidades</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">
+                Acabe definitivamente com as quedas de sinal e lentidão que minam a produtividade da sua equipe. Entenda o impacto de redes Access Points empresariais.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span>24 de Maio, 2026</span>
+            <span class="font-medium text-slate-600">6 min de leitura</span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-post-card rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/69163a128551ce062ec12c66_Blog-_5998de29ede1.jpg" alt="Adequação à LGPD" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <span class="inline-block text-[9px] font-bold text-emerald-600 uppercase tracking-widest bg-slate-50 px-2 py-0.5 rounded mb-3">Compliance</span>
+              <h3 class="text-lg font-light text-slate-950 mb-2 leading-snug tracking-tight">Adequação à LGPD em 2026: Guia Prático de TI</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">
+                Um roteiro direto ao ponto para diretores e gestores mapearem os fluxos de dados, eliminarem vazamentos e garantirem total conformidade legal.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span>18 de Maio, 2026</span>
+            <span class="font-medium text-slate-600">8 min de leitura</span>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="blog-post-card rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/69163a37dc79e51d34432ff1_Blog-_6d1edf4c3c59.jpg" alt="Firewalls de Próxima Geração" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <span class="inline-block text-[9px] font-bold text-red-600 uppercase tracking-widest bg-red-50 px-2 py-0.5 rounded mb-3">Cibersegurança</span>
+              <h3 class="text-lg font-light text-slate-950 mb-2 leading-snug tracking-tight">Firewalls de Próxima Geração: A Defesa Perfeita</h3>
+              <p class="text-slate-500 text-xs font-light leading-relaxed">
+                Entenda por que firewalls baseados em hardware pfSense e Fortinet são essenciais para isolar ameaças de rede antes que elas acessem seus servidores internos.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span>12 de Maio, 2026</span>
+            <span class="font-medium text-slate-600">5 min de leitura</span>
+          </div>
+        </article>
+
+        <!-- Newsletter Bento Box -->
+        <div class="blog-newsletter-card rounded-3xl bg-white border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8 md:col-span-8 bg-gradient-to-r from-white via-white to-blue-50/20">
+          <div class="max-w-md space-y-3">
+            <span class="inline-block text-[10px] font-bold text-blue-600 uppercase tracking-widest">Newsletter Conectiva</span>
+            <h3 class="text-2xl font-light text-slate-950 tracking-tight">Insights Exclusivos de <span class="font-medium">TI & Cibersegurança</span></h3>
+            <p class="text-slate-500 text-xs font-light leading-relaxed">
+              Receba as análises mais recentes, avisos de ameaças ativas mundiais e boas práticas operacionais de TI diretamente em sua caixa de entrada.
+            </p>
+          </div>
+          <form class="w-full md:w-auto flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso! Prepare-se para receber conteúdos de alto nível.'); this.reset();">
+            <input type="email" required placeholder="Seu e-mail corporativo" class="rounded-xl border border-slate-200 bg-slate-50 px-5 py-3.5 text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:outline-none transition-all w-full sm:w-64" />
+            <button type="submit" class="primary-button magnetic-btn" style="padding: 1rem 2rem;">
+              <div class="primary-button-flex">
+                <div class="primary-button-text-wrap">
+                  <div class="primary-button-text">Assinar</div>
+                  <div class="primary-button-text-hover">Assinar</div>
+                </div>
+              </div>
+              <div class="primary-button-hover-bg"></div>
+            </button>
+          </form>
+        </div>
+
       </div>
     </section>
 
@@ -420,7 +388,7 @@
           <a href="contato.html" class="hover:text-blue-600 transition-colors">Contato</a>
         </div>
         <div class="flex justify-center md:justify-end gap-4 text-lg">
-          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" title="WhatsApp"><svg class="inline-block align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" title="WhatsApp"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.0501 5C16.0268 5.19057 16.9244 5.66826 17.6281 6.37194C18.3318 7.07561 18.8095 7.97326 19.0001 8.95M15.0501 1C17.0793 1.22544 18.9716 2.13417 20.4163 3.57701C21.8609 5.01984 22.7721 6.91101 23.0001 8.94M22.0001 16.92V19.92C22.0012 20.1985 21.9441 20.4742 21.8326 20.7293C21.721 20.9845 21.5574 21.2136 21.3521 21.4019C21.1469 21.5901 20.9046 21.7335 20.6408 21.8227C20.377 21.9119 20.0974 21.9451 19.8201 21.92C16.7429 21.5856 13.7871 20.5341 11.1901 18.85C8.77388 17.3147 6.72539 15.2662 5.19006 12.85C3.50003 10.2412 2.4483 7.27099 2.12006 4.18C2.09507 3.90347 2.12793 3.62476 2.21656 3.36162C2.30518 3.09849 2.44763 2.85669 2.63482 2.65162C2.82202 2.44655 3.04986 2.28271 3.30385 2.17052C3.55783 2.05833 3.8324 2.00026 4.11006 2H7.11006C7.59536 1.99522 8.06585 2.16708 8.43382 2.48353C8.80179 2.79999 9.04213 3.23945 9.11005 3.72C9.23668 4.68007 9.47151 5.62273 9.81006 6.53C9.9446 6.88792 9.97372 7.27691 9.89396 7.65088C9.81421 8.02485 9.62892 8.36811 9.36005 8.64L8.09006 9.91C9.51361 12.4135 11.5865 14.4864 14.0901 15.91L15.3601 14.64C15.6319 14.3711 15.9752 14.1858 16.3492 14.1061C16.7231 14.0263 17.1121 14.0555 17.4701 14.19C18.3773 14.5286 19.32 14.7634 20.2801 14.89C20.7658 14.9585 21.2095 15.2032 21.5266 15.5775C21.8437 15.9518 22.0122 16.4296 22.0001 16.92Z" stroke="url(#paint0_linear_4587_1699)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_4587_1699" x1="12.556" y1="1" x2="12.556" y2="21.9281" gradientUnits="userSpaceOnUse">
@@ -430,7 +398,7 @@
 </defs>
 </svg>
 </a>
-          <a href="mailto:contato@dmrinfo.com.br" class="hover:text-blue-600 transition-colors" title="E-mail"><svg class="inline-block align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="mailto:contato@dmrinfo.com.br" class="hover:text-blue-600 transition-colors" title="E-mail"><svg class="inline-block align-middle w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="url(#paint0_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M22 6L12 13L2 6" stroke="url(#paint1_linear_4587_1666)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
@@ -456,7 +424,7 @@
       </div>
     </footer>
   </main>
-  
+
   <!-- GSAP, ScrollTrigger & App JS -->
   <script src="assets/gsap_8e6c1f2e24a8.js"></script>
   <script src="assets/ScrollTrigger_3b69999534fd.js"></script>

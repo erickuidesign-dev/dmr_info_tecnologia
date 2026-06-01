@@ -8,6 +8,7 @@
   <script src="assets/resource_3fa48481346f.js"></script>
   <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
   <link href="assets/css2_79567371cedd.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
 
   <style>
     @keyframes auraAmbientDriftOne { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 35% { transform: translate3d(4vw, 3vh, 0) scale(1.06); } 70% { transform: translate3d(-2vw, 5vh, 0) scale(0.98); } }
@@ -128,8 +129,8 @@
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50">
     <nav class="max-w-7xl mx-auto px-6 pt-5">
-      <div class="relative overflow-hidden rounded-full bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
-        <div class="absolute inset-0 rounded-full bg-white/36 pointer-events-none"></div>
+      <div class="relative overflow-hidden rounded-xl bg-white/84 backdrop-blur-2xl border border-white/90 shadow-[0_14px_38px_-22px_rgba(15,23,42,0.42),inset_0_1px_0_rgba(255,255,255,1)] px-6 py-1.5 md:py-2">
+        <div class="absolute inset-0 rounded-xl bg-white/36 pointer-events-none"></div>
         <div class="relative z-10 flex items-center justify-between">
           <a class="flex items-center gap-2 group h-14 md:h-16" href="index.html">
             <img src="assets/svg_full_logo_version_02.svg" alt="DMR Info Logo" class="h-full w-auto max-w-[240px] md:max-w-[280px] group-hover:scale-[1.02] transition-transform duration-300" />
@@ -138,11 +139,12 @@
             <a class="hover:text-blue-600 transition-colors" href="index.html">Início</a>
             <a class="hover:text-blue-600 transition-colors" href="sobre.html">Sobre</a>
             <a class="hover:text-blue-600 transition-colors" href="servicos.html">Serviços</a>
+            <a class="hover:text-blue-600 transition-colors" href="blog.html">Blog</a>
             <a class="hover:text-blue-600 transition-colors" href="contato.html">Contato</a>
           </div>
           <div class="flex items-center gap-2">
-            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-700 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
-            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="contato.html">Solicitar Orçamento</a>
+            <a class="hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:-translate-y-0.5 transition-all shadow-[0_5px_14px_rgba(59,130,246,0.28),inset_0_1px_0_rgba(255,255,255,0.35)]" href="area-cliente.html">Área do Cliente</a>
+            <a class="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs text-slate-770 bg-white/78 border border-slate-200 hover:bg-white hover:text-blue-600 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
             
             <!-- Hamburger Button for Mobile -->
             <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-slate-100/80 text-slate-700 hover:bg-slate-200 transition-all shadow-sm focus:outline-none" aria-label="Abrir Menu">
@@ -163,10 +165,11 @@
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="index.html">Início</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="sobre.html">Sobre</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="servicos.html">Serviços</a>
+          <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="blog.html">Blog</a>
           <a class="hover:text-blue-600 transition-colors py-2 border-b border-slate-100" href="contato.html">Contato</a>
           <div class="flex flex-col gap-2 pt-2">
-            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-700 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="area-cliente.html">Área do Cliente</a>
-            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:bg-blue-700 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.2)]" href="contato.html">Solicitar Orçamento</a>
+            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-white bg-gradient-to-b from-blue-500 to-blue-600 border border-blue-700 hover:bg-blue-700 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.2)]" href="area-cliente.html">Área do Cliente</a>
+            <a class="flex items-center justify-center rounded-full px-4 py-2.5 text-xs text-slate-700 bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all shadow-sm" href="contato.html">Fale Conosco</a>
           </div>
         </div>
       </div>
@@ -228,7 +231,7 @@
   </header>
   <main class="relative z-10 pt-32 pb-20">
 
-    <section class="max-w-md mx-auto px-6 pt-10">
+    <section class="max-w-md mx-auto px-6 pt-10" data-reveal="slide-up">
       <div class="rounded-3xl bg-white border border-slate-200 shadow-sm p-8 text-center">
         <div class="w-16 h-16 rounded-2xl bg-white/42 backdrop-blur-md border border-white/60 shadow-sm text-blue-600 flex items-center justify-center mx-auto mb-6">
             <svg class="inline-block align-middle text-3xl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -301,6 +304,7 @@
           <a href="index.html" class="hover:text-blue-600 transition-colors">Início</a>
           <a href="sobre.html" class="hover:text-blue-600 transition-colors">Sobre</a>
           <a href="servicos.html" class="hover:text-blue-600 transition-colors">Serviços</a>
+          <a href="blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
           <a href="contato.html" class="hover:text-blue-600 transition-colors">Contato</a>
         </div>
         <div class="flex justify-center md:justify-end gap-4 text-lg">
@@ -340,5 +344,10 @@
       </div>
     </footer>
   </main>
+  
+  <!-- GSAP, ScrollTrigger & App JS -->
+  <script src="assets/gsap_8e6c1f2e24a8.js"></script>
+  <script src="assets/ScrollTrigger_3b69999534fd.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
